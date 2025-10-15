@@ -214,7 +214,11 @@ define "Negative Opiate Screenings In Lookback Period":
 
 define "Opiate Rx In Lookback Period":
   "Normalize Rx In Lookback Period" Rx
-    where Rx.medication in Common."Opiate Medications"
+    where (
+      if Config."Use Default Opiate Medications ValueSet"
+        then Rx.medication in Common."Opiate Medications"
+      else Rx.medication in Config."Opiate Medications"
+    )
 
 // Oxycodone
 define "Oxycodone Screenings In Lookback Period":

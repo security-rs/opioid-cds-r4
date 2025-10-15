@@ -201,10 +201,6 @@
     "resource": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-medications"
   }, {
     "type": "depends-on",
-    "display": "Value set Opiate Medications",
-    "resource": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/non-synthetic-opioid-medications"
-  }, {
-    "type": "depends-on",
     "display": "Value set Oxycodone Medications",
     "resource": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-medications"
   }, {

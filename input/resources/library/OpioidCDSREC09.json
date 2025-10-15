@@ -10,7 +10,7 @@
     "id": "options",
     "parameter": [ {
       "name": "translatorVersion",
-      "valueString": "3.5.1"
+      "valueString": "3.11.0"
     }, {
       "name": "option",
       "valueString": "EnableAnnotations"

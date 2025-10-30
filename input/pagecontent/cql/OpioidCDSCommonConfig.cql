@@ -75,6 +75,12 @@ define "Use Alternative UDS Lookback Period":
 define "Alternative UDS Lookback Period":
   Interval[Today() - 6 months - 1 days, Today()]
 
+define "Unexpected Positive Lookback Duration":
+  61 days
+
+define "Unexpected Positive Lookback Duration String":
+  '60 days'
+
 define "Use Default Opiate Medications ValueSet":
   false
 

@@ -34,7 +34,7 @@ For further details on how the behaviors for the artifacts were determined, refe
 The conformance requirements for supporting the data queries used by this IG are defined in the [HL7 Data Exchange Profiles for 2022 CDC Clinical Practice Guideline for Prescribing Opioids](https://build.fhir.org/ig/HL7/cdc-opioid-cpg/). By conforming to these profiles (which are derived from US Core) EHRs can ensure they are prepared to implement this IG.
 
 #### CPG IG
-This IG has also followed and applied the [methodology laid out by the HL7 Clinical Practice Guideline (CPG) IG](https://www.hl7.org/fhir/uv/cpg/methodology.html). The CPG IG offers abstract, high-level guidance for translating clinical guidelines into electronic Clinical Decision Support (eCDS) artifacts via a foundational methodology based on the following steps:
+This IG has also followed and applied the [methodology laid out by the HL7 Clinical Practice Guideline (CPG) IG](https://www.hl7.org/fhir/uv/cpg/methodology.html). The CPG IG offers an abstract high-level methodology for translating clinical guidelines into electronic Clinical Decision Support (eCDS) artifacts based on the following steps:
 
 -	*Select*: Select content and recommendations for implementation
 -	*Represent*: Apply selected recommendations to the implementation approach

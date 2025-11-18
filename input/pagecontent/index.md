@@ -1,14 +1,21 @@
 ### Introduction
 
-This implementation guide provides resources and discussion in support of applying the [Centers
-for Disease Control and Prevention (CDC) 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm):
+This implementation guide provides resources and discussion in support of applying the Centers
+for Disease Control and Prevention (CDC) 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain:
 
+[2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm)
 
 This implementation guide was developed based on work initially done as part of the
-[Clinical Quality Framework (CQF)](https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework) Initiative, a public-private partnership sponsored by the Centers for Medicare & Medicaid Services (CMS) and
-the U.S. Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC), to identify, develop, and harmonize standards for clinical decision support and electronic clinical quality measurement, as well as a joint effort by the CDC and ASTP/ONC focused on improving processes for the development of standardized, shareable, computable decision support artifacts using the 2022 CDC Clinical Practice Guideline as a model case.
+<a href="https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework">Clinical Quality Framework (CQF)</a>
+Initiative, a public-private partnership sponsored by the Centers for Medicare &amp; Medicaid Services (CMS) and
+the U.S. Office of the National Coordinator for Health Information Technology (ONC) to identify, develop, and harmonize
+standards for clinical decision support and electronic clinical quality measurement, as well as a joint effort by
+the Centers for Disease Control and Prevention (CDC) and the Office of the National Coordinator for Health IT (ONC)
+focused on improving processes for the development of standardized, shareable, computable decision support artifacts
+using the 2022 CDC Clinical Practice Guideline as a model case.
 
-Feedback and contributions to this implementation guide (IG) are welcome and can be submitted using the _New Issue_ link in the footer of every page. Discussions on the use of this IG (as well as other CQF projects) happen regularly on the [CPG-on-FHIR calls](https://confluence.hl7.org/display/CDS/CPGonFHIR), a sub-workgroup of the HL7 Clinical Decision Support Workgroup.
+Feedback and contributions are welcome and can be submitted using the New Issue link in the footer of every page. Discussions on the
+use of this IG as well as other CQF projects take place regularly on the <a href="https://confluence.hl7.org/display/CDS/CPGonFHIR">CPG-on-FHIR calls</a>, a subworkgroup of the HL7 Clinical Decision Support Workgroup.
 
 ### Scope
 
@@ -27,11 +34,12 @@ This implementation guide includes support for the following guideline recommend
 
 ### Getting Started
 
-For further details on how the behaviors for the artifacts were determined, refer to the [Process Documentation](process-documentation.html).
+For clinical informaticists interested in how the behavior for the artifacts was determined,
+refer to the [Process Documentation](process-documentation.html).
 
 ### Trigger Overview
 
-This implementation guide [assumes](process-documentation.html#technical-assumptions) that [CDS Hooks](http://cds-hooks.hl7.org/index.html) serves as the technical framework for EHR integration. The table below outlines the supported triggering events for each guideline recommendation:
+This implementation guide [assumes](process-documentation.html#technical-assumptions) that [CDS Hooks](http://cds-hooks.hl7.org/index.html) will serve as the technical framework for EHR integration. The table below outlines the supported triggering events for each guideline recommendation:
 
 <div>{% include trigger_overview.svg %}</div>
  

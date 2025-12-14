@@ -1,0 +1,29 @@
+@startuml flow_rec02_ordersign
+!theme carbon-gray
+skinparam hyperlinkColor white
+<style>
+activityDiagram {
+ FontColor white
+ RoundCorner 50
+ arrow {
+  FontColor: Black
+ }
+ diamond {
+  BackgroundColor #fc914d
+ }
+}
+</style>
+title Recommendation 2 Order Sign Flow Diagram
+#1C2ED5:Order Sign; 
+if ([[subroutines.html#for-subacute-or-chronic-pain Opioid order for\n   subacute or\n  chronic pain?]]) then (no)
+(yes) elseif ([[subroutines.html#cdc-2022-general-inclusion-criteria CDC 2022 guideline\n   general inclusion\n      criteria met?]]) then (no) 
+(yes) elseif ([[subroutines.html#opioid-naive Opioid naive \ncriteria met?]]) then (no) 
+#306516: (yes) elseif (Pain management \n procedure in the\n   past 90 days?) then (yes) 
+#306516: (no) elseif (Pain treatment plan\n created or edited \nin the past 90 days?) then (yes) 
+else (no)
+#b06f19:[[user-interaction-alerts.html#recommendation-3-alert Alert]];<<output>>
+kill
+endif
+#BC2C73:No Alert*;
+caption ~*When no alert is warranted by the guidance, the user should not experience any interruption.
+@enduml

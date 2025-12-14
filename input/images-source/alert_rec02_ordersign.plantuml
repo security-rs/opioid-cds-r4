@@ -1,0 +1,76 @@
+@startuml alert_rec02_ordersign
+!theme carbon-gray
+<style>
+activityDiagram {
+ FontColor white
+ arrow {
+  FontColor: Black
+ }
+ note {
+  FontColor: Black
+  BackgroundColor: #fafad2
+ }
+}
+</style>
+#b06f19:Alert;<<output>>
+note right
+**SUMMARY:**  
+Maximize Nonopioid Therapies as Appropriate
+
+**DETAILS:**
+For many types of subacute and chronic pain, consider maximizing
+the use of nonpharmacologic and nonopioid pharmacologic 
+therapiesas appropriate.
+
+[[https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation2 Recommendation 2 of the 2022 CDC Clinical Prescribing Guideline]] 
+provides nonopioid therapy recommendations for common 
+subacute and chronic pain conditions.
+
+Nonpharmacologic Treatments
+	•	Back pain (chronic)
+	•	Back pain (low back, chronic)
+	•	Fibromyalgia
+	•	Headache (tension)
+	•	Knee osteoarthritis pain (chronic)
+	•	Neck pain
+	•	Temporomandibular disorder
+
+Nonopioid Pharmacological Therapy
+	•	Back pain (chronic, moderate to severe)
+	•	Fibromyalgia
+	•	Hip or knee osteoarthritis pain (chronic)
+	•	Neuropathic pain syndromes
+	•	Temporomandibular disorder
+end note
+split
+#c05046:**Document** 
+Collaborated with 
+patient to identify
+treatment goals;<<input>>
+kill
+split again
+#c05046:**Order** 
+Select alternative 
+therapies from 
+order set.;<<input>>
+kill
+split again
+#c05046:**Remove**
+Will remove 
+triggering 
+medication order;<<input>>
+kill
+split again
+#c05046:**Snooze* ** 
+Attempting 
+alternative therapy.
+Snooze 3 months*;<<input>>
+kill
+split again
+#c05046:**Snooze***
+N/A add comment, 
+Snooze 3 months*;<<input>>
+kill
+end split
+caption ~*Snooze duration referenced in the alert response is an example and is intended to be patient specific.
+@enduml

@@ -1,0 +1,31 @@
+@startuml subroutine_acute_pain
+!theme carbon-gray
+skinparam ActivityBackgroundColor #306516
+<style>
+activityDiagram {
+ FontColor white
+ RoundCorner 50
+ arrow {
+  FontColor: Black
+ }
+ diamond {
+  BackgroundColor #306516
+ }
+}
+</style>
+title Opioid Naive
+start
+fork
+:   **Prescripion** for opioid \n analgesics with ambulatory\n misuse potential in the past\n  90 days (including today)?;
+fork again
+:         **Report** of opioid \n analgesics with ambulatory \n misuse potential in the past\n  90 days (including today)?;
+fork again
+:**Dispensing event** of opioid\n analgesics with ambulatory\nmisuse potential in the past\n 90 days (including today)?;
+end merge
+if (Any answer is yes?) then (yes)
+#BC2C73:Return Yes;
+kill
+else (no)
+#BC2C73:Return No;
+kill
+@enduml

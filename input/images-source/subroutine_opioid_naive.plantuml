@@ -1,4 +1,4 @@
-@startuml subroutine_acute_pain
+@startuml subroutine_opioid_naive
 !theme carbon-gray
 skinparam ActivityBackgroundColor #306516
 <style>

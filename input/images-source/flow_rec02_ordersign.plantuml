@@ -21,7 +21,7 @@ if ([[subroutines.html#for-subacute-or-chronic-pain Opioid order for\n   subacut
 #306516: (yes) elseif (Pain management \n procedure in the\n   past 90 days?) then (yes) 
 #306516: (no) elseif (Pain treatment plan\n created or edited \nin the past 90 days?) then (yes) 
 else (no)
-#b06f19:[[user-interaction-alerts.html#recommendation-3-alert Alert]];<<output>>
+#b06f19:[[user-interaction-alerts.html#recommendation-2-alert Alert]];<<output>>
 kill
 endif
 #BC2C73:No Alert*;

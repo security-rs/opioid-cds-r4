@@ -19,7 +19,7 @@ if ([[subroutines.html#for-acute-pain Opioid order for\n   acute pain?]]) then (
 (yes) elseif ([[subroutines.html#cdc-2022-general-inclusion-criteria CDC 2022 guideline\n   general inclusion\n      criteria met?]]) then (no) 
 (yes) elseif ([[subroutines.html#opioid-naive Opioid naive \ncriteria met?]]) then (no) 
 else (yes)
-#b06f19:[[user-interaction-alerts.html#recommendation-3-alert Alert]];<<output>>
+#b06f19:[[user-interaction-alerts.html#recommendation-1-alert Alert]];<<output>>
 kill
 endif
 #BC2C73:No Alert*;

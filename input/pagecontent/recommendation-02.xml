@@ -5,7 +5,7 @@
     description='Nonopioid therapies are preferred for subacute and chronic pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider initiating opioid therapy if expected benefits for pain and function are anticipated to outweigh risks to the patient. Before starting opioid therapy for subacute or chronic pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy, should work with patients to establish treatment goals for pain and function, and should consider how opioid therapy will be discontinued if benefits do not outweigh risks.' 
     recommendation-category='A' 
     evidence-type='2' 
-    flow-diagram='Recommendation02-flow.svg'
+    flow-diagram='flow_rec02_ordersign.svg'
     func-desc='recommendation02-functional-description.html'
     data-elements='recommendation02-data-elements.html'
     content-table='recommendation02-content-table.html'

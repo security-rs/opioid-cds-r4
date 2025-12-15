@@ -5,7 +5,7 @@
     description='Nonopioid therapies are at least as effective as opioids for many common types of acute pain. Clinicians should maximize use of nonpharmacologic and nonopioid pharmacologic therapies as appropriate for the specific condition and patient and only consider opioid therapy for acute pain if benefits are anticipated to outweigh risks to the patient. Before prescribing opioid therapy for acute pain, clinicians should discuss with patients the realistic benefits and known risks of opioid therapy.' 
     recommendation-category='B' 
     evidence-type='3' 
-    flow-diagram='Recommendation01-flow.svg'
+    flow-diagram='flow_rec01_ordersign.svg'
     func-desc='recommendation01-functional-description.html'
     data-elements='recommendation01-data-elements.html'
     content-table='recommendation01-content-table.html'

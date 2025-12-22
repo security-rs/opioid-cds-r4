@@ -1,0 +1,14 @@
+@startuml run_ahead_execution
+Participant EHR
+Participant "CDS Service" as CDS
+EHR -> CDS: order-select
+activate CDS
+CDS --> EHR: empty card
+deactivate CDS
+
+EHR -> CDS: order-sign
+activate CDS
+CDS -> CDS: retrieve cached response
+CDS->EHR: response
+deactivate CDS
+@enduml

@@ -1,14 +1,16 @@
-This section presents key considerations and lessons learned derived from testing activities and pilot implementations of this implementation guide. It is intended to help implementers understand practical challenges and apply best practices identified through real-world use.
+This section presents key considerations and lessons learned derived from testing activities and pilot implementations of this implementation guide. It is non-normative and is intended to help implementers understand practical aspects and best practices identified through real-world use.
 
 ### Deploying Knowledge Artifacts
-To deploy the knowledge artifacts, a bundle containing all the artifacts must be deployed to a server capable of consuming these artifacts and running CQL code. To generate a deployable bundle, the following steps are necessary. These scripts require `java` to be installed and available to the shell.
+The latest version of the knowledge artifacts from this IG are available at the [IG repository](https://github.com/cqframework/opioid-cds-r4). To deploy these artifacts, a bundle containing all the artifacts should be generated and deployed to a server capable of consuming them to expose a CDS Hooks service. 
+
+The following steps show how to generate a deployable bundle. These scripts require `java` to be installed and available to the shell.
 
 1. Clone a local copy of the IG:
 ```shell
 git clone git@github.com:cqframework/opioid-cds-r4.git
 ```
 
-2. Update the CQF tooling needed to compile and generate the bundle:
+2. Update the CQF tooling (needed to compile and generate the bundle):
 ```shell
 sh ./_updateCQFTooling.sh
 ```
@@ -19,10 +21,7 @@ sh ./_refresh.sh
 ```
 Note that equivalent windows scripts are also available. 
 
-Once the above steps are completed successfully, the respective bundle for each recommendation will be generated in the following subdirectory:
-```
-./bundles/plandefinition/
-```
+Once the above steps are completed successfully, the respective bundle for each recommendation will be generated in `./bundles/plandefinition/`. 
 
 ### Configuration 
 [TBD]
@@ -55,8 +54,8 @@ The general idea behind this approach is to call the CDS service that depends on
 
 Using this approach requires careful implementation of caching and configuration of the integration with the EHR. It may also lead to deployment complexities, therefore, it should only be used in the case of response time challenges that cannot be addressed through other strategies.
 
-### Customizing the Artifacts
+### Customizing Artifacts
 Local policies at some clinical sites may require changes to the logic of the knowledge artifacts. While the logic has been designed to provide configurable parameters for common customization use cases, direct modification to the artifacts may still be needed in some cases, such as customizing alert text or suggestion cards content.
 
-We recommend that sites track their custom artifacts by creating and maintaining a fork from the [main IG repository](https://github.com/cqframework/opioid-cds-r4). This approach enables each site to manage and evolve its customized artifacts  over time, while remaining tethered to the main IG code and having a seamless mechanism to incorporate future updates to the IG such as bug fixes and enhancements. 
+We recommend that sites track their custom artifacts by creating and maintaining a fork from the [IG repository](https://github.com/cqframework/opioid-cds-r4). This approach enables each site to manage and evolve its customized artifacts  over time, while remaining tethered to the main IG code and having a seamless mechanism to incorporate future updates to the IG such as bug fixes and enhancements. 
 

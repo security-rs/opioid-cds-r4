@@ -70,7 +70,8 @@ const {
   rec10OrderSignUnexpectedPositiveFentanylPatient,
   rec10OrderSignUnexpectedPositiveFentanylTriggeringMedRef,
   rec10OrderSignUnexpectedPositiveFentanylTriggeringMedReq,
-  rec10OrderSignUnexpectedPositiveFentanylUds
+  rec10OrderSignUnexpectedPositiveFentanylUds,
+  rec10PatientBundle
 } = require("./fixtures/patient-bundle");
 
 jest.setTimeout(10 * 1000);
@@ -80,7 +81,16 @@ const CDS_SERVICE =
   process.env.CDS_SERVICE || "http://localhost:8080/cds-services";
 const ORDER_SIGN = "opioidcds-10-order-sign";
 
-beforeAll(() => {});
+beforeAll(async () => {
+  const request = rec10PatientBundle;
+
+  const response = await superagent
+    .post(`${FHIR_SERVER}`)
+    .send(request)
+    .set("Accept", "json");
+
+  expect(response.status).toBe(200);
+});
 
 afterAll(() => {});
 
@@ -105,9 +115,6 @@ it("UDS_MED_WITH_REF", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignOxycodoneMedReqWithRefPatient
     }
   };
 
@@ -117,7 +124,9 @@ it("UDS_MED_WITH_REF", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });
 
 it("UDS_MED_WITHOUT_REF", async () => {
@@ -138,9 +147,6 @@ it("UDS_MED_WITHOUT_REF", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignOxycodoneMedReqWithoutRefPatient
     }
   };
 
@@ -150,7 +156,9 @@ it("UDS_MED_WITHOUT_REF", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });
 
 it("EXCL_PATIENT_LESS_THAN_18", async () => {
@@ -171,9 +179,6 @@ it("EXCL_PATIENT_LESS_THAN_18", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignPatientLessThan18Patient
     }
   };
 
@@ -183,7 +188,8 @@ it("EXCL_PATIENT_LESS_THAN_18", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
 });
 
 it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
@@ -207,45 +213,6 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignActiveCancerEncountersPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignActiveCancerEncountersFirstCondition,
-            search: {
-              mode: "match"
-            }
-          },
-          {
-            resource: rec10OrderSignActiveCancerEncountersSecondCondition,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      },
-      item3: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignActiveCancerEncountersFirstEncounter,
-            search: {
-              mode: "match"
-            }
-          },
-          {
-            resource: rec10OrderSignActiveCancerEncountersSecondEncounter,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -253,8 +220,10 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
 });
 
 it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
@@ -278,21 +247,6 @@ it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignActiveCancerProblemListPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignActiveCancerProblemListCondition,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -300,8 +254,10 @@ it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
 });
 
 it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
@@ -325,21 +281,6 @@ it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignSickleCellProblemListPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignSickleCellProblemListCondition,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -347,8 +288,10 @@ it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
 });
 
 it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
@@ -372,21 +315,6 @@ it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignTerminalConditionProblemListPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignTerminalConditionProblemListCondition,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -394,8 +322,10 @@ it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
 });
 
 it("EXPECTED_NEGATIVE_FENTANYL", async () => {
@@ -419,21 +349,6 @@ it("EXPECTED_NEGATIVE_FENTANYL", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignExpectedNegativeFentanylPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignExpectedNegativeFentanylUds,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -441,11 +356,14 @@ it("EXPECTED_NEGATIVE_FENTANYL", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
-it("EXPECTED_POSITIVE_FENTANYL", async () => {
+it("EXPECTED_NEGATIVE_FENTANYL", async () => {
   const request = {
     hookInstance: rec10OrderSignExpectedPositiveFentanylId,
     fhirServer: FHIR_SERVER,
@@ -466,45 +384,6 @@ it("EXPECTED_POSITIVE_FENTANYL", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignExpectedPositiveFentanylPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignExpectedPositiveFentanylMedReq,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      },
-      item3: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignExpectedPositiveFentanylMedRef,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      },
-      item4: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignExpectedPositiveFentanylUds,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -512,8 +391,11 @@ it("EXPECTED_POSITIVE_FENTANYL", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
@@ -537,45 +419,6 @@ it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignUnexpectedNegativeFentanylPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignUnexpectedNegativeFentanylMedReq,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      },
-      item3: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignUnexpectedNegativeFentanylMedRef,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      },
-      item4: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignUnexpectedNegativeFentanylUds,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -583,8 +426,11 @@ it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });
 
 it("UNEXPECTED_POSITIVE_FENTANYL", async () => {
@@ -608,21 +454,6 @@ it("UNEXPECTED_POSITIVE_FENTANYL", async () => {
           }
         ]
       }
-    },
-    prefetch: {
-      item1: rec10OrderSignUnexpectedPositiveFentanylPatient,
-      item2: {
-        resourceType: "Bundle",
-        type: "searchset",
-        entry: [
-          {
-            resource: rec10OrderSignUnexpectedPositiveFentanylUds,
-            search: {
-              mode: "match"
-            }
-          }
-        ]
-      }
     }
   };
 
@@ -630,6 +461,9 @@ it("UNEXPECTED_POSITIVE_FENTANYL", async () => {
     .post(`${CDS_SERVICE}/${ORDER_SIGN}`)
     .send(request)
     .set("Accept", "json");
+
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });

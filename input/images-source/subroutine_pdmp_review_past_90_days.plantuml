@@ -16,9 +16,9 @@ activityDiagram {
 title PDMP Review in Past 90 Days Subroutine
 start
 fork
-:PDMP review procedure in past 90 days?;
+:PDMP review procedure\n      in past 90 days?;
 fork again
-:PDMP data reviewed finding in past 90 days?;
+:  PDMP data reviewed \n finding in past 90 days?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

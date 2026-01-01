@@ -16,15 +16,15 @@ activityDiagram {
 title Possible Unexpected Results in Urine Toxicology Screening Subroutine
 start
 fork
-:  Positive result for a substance of\n potential interest in the past year?;
+:  Positive result \nfor a substance of\n potential interest \n   in past year?;
 fork again
-: Negative result for a prescribable\n      substance in the past year?;
+:    Negative result \n   for a prescribable\n        substance \n      in past year?;
 -> AND;
-: An order for that substance exists\n   in the 30 days prior to the test?;
+:   An order for \n that substance \n  exists within \n 30 days prior\n   to the test?;
 fork again
-: Positive result for a prescribable\n      substance in the past year?;
+:   Positive result for a\n prescribable substance\n    in the past year?;
 -> AND;
-: No order for that substance exists\n   in the 30 days prior to the test?;
+: No order for \nthat substance\n  within 30 days \nprior to the test?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

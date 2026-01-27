@@ -1,0 +1,45 @@
+@startuml alert_rec03_ordersign
+!theme carbon-gray
+<style>
+activityDiagram {
+ FontColor white
+ arrow {
+  FontColor: Black
+ }
+ note {
+  FontColor: Black
+  BackgroundColor: #fafad2
+ }
+}
+</style>
+#b06f19:Alert;<<output>>
+note right
+**SUMMARY:** 
+When initiating opioid therapy, utilize immediate-release opioids
+
+**DETAILS:**
+Recommend prescribing immediate-release opioids instead of
+extended-release or long-acting opioids.
+
+For guidance regarding prescribing extended-release and 
+long-acting opioids, see 
+[[https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation3 Recommendation 3 of the 2022 CDC Clinical Practice Guideline]].
+end note
+split
+#c05046:**Document** 
+Will prescribe 
+immediate-release opioid;<<input>>
+kill
+split again
+#c05046:**Snooze* ** 
+Benefits outweigh risks,
+Snooze 3 months*;<<input>>
+kill
+split again
+#c05046:**Snooze***
+N/A add comment, 
+Snooze 3 months*;<<input>>
+kill
+end split
+caption ~*Snooze duration referenced in the alert response is an example and is intended to be patient specific.
+@enduml

@@ -16,9 +16,9 @@ activityDiagram {
 title Urine Toxicology Screening in Past Year Subroutine
 start
 fork
-: Opioid urine toxicology screening in past year?;
+:     Opioid urine \ntoxicology screening\n    in past year?;
 fork again
-: Nonopioid urine toxicology screening in past year?;
+:   Nonopioid urine\n toxicology screening\n      in past year?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

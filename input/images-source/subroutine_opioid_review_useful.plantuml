@@ -18,13 +18,13 @@ activityDiagram {
 title CDC 2022 General Inclusion Criteria Subroutine
 start
 fork
-:  Age < 18 years?;
+:    Age \n less than\n 18 years?;
 fork again
-: Evidence of Sickle\n    Cell Disease?;
+: Evidence of\n  sickle cell\n   disease?;
 fork again
-: Limited life expectancy\n    conditions present?;
+:      Limited \n life expectancy\n    conditions\n     present?;
 fork again
-:  Order for therapies\n  indicating end of life\n care in past 90 days?;
+:         Order for \n therapies indicating\n    end of life care\n   in past 90 days?;
 fork again
 : [[subroutines.html#active-cancer-treatment Active cancer\n  treatment?]];
 fork again

@@ -16,13 +16,13 @@ activityDiagram {
 title Factors That Increase Risk For Opioid Related Harms Subroutine
 start
 fork
-:Currently receiving benzodiazepine\n   or other central nervous system\n        depressant medications?;
+:    Currently receiving \n    benzodiazepine or\n        other central \n     nervous system\ndepressant medications?;
 fork again
-:Daily MME >= 50?;
+:Daily MME ≥ 50?;
 fork again
-:History of conditions documenting\n       substance use disorder?;
+:           History of \nconditions documenting\n substance use disorder?;
 fork again
-:Diagnosed with sleep-disordered\n         breathing condition?;
+: Sleep-disordered\nbreathing condition\n      diagnosis?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

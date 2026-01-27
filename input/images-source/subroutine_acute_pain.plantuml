@@ -16,9 +16,9 @@ activityDiagram {
 title For Acute Pain Subroutine
 start
 fork
-:Order for opioid analgesic with \n  an expected supply duration \n        of less than 28 days?;
+: Opioid analgesic order\n  with expected supply \n   duration of less than \n            28 days?;
 fork again
-:Order for opioid analgesic with\n      therapy type of "acute"?;
+: Opioid analgesic order \n    with therapy type\n           "acute"?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

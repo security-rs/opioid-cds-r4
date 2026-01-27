@@ -16,13 +16,13 @@ activityDiagram {
 title Subacute or Chronic Pain Subroutine
 start
 fork
-:Order for opioid analgesic with \n  an expected supply duration \n        of 28 days or longer?;
+:  Opioid analgesic order \n  with an expected supply \n    duration of 28 days\n         or longer?;
 fork again
-:Order in the past 90 days for \nopioid analgesic with therapy \n      type of "continuous"?;
+:Opioid analgesic order \n  in the past 90 days \n    with "continuous" \n      therapy type?;
 fork again
-:Order for opioid analgesic for \n      28 of the past 90 days \n           including today?;
+:Opioid analgesic order \n for 28 of the past 90 \n days (including today)?;
 -> AND;
-:An active or pending order for  \n          opioid analgesic?;
+:    Active or pending \nopioid analgesic order?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

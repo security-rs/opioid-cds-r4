@@ -16,11 +16,11 @@ activityDiagram {
 title Active Cancer Treatment Subroutine
 start
 fork
-:    Patient problem list\n includes CDC malignant\n     cancer condition?;
+:     Problem list\n    includes CDC \n malignant cancer\n      condition?;
 fork again
 : Two office visits in\n  past 12 months?;
 -> AND;
-:    Office visit including CDC \n  malignant cancer condition?;
+:     Office visit \n   including CDC \nmalignant cancer\n    condition?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

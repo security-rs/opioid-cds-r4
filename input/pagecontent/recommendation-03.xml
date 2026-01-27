@@ -5,7 +5,7 @@
     description='When starting opioid therapy for acute, subacute, or chronic pain, clinicians should prescribe immediate-release opioids instead of extended-release and long-acting (ER/LA) opioids.' 
     recommendation-category='A' 
     evidence-type='4' 
-    flow-diagram='Recommendation03-flow.png'
+    flow-diagram='flow_rec03_ordersign.svg'
     func-desc='recommendation03-functional-description.html'
     data-elements='recommendation03-data-elements.html'
     content-table='recommendation03-content-table.html'

@@ -1,0 +1,75 @@
+@startuml alert_rec04-05_ordersign
+!theme carbon-gray
+<style>
+activityDiagram {
+ FontColor white
+ arrow {
+  FontColor: Black
+ }
+ note {
+  FontColor: Black
+  BackgroundColor: #fafad2
+ }
+}
+</style>
+#b06f19:Alert;<<output>>
+note right
+**SUMMARY**: 
+Calibrate to Lowest Opioid Dose Needed for Expected Results 
+and Exercise Care When Changing Opioid Dosages 
+
+**DETAILS**:
+When opioid therapy is considered appropriate, calibrate opioid 
+dosages to lowest dose needed to achieve expected effects and 
+optimize nonopioid therapies. For patients already receiving opioid 
+therapy, carefully weigh benefits and risks and exercise care when 
+changing 
+opioid dosage.
+
+For guidance in determining the lowest effective opioid dosage, 
+see [[https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation4 Recommendation 4 of the 2022 CDC Clinical Practice Guideline]].
+
+For patients who have received opioid therapy for longer durations 
+of time (e.g., for ≥1 year), if tapering, consider working closely 
+with the patient to gradually taper dosages (no more than 10% 
+per month).
+
+For more guidance regarding tapering,  
+see [[https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation5 Recommendation 5 of the 2022 CDC Clinical Practice Guideline]].
+
+For a tapering calculator, see
+[[https://agencymeddirectors.wa.gov/Calculator/TaperDoseCalculator.html Agency Medical Directors' Group (AMDG) MME Calculator]]
+
+See [[index.html#morphine-milligram-equivalent-mme-calculation-cautions MME Calculator Cautions]].
+
+end note
+split
+#c05046:**Document**
+Will prescribe 
+lower dose;<<input>>
+kill
+split again
+#c05046:**Document**
+Will callibrate a 
+gradual change 
+in dose;<<input>>
+kill
+split again
+#c05046:**Snooze***
+Benefits outweigh risks,
+Snooze 3 months*;<<input>>
+kill
+split again
+#c05046:**Snooze* ** 
+Short-term benefits 
+outweigh risks,
+Snooze 1 month*;<<input>>
+kill
+split again
+#c05046:**Snooze* ** 
+N/A add comment, 
+Snooze 3 months*;<<input>>
+kill
+end split
+caption ~*Snooze duration referenced in the alert response is an example and is intended to be patient specific.
+@enduml

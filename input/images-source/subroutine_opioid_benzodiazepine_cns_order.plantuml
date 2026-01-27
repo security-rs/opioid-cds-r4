@@ -16,11 +16,11 @@ activityDiagram {
 title Order for Opioid Analgesic, Benzodiazepine or CNS Depressant Subroutine
 start
 fork
-:      Order for opioid \nanalgesic with ambulatory \n      misuse potential?;
+:Opioid analgesic order \n    with ambulatory \n   misuse potential?;
 fork again
-: Order for benzodiazepine?;
+:    Order for \nbenzodiazepine?;
 fork again
-: Order for central nervous \n     system depressant?;
+:       Order for \n   central nervous \n system depressant?;
 end merge
 if (Any answer is yes?) then (yes)
 #BC2C73:Return Yes;

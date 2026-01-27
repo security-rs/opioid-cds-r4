@@ -1,0 +1,78 @@
+@startuml alert_rec01_ordersign
+!theme carbon-gray
+<style>
+activityDiagram {
+ FontColor white
+ arrow {
+  FontColor: Black
+ }
+ note {
+  FontColor: Black
+  BackgroundColor: #fafad2
+ }
+}
+</style>
+#b06f19:Alert;<<output>>
+note right
+**SUMMARY:**
+Consider Nonopioid Treatment Options for Acute Pain
+
+**DETAILS:**
+For many types of acute pain, clinicians should maximize the use 
+of nonpharmacologic (for example, physical therapy) and nonopioid
+pharmacologic therapies (for example, NSAIDs), as appropriate for 
+the specific condition and patient and only consider opioid therapy 
+for acute pain if benefits are anticipated to outweigh risks to the
+patient. Before prescribing opioid therapy for acute pain, clinicians
+should discuss with patients the realistic benefits and known risks 
+of opioid therapy.
+
+[[https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm#Recommendation1 Recommendation 1 of the 2022 CDC Clinical Practice Guideline]] 
+provides nonopioid therapy options for common acute pain conditions.
+
+**Nonopioid Pharmacological Therapy**
+	•	Back pain (low back, acute)
+	•	Dental pain (acute)
+	•	Dental pain (surgical)
+	•	Kidney stone pain (acute)
+	•	Migraine pain (episodic)
+	•	Musculoskeletal pain
+	•	Postpartum pain
+
+**Nonpharmacologic Treatments**  
+	•	Back pain (low back, acute)
+	•	Migraine pain (episodic)
+	•	Musculoskeletal pain
+	•	Postoperative pain
+end note
+split
+#c05046:**Document** 
+Record reason for 
+opiod therapy;<<input>>
+kill
+split again
+#c05046:**Order** 
+Select alternative 
+therapies from 
+order set.;<<input>>
+kill
+split again
+#c05046:**Remove**
+Will remove 
+triggering 
+medication order;<<input>>
+kill
+split again
+#c05046:**Snooze* ** 
+Attempting 
+alternative therapy.
+Snooze 3 months*;<<input>>
+kill
+split again
+#c05046:**Snooze***
+N/A add comment, 
+Snooze 3 months*;<<input>>
+kill
+end split
+caption ~*Snooze duration referenced in the alert response is an example and is intended to be patient specific.
+@enduml

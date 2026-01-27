@@ -16,7 +16,7 @@ activityDiagram {
 title Opioid Naive
 start
 fork
-:   **Prescripion** for opioid \n analgesics with ambulatory\n misuse potential in the past\n  90 days (including today)?;
+:   **Prescription** for opioid \n analgesics with ambulatory\n misuse potential in the past\n  90 days (including today)?;
 fork again
 :         **Report** of opioid \n analgesics with ambulatory \n misuse potential in the past\n  90 days (including today)?;
 fork again

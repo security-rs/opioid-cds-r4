@@ -23,9 +23,9 @@ fork again
 :**Dispensing event** of opioid\n analgesics with ambulatory\nmisuse potential in the past\n 90 days (including today)?;
 end merge
 if (Any answer is yes?) then (yes)
-#BC2C73:Return Yes;
+#BC2C73:Return No;
 kill
 else (no)
-#BC2C73:Return No;
+#BC2C73:Return Yes;
 kill
 @enduml

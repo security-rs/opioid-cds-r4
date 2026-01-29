@@ -1,7 +1,7 @@
 const {
   todayDateTime,
   nowNoTz,
-  dateTimePlus30Days,
+  dateTimePlus30Days
 } = require("./date-helpers");
 
 const createPatient = (id, firstName, lastName, gender, birthDate) => ({

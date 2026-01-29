@@ -6,6 +6,6 @@
   "devDependencies": {
     "dotenv": "^17.2.3",
     "jest": "^30.0.2",
-    "superagent": "^10.2.3"
+    "superagent": "^10.3.0"
   }
 }

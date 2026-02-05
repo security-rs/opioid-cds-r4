@@ -19,8 +19,9 @@ define "Sickle Cell Assumed Active":
   true
 
 // Active Cancer Treatment
+// TODO: the subroutine could use work to correctly select patient with active cancer as per discussion with clinician - maybe search for active chemotherapy?
 define "Active Cancer Treatment Encounters Condition Is Enabled":
-  true
+  false
 
 // Opioid Naive
 define "Opioid Naive Prescription Condition Is Enabled":

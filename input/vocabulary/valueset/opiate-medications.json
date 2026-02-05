@@ -23,7 +23,7 @@
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-      "valueMarkdown": "https://mor.nlm.nih.gov/RxMix/ Script: \r\nStep 1 Upload to RxMix a workflow config file  named GetRelatedByType.config containing the following workflow text: <WFE><filteredOutputs>RXCUI|name|term_type</filteredOutputs><input>NOINPUT</input><FS><service>NOINPUT</service><function>getRelatedByType</function><level>0</level><paramSize>2</paramSize><param order ='0'>?</param><param order ='1'>BPCK,GPCK,SBD,SCD</param></FS></WFE> \r\n\r\nStep 2 Create Batch text input file (Ingredients.txt) with following RxNorm non-synthetic opioid ingredient codes representing morphine, codeine, opium, hydromorphone, hydrocodone as an input within the file:\r\n2670\r\n7052\r\n7676\r\n3423\r\n5489\r\n\r\nStep 3 Upload the batch text input file Ingredients.txt created in step 2. \r\n\r\nStep 4 Submit the batch which will run the workflow using the input codes to generate a combined set of all the concepts needed."
+      "valueMarkdown": "https://mor.nlm.nih.gov/RxMix/ Script: \r\nStep 1 Upload to RxMix a workflow config file  named GetRelatedByType.config containing the following workflow text: <WFE><filteredOutputs>RXCUI|name|term_type</filteredOutputs><input>NOINPUT</input><FS><service>NOINPUT</service><function>getRelatedByType</function><level>0</level><paramSize>2</paramSize><param order ='0'>?</param><param order ='1'>BPCK,GPCK,SBD,SCD</param></FS></WFE> \r\n\r\nStep 2 Create Batch text input file (Ingredients.txt) with following RxNorm non-synthetic opioid ingredient codes representing morphine, codeine, opium, hydromorphone, hydrocodone, oxymorphone as an input within the file:\r\n2670\r\n7052\r\n7676\r\n3423\r\n5489\r\n7814\r\n\r\nStep 3 Upload the batch text input file Ingredients.txt created in step 2. \r\n\r\nStep 4 Submit the batch which will run the workflow using the input codes to generate a combined set of all the concepts needed."
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-medications",
@@ -44,7 +44,7 @@
       ]
     }
   ],
-  "description": "Medications derived from the opium plant including hydromorphone and hydrocodone.",
+  "description": "Medications derived from the opium plant including hydromorphone, hydrocodone and oxymorphone.",
   "jurisdiction": [
     {
       "coding": [
@@ -2015,6 +2015,51 @@
         "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
         "code": "992668",
         "display": "homatropine methylbromide 0.3 MG/ML / hydrocodone bitartrate 1 MG/ML Oral Solution"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977874",
+        "display": "12 HR oxymorphone hydrochloride 10 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977894",
+        "display": "12 HR oxymorphone hydrochloride 15 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977902",
+        "display": "12 HR oxymorphone hydrochloride 20 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977909",
+        "display": "12 HR oxymorphone hydrochloride 30 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977915",
+        "display": "12 HR oxymorphone hydrochloride 40 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977923",
+        "display": "12 HR oxymorphone hydrochloride 5 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977929",
+        "display": "12 HR oxymorphone hydrochloride 7.5 MG Extended Release Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977939",
+        "display": "oxymorphone hydrochloride 5 MG Oral Tablet"
+      },
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "977942",
+        "display": "oxymorphone hydrochloride 10 MG Oral Tablet"
       }
     ]
   }

@@ -1,18 +1,7 @@
 ### Introduction
 
-This implementation guide provides resources and discussion in support of applying the [Centers
-for Disease Control and Prevention (CDC) 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm):
-
-
-This implementation guide was developed based on work initially done as part of the
-[Clinical Quality Framework (CQF)](https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework) Initiative, a public-private partnership sponsored by the Centers for Medicare & Medicaid Services (CMS) and
-the U.S. Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC), to identify, develop, and harmonize standards for clinical decision support and electronic clinical quality measurement, as well as a joint effort by the CDC and ASTP/ONC focused on improving processes for the development of standardized, shareable, computable decision support artifacts using the 2022 CDC Clinical Practice Guideline as a model case.
-
-Feedback and contributions to this implementation guide (IG) are welcome and can be submitted using the _New Issue_ link in the footer of every page. Discussions on the use of this IG (as well as other CQF projects) happen regularly on the [CPG-on-FHIR calls](https://confluence.hl7.org/display/CDS/CPGonFHIR), a sub-workgroup of the HL7 Clinical Decision Support Workgroup.
-
-### Scope
-
-This implementation guide includes support for the following guideline recommendations:
+This implementation guide (IG) provides resources and discussion in support of applying the [Centers
+for Disease Control and Prevention (CDC) 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain](https://www.cdc.gov/mmwr/volumes/71/rr/rr7103a1.htm), including support for the following guideline recommendations:
 * [Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration](recommendation-01.html)
 * [Recommendation #2 - Prioritize Nonopioid Pain Therapies](recommendation-02.html)
 * [Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy](recommendation-03.html)
@@ -25,16 +14,21 @@ This implementation guide includes support for the following guideline recommend
 * [Recommendation #11 - Concurrent Use of Opioids and Benzodiazepines](recommendation-11.html)
 * [Recommendation #12 - Evidence-based Treatment for Patients with Opioid Use Disorder](recommendation-12.html)  
 
-### Getting Started
-
 For further details on how the behaviors for the artifacts were determined, refer to the [Process Documentation](process-documentation.html).
 
+### Background
+
+This implementation guide was developed based on work initially done as part of the
+[Clinical Quality Framework (CQF)](https://confluence.hl7.org/display/CQIWC/Clinical+Quality+Framework) Initiative, a public-private partnership sponsored by the Centers for Medicare & Medicaid Services (CMS) and
+the U.S. Assistant Secretary for Technology Policy/Office of the National Coordinator for Health Information Technology (ASTP/ONC), to identify, develop, and harmonize standards for clinical decision support and electronic clinical quality measurement, as well as a joint effort by the CDC and ASTP/ONC focused on improving processes for the development of standardized, shareable, computable decision support artifacts using the 2022 CDC Clinical Practice Guideline as a model case.
+
+### Feedback and Discussion
+Discussions on the use of this IG happen at the [HL7 Clinical Decision Support (CDS) Workgroup](https://confluence.hl7.org/spaces/CDS/pages/40742688/WorkGroup+Home). Feedback and contributions are welcome and can be raised with the CDS Workgroup or submitted directly using the _New Issue_ link in the footer of every page.
+
 ### Related IGs
-#### Data Exchange Profiles IG
-The conformance requirements for supporting the data queries used by this IG are defined in the [HL7 Data Exchange Profiles for 2022 CDC Clinical Practice Guideline for Prescribing Opioids](https://build.fhir.org/ig/HL7/cdc-opioid-cpg/). By conforming to these profiles (which are derived from US Core) EHRs can ensure they are prepared to implement this IG.
 
 #### CPG IG
-This IG has also followed and applied the [methodology laid out by the HL7 Clinical Practice Guideline (CPG) IG](https://www.hl7.org/fhir/uv/cpg/methodology.html). The CPG IG offers an abstract high-level methodology for translating clinical guidelines into electronic Clinical Decision Support (eCDS) artifacts based on the following steps:
+This implementation guide has followed and applied the [methodology laid out by the HL7 Clinical Practice Guideline (CPG) IG](https://www.hl7.org/fhir/uv/cpg/methodology.html). The CPG IG offers an abstract high-level methodology for translating clinical guidelines into electronic Clinical Decision Support (eCDS) artifacts based on the following steps:
 
 -	*Select*: Select content and recommendations for implementation
 -	*Represent*: Apply selected recommendations to the implementation approach
@@ -44,6 +38,9 @@ This IG has also followed and applied the [methodology laid out by the HL7 Clini
 The following diagram depicts the relationship and (navigable) links between the artifacts in the CPG IG and their respective instantiations in this IG.
 
 <div>{% include cpg-ig-diagram.svg %}</div>
+
+#### Data Exchange Profiles IG
+The [HL7 Data Exchange Profiles for 2022 CDC Clinical Practice Guideline for Prescribing Opioids](https://build.fhir.org/ig/HL7/cdc-opioid-cpg/) has been developed to define a set of conformance requirements for supporting the data queries used in this implementation guide. By conforming to these profiles (which are derived from US Core) EHRs can ensure they are prepared to support the integration with this IG.
 
 ### Trigger Overview
 

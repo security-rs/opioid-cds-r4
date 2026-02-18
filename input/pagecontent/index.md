@@ -91,7 +91,7 @@ This implementation guide [assumes](process-documentation.html#technical-assumpt
 - Mohammad Jafari, PhD (Security Risk Solutions)
 - Kensaku Kawamoto, MD, PhD, MHS (Independent)
 - Robert McClure, MD (Independent)
-- Amber Patel (Independent)
+- Amber Patel (Security Risk Solutions)
 - Bryn Rhodes (Smile CDR)
 - Chris Schuler (Smile CDR)
 - Greg White (Security Risk Solutions)

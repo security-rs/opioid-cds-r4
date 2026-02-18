@@ -85,6 +85,28 @@ This implementation guide [assumes](process-documentation.html#technical-assumpt
 
 ** Tramadol is a µ-receptor agonist and norepinephrine and serotonin reuptake inhibitor. MMEs are based on degree of µ-receptor agonist activity; however, it is unknown whether tramadol is associated with overdose in the same dose-dependent manner as observed with medications that are solely µ-receptor agonists.
 
+### Credits
+**Project Team**
+- Johnathan Coleman (Security Risk Solutions)
+- Mohammad Jafari, PhD (Security Risk Solutions)
+- Kensaku Kawamoto, MD, PhD, MHS (Independent)
+- Robert McClure, MD (Independent)
+- Amber Patel (Independent)
+- Bryn Rhodes (Smile CDR)
+- Chris Schuler (Smile CDR)
+- Greg White (Security Risk Solutions)
+
+**Government Leadership**
+- Mera Choi (ASTP)
+- Roua El Kalach, PharmD, BCPS (CDC)
+- Alison Kemp, MPH (ASTP)
+- Jan Losby, PhD (CDC)
+- Anastasia Perchem (ASTP)
+- Wes Sargent, EdD (CDC)
+- Andrew Terranella, MD, MPH (CDC)
+- Adam Wong, MPP (ASTP)
+
+
 ### Intellectual Property
 
 {% include ip-statements.xhtml %}

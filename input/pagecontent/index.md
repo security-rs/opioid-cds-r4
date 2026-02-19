@@ -98,14 +98,9 @@ This implementation guide [assumes](process-documentation.html#technical-assumpt
 
 **Government Leadership**
 - Mera Choi (ASTP)
-- Roua El Kalach, PharmD, BCPS (CDC)
 - Alison Kemp, MPH (ASTP)
-- Jan Losby, PhD (CDC)
 - Anastasia Perchem (ASTP)
-- Wes Sargent, EdD (CDC)
-- Andrew Terranella, MD, MPH (CDC)
 - Adam Wong, MPP (ASTP)
-
 
 ### Intellectual Property
 

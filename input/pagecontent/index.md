@@ -46,7 +46,22 @@ The [HL7 Data Exchange Profiles for 2022 CDC Clinical Practice Guideline for Pre
 
 This implementation guide [assumes](process-documentation.html#technical-assumptions) that [CDS Hooks](http://cds-hooks.hl7.org/index.html) serves as the technical framework for EHR integration. The table below outlines the supported triggering events for each guideline recommendation:
 
-<div>{% include trigger_overview.svg %}</div>
+| | [`patient-view`](https://cds-hooks.hl7.org/hooks/patient-view.html) | [`order-select`](https://cds-hooks.hl7.org/hooks/order-select.html)| [`order-sign`](https://cds-hooks.hl7.org/hooks/order-sign.html)|
+|--|:--:|:--:|:--:|
+|[Recommendation 1](recommendation-01.html) |  | |✓
+|[Recommendation 2](recommendation-02.html) |  | |✓
+|[Recommendation 3](recommendation-03.html) |  | |✓
+|[Recommendation 4](recommendation-04.html) |  | |✓
+|[Recommendation 5](recommendation-05.html) |  | |✓
+|[Recommendation 6](recommendation-06.html) |  | |✓
+|[Recommendation 7](recommendation-07.html) |  | |✓
+|[Recommendation 8](recommendation-08.html) |  | |✓
+|[Recommendation 9](recommendation-09.html) |  | |✓
+|[Recommendation 10](recommendation-10.html)|✓*| |✓
+|[Recommendation 11](recommendation-11.html)|✓*|✓|
+|[Recommendation 12](recommendation-12.html)|✓ | |
+
+(*) Developed for implementations without capabilities to support the preferred trigger.
  
 ### Morphine Milligram Equivalent (MME) Calculation Cautions
 

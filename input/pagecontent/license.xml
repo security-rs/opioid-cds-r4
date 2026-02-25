@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://hl7.org/fhir ../../input-cache/schemas-r5/fhir-single.xsd">
   <p>
-      This project is a joint effort by the Centers for Disease Control and Prevention (CDC) and the Office of the National Coordinator for Health IT (ONC) focused on improving processes for the development of standardized, shareable, computable decision support artifacts using the CDC 2022 Opioid Prescribing Guideline as a model case.
+      This project is a joint effort sponsored by the Centers for Disease Control and Prevention (CDC) and the Assistant Secretary for Technology Policy (ASTP) / The Office of the National Coordinator for Health Information Technology (ONC) focused on improving processes for the development of standardized, shareable, computable decision support artifacts using the CDC 2022 Opioid Prescribing Guideline as a model case.
   </p>
 
   <a name="projlicense"> </a>

@@ -51,8 +51,8 @@ This implementation guide [assumes](process-documentation.html#technical-assumpt
 |[Recommendation 1](recommendation-01.html) |  | |✓
 |[Recommendation 2](recommendation-02.html) |  | |✓
 |[Recommendation 3](recommendation-03.html) |  | |✓
-|[Recommendation 4](recommendation-04.html) |  | |✓
-|[Recommendation 5](recommendation-05.html) |  | |✓
+|[Recommendation 4](recommendation-04-05.html) |  | |✓
+|[Recommendation 5](recommendation-04-05.html) |  | |✓
 |[Recommendation 6](recommendation-06.html) |  | |✓
 |[Recommendation 7](recommendation-07.html) |  | |✓
 |[Recommendation 8](recommendation-08.html) |  | |✓

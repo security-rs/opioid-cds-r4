@@ -7,7 +7,7 @@
   <title value="2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2017-02-06" />
+  <date value="2026-03-07" />
   <publisher value="CDC / Security Risk Solutions, Inc. (SRS)" />
   <contact>
     <telecom>
@@ -641,7 +641,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel" />
-      <value value="CI Build" />
+      <value value="Release 2022.1" />
     </parameter>
     <parameter>
       <code value="find-other-resources" />

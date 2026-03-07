@@ -64,7 +64,7 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests",
   "name": "OXYCODONE_URINE_DRUG_SCREENING_TESTS",
   "title": "Oxycodone urine drug screening tests",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
   "date": "2024-04-15T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",

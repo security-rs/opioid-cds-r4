@@ -4,11 +4,11 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons",
   "name": "CDC_Opioid_Override_Reasons",
   "title": "CDC Opioid Override Reasons",
-  "status": "draft",
+  "status": "active",
   "experimental": false,
-  "description": "Example override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
+  "description": "Override reasons for the 2022 CDC Clinical Practice Guideline for Prescribing Opioids for Pain",
   "caseSensitive": true,
-  "content": "example",
+  "content": "complete",
   "concept": [
     {
       "code": "snooze-1-month",

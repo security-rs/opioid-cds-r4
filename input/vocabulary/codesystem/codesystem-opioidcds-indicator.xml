@@ -3,9 +3,9 @@
     <url value="http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-indicator"/>
     <name value="CDC_Opioid_Indicator"/>
     <title value="CodeSystem - CDC 2022 Opioid Indicator"/>
-    <status value="draft"/>
+    <status value="active"/>
     <experimental value="false"/>
-    <description value="Indicates the urgency/importance of what this RequestGroup action conveys"/>
+    <description value="Indicates the urgency/importance of the recommended action"/>
     <caseSensitive value="true"/>
     <content value="complete"/>
     <concept>

@@ -60,7 +60,7 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10Common",
   "version": "2022.1.0",
   "name": "OpioidCDSREC10Common",
-  "status": "draft",
+  "status": "active",
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

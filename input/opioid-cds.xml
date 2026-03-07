@@ -719,10 +719,26 @@
       <value value="input/vocabulary/valueset" />
     </parameter>
     <parameter>
-      <code value="path-expansion-params" />
-      <value value="../exp-params.json" />
+      <code value="path-resource" />
+      <value value="input/resources/parameters" />
     </parameter>
-    <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="path-expansion-params" />
+      <value value="resources/parameters/Parameters-manifest.json" />
+    </parameter>
+    <parameter>
+      <code value="pin-canonicals" />
+      <value value="pin-all" />
+    </parameter>
+    <parameter>
+      <code value="pin-manifest" />
+      <value value="manifest" />
+    </parameter>
+    <parameter>
+      <code value="pin-external" />
+      <value value="true" />
+    </parameter>
+         <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
          <parameter>
            <code value="excludexml"/>
            <value value="true"/>

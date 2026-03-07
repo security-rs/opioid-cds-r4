@@ -1,6 +1,6 @@
 {
   "resourceType": "Parameters",
-  "id": "exp-params",
+  "id": "manifest",
   "parameter": [
     {
       "name": "system-version",

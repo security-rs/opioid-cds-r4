@@ -670,7 +670,7 @@
     } ]
   },
   "status": "draft",
-  "experimental": true,
+  "experimental": false,
   "date": "2025-08-06",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "When opioids are needed for acute pain, clinicians should prescribe no greater quantity than needed for the expected duration of pain severe enough to require opioids.",

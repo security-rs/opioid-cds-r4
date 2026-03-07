@@ -817,7 +817,7 @@
     } ]
   },
   "status": "draft",
-  "experimental": true,
+  "experimental": false,
   "date": "2025-08-06",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "contact": [ {

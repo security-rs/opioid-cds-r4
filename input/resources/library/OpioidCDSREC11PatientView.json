@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC11PatientView",
   "title": "Library - Recommendation #11 Patient View - Concurrent Use of Opioids and Benzodiazepines",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

@@ -57,7 +57,7 @@
   "name": "BARBITURATE_URINE_DRUG_SCREENING_TESTS",
   "title": "Barbiturate urine drug screening tests",
   "status": "draft",
-  "experimental": true,
+  "experimental": false,
   "date": "2024-04-15T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for barbiturates that are not specific to a particular substance.",

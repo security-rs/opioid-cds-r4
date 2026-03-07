@@ -931,7 +931,7 @@
     } ]
   },
   "status": "draft",
-  "experimental": true,
+  "experimental": false,
   "date": "2025-08-06",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "When starting opioid therapy for acute, subacute, or chronic pain, clinicians should prescribe immediate-release opioids instead of extended-release and long-acting (ER/LA) opioids.",

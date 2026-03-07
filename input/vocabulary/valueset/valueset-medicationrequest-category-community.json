@@ -25,7 +25,7 @@
   "version": "0.0.1",
   "title": "ValueSet - Medication Request Category Community",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "publisher": "Alphora",
   "description": "Includes requests for medications to be administered or consumed by the patient in their home (this would include long term care or nursing homes, hospices, etc.).",
   "expansion": {

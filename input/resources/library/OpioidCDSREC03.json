@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC03",
   "title": "Library - Recommendation #3 - Opioid Immediate Release Form When Starting Opioid Therapy",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

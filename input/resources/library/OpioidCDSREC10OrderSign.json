@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC10OrderSign",
   "title": "Library - Recommendation #10 - Urine Drug Testing",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

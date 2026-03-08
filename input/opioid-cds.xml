@@ -37,11 +37,11 @@
     <version value="1.0.0" />
   </dependsOn>
   <!-- Using older version of the R4 extension pack here as the updated (v5.1.0) version contains R5 extension for cqf-strengthOfRecommendation and cqf-qualityOfEvidence -->
-  <dependsOn>
+  <!--dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
     <packageId value="hl7.fhir.uv.extensions.r4" />
     <version value="5.1.0" />
-  </dependsOn>
+  </dependsOn-->
   <!-- Needed for the auto-oid-root parameter -->
   <!-- <dependsOn>
     <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools" />
@@ -493,6 +493,14 @@
       <exampleBoolean value="false" />
       <groupingId value="activitydefinitions" />
     </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/manifest"/>
+      </reference>
+      <name value="Input Expansion Parameters"/>
+      <description value="The input expansion parameters resource for this implementation guide, specifying SNOMED Edition and version. This resource will be contained within the published implementation guide with all pinned references."/>
+      <exampleBoolean value="false"/>
+    </resource>
     <!-- Device -->
     <resource>
       <reference>
@@ -666,10 +674,11 @@
       <code value="auto-oid-root" />
       <value value="2.16.840.1.114222" />
     </parameter> -->
-    <parameter>
+    <!-- Turning this off, since we currently use CQF Tooling to compile and package CQL libraries and related artifacts -->
+    <!-- <parameter>
       <code value="path-binary" />
       <value value="input\cql" />
-    </parameter>
+    </parameter> -->
     <parameter>
       <code value="path-liquid" />
       <value value="templates/liquid" />

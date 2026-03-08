@@ -19,7 +19,7 @@
   "status": "completed",
   "category": {
     "coding": [ {
-      "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+      "system": "http://terminology.hl7.org/CodeSystem/medicationdispense-category",
       "code": "community",
       "display": "Community"
     } ]

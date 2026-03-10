@@ -52,6 +52,8 @@ WARNING: ImplementationGuide/fhir.cdc.opioid-cds-r4: ImplementationGuide.depends
 %No definition could be found for URL value 'https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3128404/'
 %No definition could be found for URL value 'http://dx.doi.org/10.15585/mmwr.rr7103a1'
 %No definition could be found for URL value 'https://www.cdc.gov/mmwr/volumes/71/rr/pdfs/rr7103a1-H.pdf'
+
+# This is the correct URL, it is not clear why this is an error
 ERROR: ValueSet/condition-us-core-health-concern-category: ValueSet.expansion.contains[0].system: No definition could be found for URL value 'http://hl7.org/fhir/us/core/CodeSystem/condition-category'
 
 # Intentionally using this code as the one in use in current production
@@ -148,10 +150,10 @@ ERROR: ValueSet/conditions-documenting-substance-misuse: ValueSet.compose.exclud
 ERROR: ValueSet/conditions-documenting-substance-misuse: ValueSet.compose.exclude[4].filter[0]: The value for a filter based on property 'concept' must be a valid code from the system 'http://snomed.info/sct', and '62014003' is not (A definition for CodeSystem 'http://snomed.info/sct' version 'http://snomed.info/sct/731000124108/version/20250301' could not be found, so the code cannot be validated. Valid versions: http://snomed.info/sct/11000146104/version/20240930, http://snomed.info/sct/11000172109/version/20231115, http://snomed.info/sct/2011000195101/version/20230607, http://snomed.info/sct/32506021000036107/version/20230731, http://snomed.info/sct/45991000052106/version/20231130, http://snomed.info/sct/554471000005108/version/20250930, http://snomed.info/sct/731000124108/version/20230301, http://snomed.info/sct/731000124108/version/20240301, http://snomed.info/sct/731000124108/version/20250901, http://snomed.info/sct/827022005/version/20241216, http://snomed.info/sct/83821000000107/version/20230412, http://snomed.info/sct/900000000000207008/version/20240201, http://snomed.info/sct/900000000000207008/version/20250201 and http://snomed.info/xsct/900000000000207008/version/20250814)
 
 # Validated these extensions are allowed on PlanDefinition.action in 5.2.0, not clear why this is still showing up as an error
-ERROR: PlanDefinition/opioidcds-01: PlanDefinition.action[0]: The extension http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation is not allowed to be used at this point (this element is [BackboneElement, PlanDefinition.action]; allowed for this version = e:Attachment)
-ERROR: PlanDefinition/opioidcds-01: PlanDefinition.action[0]: The extension http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence is not allowed to be used at this point (this element is [BackboneElement, PlanDefinition.action]; allowed for this version = e:Attachment)
+%The extension http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation is not allowed to be used at this point (this element is [BackboneElement, PlanDefinition.action]; allowed for this version = e:Attachment)
+%The extension http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence is not allowed to be used at this point (this element is [BackboneElement, PlanDefinition.action]; allowed for this version = e:Attachment)
 
-# Validated these do not impact functionality, and are produced in the narrative generation
+# Validated these do not impact functionality, and are produced in the narrative generation by the publisher adding anchor tags around URLs that are already hyperlinks
 ERROR: Library/ConversionFactors: Library.text.div: Elements of type a at div/table/tr/td/ul/li/a cannot contain nested a at a/a
 ERROR: Library/MMECalculator: Library.text.div: Elements of type a at div/table/tr/td/ul/li/a cannot contain nested a at a/a
 ERROR: Library/OMTKData: Library.text.div: Elements of type a at div/table/tr/td/ul/li/a cannot contain nested a at a/a
@@ -166,3 +168,31 @@ ERROR: PlanDefinition/opioidcds-10-order-sign: PlanDefinition.action[1].action[0
 ERROR: PlanDefinition/opioidcds-10-order-sign: PlanDefinition.action[1].action[1].reason[0].coding[0].code: Unknown code 'UnExptResultNA' in the CodeSystem 'http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons' version '2022.1.0'
 ERROR: PlanDefinition/opioidcds-10-order-sign: PlanDefinition.action[1].action[2].reason[0].coding[0].code: Unknown code 'UnExptResultWrongProvider' in the CodeSystem 'http://fhir.org/guides/cdc/opioid-cds/CodeSystem/opioidcds-overrideReasons' version '2022.1.0'
 
+# These will resolve once published
+ERROR: Library/CDCMMEClinicalConversionFactors: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/CDCMMEClinicalConversionFactors.cql'
+ERROR: Library/ConversionFactors: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/ConversionFactors.cql'
+ERROR: Library/FHIRHelpers: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/FHIRHelpers.cql'
+ERROR: Library/HelloWorld: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/HelloWorld.cql'
+ERROR: Library/HelloWorldPatientView: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/HelloWorldPatientView.cql'
+ERROR: Library/MMECalculator: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/MMECalculator.cql'
+ERROR: Library/OMTKData: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OMTKData.cql'
+ERROR: Library/OMTKData2020: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OMTKData2020.cql'
+ERROR: Library/OMTKLogic: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OMTKLogic.cql'
+ERROR: Library/OMTKLogicMK2020: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OMTKLogicMK2020.cql'
+ERROR: Library/OpioidCDSCommon: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommon.cql'
+ERROR: Library/OpioidCDSCommonConfig: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSCommonConfig.cql'
+ERROR: Library/OpioidCDSREC01: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC01.cql'
+ERROR: Library/OpioidCDSREC02: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC02.cql'
+ERROR: Library/OpioidCDSREC03: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC03.cql'
+ERROR: Library/OpioidCDSREC04And05: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC04And05.cql'
+ERROR: Library/OpioidCDSREC06: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC06.cql'
+ERROR: Library/OpioidCDSREC07: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC07.cql'
+ERROR: Library/OpioidCDSREC08: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC08.cql'
+ERROR: Library/OpioidCDSREC09: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC09.cql'
+ERROR: Library/OpioidCDSREC10Common: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10Common.cql'
+ERROR: Library/OpioidCDSREC10OrderSign: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10OrderSign.cql'
+ERROR: Library/OpioidCDSREC10PatientView: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC10PatientView.cql'
+ERROR: Library/OpioidCDSREC11OrderSelect: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC11OrderSelect.cql'
+ERROR: Library/OpioidCDSREC11PatientView: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC11PatientView.cql'
+ERROR: Library/OpioidCDSREC12PatientView: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSREC12PatientView.cql'
+ERROR: Library/OpioidCDSRoutines: Library.content[0].url: No definition could be found for URL value 'http://fhir.org/guides/cdc/opioid-cds/OpioidCDSRoutines.cql'

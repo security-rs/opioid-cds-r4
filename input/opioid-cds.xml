@@ -7,8 +7,8 @@
   <title value="2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide" />
   <status value="active" />
   <experimental value="false" />
-  <date value="2017-02-06" />
-  <publisher value="Security Risk Solutions, Inc. (SRS)" />
+  <date value="2026-03-07" />
+  <publisher value="CDC / Security Risk Solutions, Inc. (SRS)" />
   <contact>
     <telecom>
       <system value="url" />
@@ -17,7 +17,9 @@
   </contact>
   <description
     value="2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide" />
+  <copyright value="Centers for Disease Control and Prevention (CDC)"/>
   <packageId value="fhir.cdc.opioid-cds-r4" />
+  <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1" />
   <dependsOn>
     <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg" />
@@ -35,11 +37,11 @@
     <version value="1.0.0" />
   </dependsOn>
   <!-- Using older version of the R4 extension pack here as the updated (v5.1.0) version contains R5 extension for cqf-strengthOfRecommendation and cqf-qualityOfEvidence -->
-  <dependsOn>
+  <!--dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
     <packageId value="hl7.fhir.uv.extensions.r4" />
     <version value="5.1.0" />
-  </dependsOn>
+  </dependsOn-->
   <!-- Needed for the auto-oid-root parameter -->
   <!-- <dependsOn>
     <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools" />
@@ -491,6 +493,14 @@
       <exampleBoolean value="false" />
       <groupingId value="activitydefinitions" />
     </resource>
+    <resource>
+      <reference>
+        <reference value="Parameters/manifest"/>
+      </reference>
+      <name value="Input Expansion Parameters"/>
+      <description value="The input expansion parameters resource for this implementation guide, specifying SNOMED Edition and version. This resource will be contained within the published implementation guide with all pinned references."/>
+      <exampleBoolean value="false"/>
+    </resource>
     <!-- Device -->
     <resource>
       <reference>
@@ -639,7 +649,7 @@
     <!-- releaselabel should be the ballot status for HL7-published IGs. -->
     <parameter>
       <code value="releaselabel" />
-      <value value="CI Build" />
+      <value value="Release 2022.1" />
     </parameter>
     <parameter>
       <code value="find-other-resources" />
@@ -664,10 +674,11 @@
       <code value="auto-oid-root" />
       <value value="2.16.840.1.114222" />
     </parameter> -->
-    <parameter>
+    <!-- Turning this off, since we currently use CQF Tooling to compile and package CQL libraries and related artifacts -->
+    <!-- <parameter>
       <code value="path-binary" />
       <value value="input\cql" />
-    </parameter>
+    </parameter> -->
     <parameter>
       <code value="path-liquid" />
       <value value="templates/liquid" />
@@ -717,10 +728,26 @@
       <value value="input/vocabulary/valueset" />
     </parameter>
     <parameter>
-      <code value="path-expansion-params" />
-      <value value="../exp-params.json" />
+      <code value="path-resource" />
+      <value value="input/resources/parameters" />
     </parameter>
-    <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
+    <parameter>
+      <code value="path-expansion-params" />
+      <value value="resources/parameters/Parameters-manifest.json" />
+    </parameter>
+    <parameter>
+      <code value="pin-canonicals" />
+      <value value="pin-all" />
+    </parameter>
+    <parameter>
+      <code value="pin-manifest" />
+      <value value="manifest" />
+    </parameter>
+    <parameter>
+      <code value="pin-external" />
+      <value value="true" />
+    </parameter>
+         <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
          <parameter>
            <code value="excludexml"/>
            <value value="true"/>

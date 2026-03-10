@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC06",
   "title": "Library - Recommendation #6 - Prescribe Lowest Effective Dose and Duration",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

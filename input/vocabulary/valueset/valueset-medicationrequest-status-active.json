@@ -25,7 +25,7 @@
   "version": "0.0.1",
   "title": "ValueSet - Medication Request Status Active",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "publisher": "Alphora",
   "description": "The prescription is 'actionable', but not all actions that are implied by it have occurred yet.",
   "expansion": {

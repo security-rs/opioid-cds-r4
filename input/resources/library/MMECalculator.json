@@ -177,9 +177,9 @@
     "type": "documentation",
     "label": "MME Calculator",
     "display": "MME Calculator",
-    "url": "https://fhir.org/guides/cdc/opioid-mme-r4/mme-calculator.html",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/mme-calculator.html",
     "document": {
-      "url": "https://fhir.org/guides/cdc/opioid-mme-r4/mme-calculator.html"
+      "url": "http://fhir.org/guides/cdc/opioid-mme-r4/mme-calculator.html"
     }
   }, {
     "type": "depends-on",

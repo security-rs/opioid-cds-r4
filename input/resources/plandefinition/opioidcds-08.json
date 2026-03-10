@@ -650,8 +650,8 @@
       "display": "ECA Rule"
     } ]
   },
-  "status": "draft",
-  "experimental": true,
+  "status": "active",
+  "experimental": false,
   "date": "2025-08-06",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Before starting and periodically during continuation of opioid therapy, clinicians should evaluate risk for opioid-related harms and discuss risk with patients. Clinicians should work with patients to incorporate into the management plan strategies to mitigate risk, including offering naloxone.",

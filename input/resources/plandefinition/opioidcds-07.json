@@ -961,8 +961,8 @@
       "display": "ECA Rule"
     } ]
   },
-  "status": "draft",
-  "experimental": true,
+  "status": "active",
+  "experimental": false,
   "date": "2025-08-06",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Clinicians should evaluate benefits and risks with patients within 1-4 weeks of starting opioid therapy for subacute or chronic pain or of dosage escalation. Clinicians should regularly reevaluate benefits and risks of continued opioid therapy with patients.",

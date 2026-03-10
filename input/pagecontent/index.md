@@ -132,3 +132,7 @@ This implementation guide [assumes](process-documentation.html#technical-assumpt
 ### Globals
 
 {% include globals-table.xhtml %}
+
+### Expansion Parameters
+
+{% include expansion-params.xhtml %}

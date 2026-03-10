@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC09",
   "title": "Library - Recommendation #9 - Consider Patient's History of Controlled Substance Prescriptions",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

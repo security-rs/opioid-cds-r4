@@ -65,7 +65,7 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/Library/HelloWorldPatientView",
   "version": "1.0.0",
   "name": "HelloWorldPatientView",
-  "status": "draft",
+  "status": "active",
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

@@ -56,7 +56,7 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.78",
+        "version": "2.81",
         "filter": [
           {
             "property": "parent",
@@ -78,19 +78,19 @@
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.75",
+        "version": "2.81",
         "code": "101809-2",
         "display": "Xylazine [Presence] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.75",
+        "version": "2.81",
         "code": "101808-4",
         "display": "Xylazine [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.75",
+        "version": "2.81",
         "code": "101810-0",
         "display": "Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method"
       }

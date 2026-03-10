@@ -49,6 +49,7 @@
   "compose": {
     "include": [ {
       "system": "http://loinc.org",
+      "version": "2.81",
       "filter": [ {
         "property": "parent",
         "op": "=",
@@ -61,7 +62,7 @@
     "total": 1,
     "contains": [ {
       "system": "http://loinc.org",
-      "version": "2.74",
+      "version": "2.81",
       "code": "80764-4",
       "display": "Pain medicine Plan of care note"
     } ]

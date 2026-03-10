@@ -177,9 +177,9 @@
     "type": "documentation",
     "label": "OMTK Data Processing",
     "display": "OMTK Data Processing",
-    "url": "https://fhir.org/guides/cdc/opioid-mme-r4/omtkdata-processing.html",
+    "url": "http://fhir.org/guides/cdc/opioid-mme-r4/omtkdata-processing.html",
     "document": {
-      "url": "https://fhir.org/guides/cdc/opioid-mme-r4/omtkdata-processing.html"
+      "url": "http://fhir.org/guides/cdc/opioid-mme-r4/omtkdata-processing.html"
     }
   } ],
   "parameter": [ {

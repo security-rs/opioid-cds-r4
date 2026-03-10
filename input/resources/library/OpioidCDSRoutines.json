@@ -67,7 +67,7 @@
   "name": "OpioidCDSRoutines",
   "title": "Library - OpioidCDS Routines",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

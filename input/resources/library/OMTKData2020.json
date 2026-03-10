@@ -67,7 +67,7 @@
   "name": "OMTKData2020",
   "title": "Library - OMTK Data (2020)",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

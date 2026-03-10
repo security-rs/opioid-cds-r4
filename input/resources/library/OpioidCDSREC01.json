@@ -62,7 +62,7 @@
   "name": "OpioidCDSREC01",
   "title": "Library - Recommendation #1 - Nonpharmacologic and Nonopioid Pharmacologic Therapy Consideration",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

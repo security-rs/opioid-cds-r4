@@ -64,8 +64,8 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests",
   "name": "OXYCODONE_URINE_DRUG_SCREENING_TESTS",
   "title": "Oxycodone urine drug screening tests",
-  "status": "draft",
-  "experimental": true,
+  "status": "active",
+  "experimental": false,
   "date": "2024-04-15T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for oxycodone.",
@@ -77,127 +77,127 @@
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "51954-6",
         "display": "oxyCODONE Free Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "46973-4",
         "display": "oxyCODONE Free Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "61197-0",
         "display": "oxyCODONE+oxyMORphone Ur Ql Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "58430-0",
         "display": "oxyCODONE+oxyMORphone Ur Ql Scn"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "60276-3",
         "display": "oxyCODONE+oxyMORphone CtO Ur Scn-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "90894-7",
         "display": "Noroxymorphone Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "89302-4",
         "display": "Noroxymorphone Ur Ql Scn"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "86609-5",
         "display": "Noroxymorphone/Creat Ur Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "11246-6",
         "display": "oxyCODONE Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "16249-5",
         "display": "oxyCODONE Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "10998-3",
         "display": "oxyCODONE Ur Ql"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19643-6",
         "display": "oxyCODONE Ur Ql Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19642-8",
         "display": "oxyCODONE Ur Ql Scn"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "70215-9",
         "display": "oxyCODONE Ur Cfm-sCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "78873-7",
         "display": "oxyCODONE Z-score Ur"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19645-1",
         "display": "oxyCODONE CtO Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19644-4",
         "display": "oxyCODONE CtO Ur Scn-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "58395-5",
         "display": "oxyCODONE/Creat Ur"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "78767-1",
         "display": "oxyCODONE adj bodymass+crea Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "94304-3",
         "display": "OxyCODONE+metabolites Pnl Ur Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "94305-0",
         "display": "OxyMORphone+Noroxymorph Pnl Ur Cfm"
       }

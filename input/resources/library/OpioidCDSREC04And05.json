@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC04And05",
   "title": "Library - Recommendations #4 and #5 - Lowest Effective Dose",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

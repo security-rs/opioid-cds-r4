@@ -64,8 +64,8 @@
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests",
   "name": "HEROIN_URINE_DRUG_SCREENING_TESTS",
   "title": "Heroin urine drug screening tests",
-  "status": "draft",
-  "experimental": true,
+  "status": "active",
+  "experimental": false,
   "date": "2024-04-15T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for heroin and metabolites.",
@@ -77,127 +77,127 @@
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "51740-9",
         "display": "6MAM Free Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "47004-7",
         "display": "6MAM Free Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "27073-6",
         "display": "Deprecated 6MAM Ur Ql"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "14845-2",
         "display": "Deprecated 6MAM Ur Ql"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19592-5",
         "display": "Deprecated 6MAM Ur Ql Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19591-7",
         "display": "Deprecated 6MAM Ur Ql Scn"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "21050-0",
         "display": "Deprecated 6MAM Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19594-1",
         "display": "Deprecated 6MAM Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "10975-1",
         "display": "6MAM Ur-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "20514-6",
         "display": "Deprecated 6MAM Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19593-3",
         "display": "6MAM Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "10976-9",
         "display": "6MAM Ur Ql"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19322-7",
         "display": "6MAM Ur Ql Cfm"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19321-9",
         "display": "6MAM Ur Ql Scn"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "55520-1",
         "display": "6MAM Ur-sCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "70197-9",
         "display": "6MAM Ur Cfm-sCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19596-6",
         "display": "Deprecated 6MAM CtO Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19324-3",
         "display": "6MAM CtO Ur Cfm-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19595-8",
         "display": "Deprecated 6MAM CtO Ur Scn-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "19323-5",
         "display": "6MAM CtO Ur Scn-mCnc"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.76",
+        "version": "2.81",
         "code": "58384-9",
         "display": "6MAM/Creat Ur"
       }

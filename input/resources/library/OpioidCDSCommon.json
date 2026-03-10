@@ -71,7 +71,7 @@
   "name": "OpioidCDSCommon",
   "title": "Library - OpioidCDS Common",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

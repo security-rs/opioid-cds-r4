@@ -67,7 +67,7 @@
   "name": "OpioidCDSREC12PatientView",
   "title": "Library - Recommendation #12 (patient-view) - Evidence-based Treatment for Patients with Opioid Use Disorder",
   "status": "active",
-  "experimental": true,
+  "experimental": false,
   "type": {
     "coding": [ {
       "system": "http://terminology.hl7.org/CodeSystem/library-type",

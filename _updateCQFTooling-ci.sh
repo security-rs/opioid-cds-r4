@@ -1,13 +1,8 @@
 #!/bin/bash
 #DO NOT EDIT WITH WINDOWS
 #exit 1
-
-r=releases
-g=org.opencds.cqf
-a=tooling-cli
 v=3.8.0
-
-dlurl='https://oss.sonatype.org/service/local/artifact/maven/redirect?r='${r}'&g='${g}'&a='${a}'&v='${v}''
+dlurl='https://repo1.maven.org/maven2/org/opencds/cqf/tooling-cli/'${v}'/tooling-cli-'${v}'.jar'
 
 echo ${dlurl}
 
@@ -43,6 +38,9 @@ else
 fi
 
 echo "Downloading most recent tooling to $jarlocationname - it's ~170 MB, so this may take a bit"
-curl $dlurl -L -o "$jarlocation" --create-dirs
-echo "Download complete."
-
+if curl $dlurl --fail -L -o "$jarlocation" --create-dirs; then
+	echo "Download complete."
+else 
+	echo "Failed to download CQF tooling" $dlurl
+	exit 1
+fi

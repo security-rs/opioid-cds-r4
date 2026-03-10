@@ -1,6 +1,6 @@
 @ECHO OFF
 
-SET "dlurl=https://oss.sonatype.org/service/local/artifact/maven/redirect?r=releases&g=org.opencds.cqf&a=tooling-cli&v=3.7.0"
+SET "dlurl=https://repo1.maven.org/maven2/org/opencds/cqf/tooling-cli/3.8.0/tooling-cli-3.8.0.jar"
 SET tooling_jar=tooling-cli-3.8.0.jar
 SET input_cache_path=%~dp0input-cache\
 

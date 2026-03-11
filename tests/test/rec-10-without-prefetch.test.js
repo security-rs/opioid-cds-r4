@@ -190,6 +190,7 @@ it("EXCL_PATIENT_LESS_THAN_18", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
@@ -224,6 +225,8 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
+  //todo: chris mentioned that this is a known issue
+  // expect(cards.length).toBe(0); 
 });
 
 it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
@@ -258,6 +261,7 @@ it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
@@ -292,6 +296,7 @@ it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
@@ -326,6 +331,7 @@ it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXPECTED_NEGATIVE_FENTANYL", async () => {

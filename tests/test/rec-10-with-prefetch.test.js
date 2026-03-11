@@ -117,7 +117,9 @@ it("UDS_MED_WITH_REF", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });
 
 it("UDS_MED_WITHOUT_REF", async () => {
@@ -150,7 +152,9 @@ it("UDS_MED_WITHOUT_REF", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });
 
 it("EXCL_PATIENT_LESS_THAN_18", async () => {
@@ -183,7 +187,9 @@ it("EXCL_PATIENT_LESS_THAN_18", async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
@@ -254,7 +260,9 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  // expect(cards.length).toBe(0); //known issue
 });
 
 it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
@@ -301,7 +309,9 @@ it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
@@ -348,7 +358,9 @@ it("EXCL_SICKLE_CELL_PROBLEM_LIST", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
@@ -395,7 +407,9 @@ it("EXCL_TERMINAL_CONDITION_PROBLEM_LIST", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXPECTED_NEGATIVE_FENTANYL", async () => {
@@ -442,7 +456,9 @@ it("EXPECTED_NEGATIVE_FENTANYL", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("EXPECTED_POSITIVE_FENTANYL", async () => {
@@ -513,7 +529,9 @@ it("EXPECTED_POSITIVE_FENTANYL", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBe(0);
 });
 
 it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
@@ -584,7 +602,9 @@ it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  // expect(cards.length).toBeGreaterThan(0); 
 });
 
 it("UNEXPECTED_POSITIVE_FENTANYL", async () => {
@@ -631,5 +651,7 @@ it("UNEXPECTED_POSITIVE_FENTANYL", async () => {
     .send(request)
     .set("Accept", "json");
   expect(response.status).toBe(200);
-  expect(response.body.cards).toBeDefined();
+  const cards = response.body?.cards;
+  expect(cards).toBeDefined();
+  expect(cards.length).toBeGreaterThan(0);
 });

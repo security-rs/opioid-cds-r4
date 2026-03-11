@@ -225,7 +225,7 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
-  // expect(cards.length).toBe(0); //known issue
+  expect(cards.length).toBe(0);
 });
 
 it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {

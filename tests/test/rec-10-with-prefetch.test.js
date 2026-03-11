@@ -604,7 +604,7 @@ it("UNEXPECTED_NEGATIVE_FENTANYL", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
-  // expect(cards.length).toBeGreaterThan(0); 
+  // expect(cards.length).toBeGreaterThan(0); //known issue
 });
 
 it("UNEXPECTED_POSITIVE_FENTANYL", async () => {

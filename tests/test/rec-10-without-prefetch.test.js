@@ -90,7 +90,7 @@ beforeAll(async () => {
     .set("Accept", "json");
 
   expect(response.status).toBe(200);
-});
+}, 30000);
 
 afterAll(() => {});
 
@@ -225,8 +225,7 @@ it("EXCL_ACTIVE_CANCER_ENCOUNTERS", async () => {
   expect(response.status).toBe(200);
   const cards = response.body?.cards;
   expect(cards).toBeDefined();
-  //todo: chris mentioned that this is a known issue
-  // expect(cards.length).toBe(0); 
+  // expect(cards.length).toBe(0); //known issue
 });
 
 it("EXCL_ACTIVE_CANCER_PROBLEM_LIST", async () => {

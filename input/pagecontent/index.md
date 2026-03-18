@@ -37,7 +37,7 @@ This implementation guide has followed and applied the [methodology laid out by 
 
 The following diagram depicts the relationship and (navigable) links between the artifacts in the CPG IG and their respective instantiations in this IG.
 
-<div>{% include cpg-ig-diagram.svg %}</div>
+![Clinical Guidelines Methodology Steps](assets/images/cpg-ig-diagram.svg)
 
 #### Data Exchange Profiles IG
 The [HL7 Data Exchange Profiles for 2022 CDC Clinical Practice Guideline for Prescribing Opioids](https://build.fhir.org/ig/HL7/cdc-opioid-cpg/) has been developed to define a set of conformance requirements for supporting the data queries used in this implementation guide. By conforming to these profiles (which are derived from US Core) EHRs can ensure they are prepared to support the integration with this IG.

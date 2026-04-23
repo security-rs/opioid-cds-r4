@@ -52,7 +52,7 @@
       "value": "https://www.cdc.gov"
     } ]
   } ],
-  "description": "Urine tests for phencyclidine",
+  "description": "Urine screening tests for phencyclidine",
   "jurisdiction": [ {
     "coding": [ {
       "system": "urn:iso:std:iso:3166",

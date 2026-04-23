@@ -40,7 +40,7 @@
       "value": "https://www.cdc.gov"
     } ]
   } ],
-  "description": "Urine tests for fentanyl-type drugs and metabolites",
+  "description": "Urine screening tests for fentanyl-type drugs and metabolites",
   "jurisdiction": [ {
     "coding": [ {
       "system": "urn:iso:std:iso:3166",

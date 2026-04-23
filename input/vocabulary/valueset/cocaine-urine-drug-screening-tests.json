@@ -40,7 +40,7 @@
       "value": "https://www.cdc.gov"
     } ]
   } ],
-  "description": "Urine tests for cocaine and cocaine metabolites",
+  "description": "Urine screening tests for cocaine and cocaine metabolites",
   "jurisdiction": [ {
     "coding": [ {
       "system": "urn:iso:std:iso:3166",

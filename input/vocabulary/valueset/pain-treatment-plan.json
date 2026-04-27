@@ -50,10 +50,9 @@
     "include": [ {
       "system": "http://loinc.org",
       "version": "2.81",
-      "filter": [ {
-        "property": "parent",
-        "op": "=",
-        "value": "80764-4"
+      "concept": [ {
+        "code": "80764-4",
+        "display": "Pain medicine Plan of care note"
       } ]
     } ]
   },

@@ -173,27 +173,6 @@
           {
             "property": "parent",
             "op": "=",
-            "value": "LP390119-8"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
             "value": "LP419316-7"
           },
           {
@@ -257,130 +236,146 @@
       }
     ]
   },
-  "expansion": {
-    "timestamp": "2026-04-30T19:26:56.850Z",
-    "identifier": "urn:uuid:a777ce77-3f03-48db-9687-7d9d53d4a51d",
-    "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
-      {
-        "name": "used-codesystem",
-        "valueUri": "http://loinc.org|2.82"
-      }
-    ],
-    "offset": 0,
-    "total": 21,
-    "contains": [
-      {
-        "system": "http://loinc.org",
-        "code": "46973-4",
-        "display": "oxyCODONE Free [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "51954-6",
-        "display": "oxyCODONE Free [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58430-0",
-        "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "60276-3",
-        "display": "oxyCODONE+oxyMORphone cutoff [Mass/volume] in Urine for Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "61197-0",
-        "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "86609-5",
-        "display": "Noroxymorphone/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "89302-4",
-        "display": "Noroxymorphone [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "90894-7",
-        "display": "Noroxymorphone [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "10998-3",
-        "display": "oxyCODONE [Presence] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "11246-6",
-        "display": "oxyCODONE [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "16249-5",
-        "display": "oxyCODONE [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "19642-8",
-        "display": "oxyCODONE [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "19643-6",
-        "display": "oxyCODONE [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "19644-4",
-        "display": "oxyCODONE cutoff [Mass/volume] in Urine for Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "19645-1",
-        "display": "oxyCODONE cutoff [Mass/volume] in Urine for Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58395-5",
-        "display": "oxyCODONE/Creatinine [Mass Ratio] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "70215-9",
-        "display": "oxyCODONE [Moles/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "78767-1",
-        "display": "oxyCODONE [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "78873-7",
-        "display": "oxyCODONE [Z-score] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "94304-3",
-        "display": "OxyCODONE and metabolites panel - Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "94305-0",
-        "display": "OxyMORphone and Noroxymorphone panel - Urine by Confirmatory method"
-      }
-    ]
-  }}
+  "expansion":{
+    "resourceType": "ValueSet",
+    "meta": {
+      "profile": [
+        "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+        "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
+      ]
+    },
+    "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests",
+    "name": "OXYCODONE_URINE_DRUG_SCREENING_TESTS",
+    "title": "Oxycodone urine drug screening tests",
+    "status": "active",
+    "experimental": false,
+    "date": "2024-04-15T12:22:34-06:00",
+    "expansion": {
+      "timestamp": "2026-04-30T19:26:56.850Z",
+      "identifier": "urn:uuid:a777ce77-3f03-48db-9687-7d9d53d4a51d",
+      "parameter": [
+        {
+          "name": "offset",
+          "valueInteger": 0
+        },
+        {
+          "name": "count",
+          "valueInteger": 200
+        },
+        {
+          "name": "used-codesystem",
+          "valueUri": "http://loinc.org|2.82"
+        }
+      ],
+      "offset": 0,
+      "total": 21,
+      "contains": [
+        {
+          "system": "http://loinc.org",
+          "code": "46973-4",
+          "display": "oxyCODONE Free [Mass/volume] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "51954-6",
+          "display": "oxyCODONE Free [Mass/volume] in Urine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "58430-0",
+          "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Screen method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "60276-3",
+          "display": "oxyCODONE+oxyMORphone cutoff [Mass/volume] in Urine for Screen method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "61197-0",
+          "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "86609-5",
+          "display": "Noroxymorphone/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "89302-4",
+          "display": "Noroxymorphone [Presence] in Urine by Screen method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "90894-7",
+          "display": "Noroxymorphone [Mass/volume] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "10998-3",
+          "display": "oxyCODONE [Presence] in Urine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "11246-6",
+          "display": "oxyCODONE [Mass/volume] in Urine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "16249-5",
+          "display": "oxyCODONE [Mass/volume] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "19642-8",
+          "display": "oxyCODONE [Presence] in Urine by Screen method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "19643-6",
+          "display": "oxyCODONE [Presence] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "19644-4",
+          "display": "oxyCODONE cutoff [Mass/volume] in Urine for Screen method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "19645-1",
+          "display": "oxyCODONE cutoff [Mass/volume] in Urine for Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "58395-5",
+          "display": "oxyCODONE/Creatinine [Mass Ratio] in Urine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "70215-9",
+          "display": "oxyCODONE [Moles/volume] in Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "78767-1",
+          "display": "oxyCODONE [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "78873-7",
+          "display": "oxyCODONE [Z-score] in Urine"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "94304-3",
+          "display": "OxyCODONE and metabolites panel - Urine by Confirmatory method"
+        },
+        {
+          "system": "http://loinc.org",
+          "code": "94305-0",
+          "display": "OxyMORphone and Noroxymorphone panel - Urine by Confirmatory method"
+        }
+      ]
+    }
+  }
+}

@@ -127,78 +127,695 @@
     ]
   },
   "expansion": {
-    "timestamp": "2023-05-25T18:08:12-06:00",
-    "total": 14,
-    "contains": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "3937-0",
-      "display": "Phencyclidine [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "16254-5",
-      "display": "Phencyclidine [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "72825-3",
-      "display": "Phencyclidine [Mass/volume] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "3936-2",
-      "display": "Phencyclidine [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "18392-1",
-      "display": "Phencyclidine [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "14311-5",
-      "display": "Phencyclidine [Presence] in Urine by Confirm method >20 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "8237-0",
-      "display": "Phencyclidine [Presence] in Urine by SAMHSA confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "8238-8",
-      "display": "Phencyclidine [Presence] in Urine by SAMHSA screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "19659-2",
-      "display": "Phencyclidine [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "14310-7",
-      "display": "Phencyclidine [Presence] in Urine by Screen method >25 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "52951-1",
-      "display": "Phencyclidine [Moles/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "19661-8",
-      "display": "Phencyclidine cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "19660-0",
-      "display": "Phencyclidine cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "58397-1",
-      "display": "Phencyclidine/Creatinine [Mass Ratio] in Urine"
-    } ]
+    "timestamp": "2026-04-29T15:25:48.416Z",
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 200
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "offset": 0,
+    "total": 95,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "3372-0",
+        "display": "Barbiturate screen absent [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3373-8",
+        "display": "Deprecated Barbiturate screen absent [Identifier] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3374-6",
+        "display": "Barbiturate screen present [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3375-3",
+        "display": "Deprecated Barbiturate screen present [Identifier] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19274-0",
+        "display": "Barbiturates positive [Identifier] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12360-4",
+        "display": "Barbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19353-2",
+        "display": "Barbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19354-0",
+        "display": "Barbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19355-7",
+        "display": "Barbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19356-5",
+        "display": "Barbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20518-7",
+        "display": "Barbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3371-2",
+        "display": "Barbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16429-3",
+        "display": "Barbiturates [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16430-1",
+        "inactive": true,
+        "display": "Barbiturates [Units/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DISCOURAGED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19270-8",
+        "display": "Barbiturates [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19271-6",
+        "display": "Barbiturates tested for in Urine by Screen method Nominal"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19272-4",
+        "display": "Barbiturates tested for in Urine by Screen method Narrative"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19275-7",
+        "display": "Barbiturates cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19276-5",
+        "display": "Barbiturates cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19277-3",
+        "display": "Barbiturates screen method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19278-1",
+        "display": "Barbiturates confirm method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20411-5",
+        "display": "Barbiturates [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20664-9",
+        "display": "Barbiturates [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3377-9",
+        "display": "Barbiturates [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "41468-0",
+        "display": "Barbiturates/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52956-0",
+        "display": "Barbiturates [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70139-1",
+        "display": "Barbiturates [Presence] in Urine by Screen method >300 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70155-7",
+        "display": "Barbiturates [Presence] in Urine by Screen method >200 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "9426-8",
+        "display": "Barbiturates [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16191-9",
+        "display": "Butabarbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16236-2",
+        "display": "Butabarbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19368-0",
+        "display": "Butabarbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19370-6",
+        "display": "Butabarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19371-4",
+        "display": "Butabarbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19372-2",
+        "display": "Butabarbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3419-9",
+        "display": "Butabarbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "11071-8",
+        "display": "Butalbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16237-0",
+        "display": "Butalbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18385-5",
+        "display": "Butalbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19373-0",
+        "display": "Butalbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19375-5",
+        "display": "Butalbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19376-3",
+        "display": "Butalbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "32056-4",
+        "display": "Butalbital [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3421-5",
+        "display": "Butalbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64139-9",
+        "display": "Butalbital/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "27165-0",
+        "display": "Hexobarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12315-8",
+        "display": "Mephobarbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "17250-2",
+        "display": "Mephobarbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19536-2",
+        "display": "Mephobarbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19537-0",
+        "display": "Mephobarbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19539-6",
+        "display": "Mephobarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19540-4",
+        "display": "Mephobarbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19541-2",
+        "display": "Mephobarbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3920-6",
+        "display": "Pentetrazol [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3921-4",
+        "display": "Pentetrazol [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3922-2",
+        "display": "Pentetrazol [Mass/time] in 24 hour Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16193-5",
+        "display": "PENTobarbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16240-4",
+        "display": "PENTobarbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19655-0",
+        "display": "PENTobarbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19657-6",
+        "display": "PENTobarbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19658-4",
+        "display": "PENTobarbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3925-5",
+        "display": "PENTobarbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3926-3",
+        "display": "PENTobarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64132-4",
+        "display": "PENTobarbital/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16192-7",
+        "display": "PHENobarbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16241-2",
+        "display": "PHENobarbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19666-7",
+        "display": "PHENobarbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19668-3",
+        "display": "PHENobarbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19669-1",
+        "display": "PHENobarbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "39487-4",
+        "display": "PHENobarbital [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3949-5",
+        "display": "PHENobarbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3950-3",
+        "display": "PHENobarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64133-2",
+        "display": "PHENobarbital/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16194-3",
+        "display": "Secobarbital [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16238-8",
+        "display": "Secobarbital [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19692-3",
+        "display": "Secobarbital [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19695-6",
+        "display": "Secobarbital [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19696-4",
+        "display": "Secobarbital cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19697-2",
+        "display": "Secobarbital cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "4029-5",
+        "display": "Secobarbital [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72928-5",
+        "display": "Secobarbital [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12370-3",
+        "display": "Thiopental [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16223-0",
+        "display": "Thiopental [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "53735-7",
+        "display": "Barbiturates.other [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "53746-4",
+        "display": "Barbiturates panel - Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "110546-9",
+        "display": "Barbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111449-5",
+        "display": "Barbiturates [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "110552-7",
+        "display": "Butabarbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111149-1",
+        "display": "Butalbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "110579-0",
+        "display": "Mephobarbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "108490-4",
+        "display": "Pentetrazol [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "110585-7",
+        "display": "PENTobarbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111121-0",
+        "display": "PHENobarbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111096-4",
+        "display": "Secobarbital [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64135-7",
+        "display": "Secobarbital/Creatinine [Mass Ratio] of Urine"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
+      }
+    ]
   }
 }

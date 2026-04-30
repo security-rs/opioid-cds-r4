@@ -37,7 +37,21 @@
   }, {
     "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
     "valueMarkdown": "Use the following LOINC query: Phencyclidine (=system:Urine) AND NOT status:DEPRECATED"
-  } ],
+  },
+  {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+    "extension": [
+      {
+        "url": "type",
+        "valueCode": "documentation"
+      },
+      {
+        "url": "text",
+        "valueMarkdown": "Maintenance search expression: `Phencyclidine (=system:Urine) AND NOT status:DEPRECATED`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine phencyclidine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives such as Dextromethorphan."
+      }
+    ]
+  }
+  ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/phencyclidine-urine-drug-screening-tests",
   "name": "PHENCYCLIDINE_URINE_DRUG_SCREENING_TESTS",
   "title": "Phencyclidine urine drug screening tests",
@@ -61,6 +75,57 @@
   } ],
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP390195-8"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP248770-2"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "COMPONENT",
+            "op": "=",
+            "value": "LP14566-1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
     "timestamp": "2023-05-25T18:08:12-06:00",
     "total": 14,

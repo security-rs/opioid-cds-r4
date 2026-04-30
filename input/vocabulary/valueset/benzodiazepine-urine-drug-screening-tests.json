@@ -9,10 +9,6 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-      "valueMarkdown": "Step 1: go to https://loinc.org/tree/\nStep 2: use query benzodiazepine AND system:urine\nStep 3: export the results to CSV\nStep 4: Filter results by properties defined in query"
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
       "valueContactDetail": {
         "name": "MD Partners, Inc.",
@@ -51,6 +47,19 @@
     {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `benzodiazepine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine benzodiazepine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives such as."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/benzodiazepine-urine-drug-screening-tests",
@@ -58,194 +67,459 @@
   "title": "Benzodiazepine urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-04-15T12:22:34-06:00",
+  "date": "2026-04-30T12:03:50-04:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for benzodiazepines screening and any substance that is in the class.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP431557-0"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP431559-6"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP391611-3"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP431526-5"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP391614-7"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP417031-4"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP417032-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP391767-3"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP392032-1"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP248770-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "COMPONENT",
+            "op": "=",
+            "value": "LP15014-1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
-    "timestamp": "2024-04-15T12:22:36-06:00",
-    "total": 30,
+    "timestamp": "2026-04-30T15:41:25.238Z",
+    "identifier": "urn:uuid:191993e3-29fe-432d-bebb-ae44204b11fa",
+    "parameter": [
+      {
+        "name": "offset",
+        "valueInteger": 0
+      },
+      {
+        "name": "count",
+        "valueInteger": 200
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "offset": 0,
+    "total": 33,
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "107210-7",
+        "display": "Designer benzodiazepines [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "99262-8",
-        "display": "Designer benzodiazepines Ur Ql Cfm"
+        "display": "Designer benzodiazepines [Presence] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "code": "99263-6",
-        "display": "Delorazepam Ur Cfm-mCnc"
+        "display": "Delorazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "99276-8",
-        "display": "3-OH-phenazepam Ur Cfm-mCnc"
+        "code": "105100-2",
+        "display": "Benzodiazepines tested for in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "42235-2",
-        "display": "Benzodiaz metab Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3386-0",
-        "display": "Deprecated Benzodiaz Neg Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3385-2",
-        "display": "Benzodiaz Neg Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3388-6",
-        "display": "Deprecated Benzodiaz Pos Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3387-8",
-        "display": "Benzodiaz Pos Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19282-3",
-        "display": "Benzodiaz Pos Ur Cfm"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "9428-4",
-        "display": "Benzodiaz Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "20412-3",
-        "display": "Benzodiaz Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "70140-9",
-        "display": "Benzodiaz Ur Scn-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3390-2",
-        "display": "Benzodiaz Ur Ql"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "16195-0",
-        "display": "Benzodiaz Ur Ql Cfm"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "14316-4",
-        "display": "Benzodiaz Ur Ql Scn"
+        "display": "Benzodiazepines [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "70141-7",
-        "display": "Benzodiaz Ur Ql Scn>200 ng/mL"
+        "code": "16195-0",
+        "display": "Benzodiazepines [Presence] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "70142-5",
-        "display": "Benzodiaz Ur Ql Scn>300 ng/mL"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "52955-2",
-        "display": "Benzodiaz Ur-sCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19286-4",
-        "display": "Benzodiaz Cfm Meth Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "19064-5",
-        "display": "Benzodiaz CtO Ur-mCnc"
+        "display": "Benzodiazepines cutoff [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19284-9",
-        "display": "Benzodiaz CtO Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19283-1",
-        "display": "Benzodiaz CtO Ur Scn-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19285-6",
-        "display": "Benzodiaz Scn Meth Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19280-7",
-        "display": "Benzodiaz Tested Ur Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "19279-9",
-        "display": "Benzodiaz Tested Ur Scn"
+        "display": "Benzodiazepines tested for in Urine by Screen method Nominal"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "19280-7",
+        "display": "Benzodiazepines tested for in Urine by Screen method Narrative"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19283-1",
+        "display": "Benzodiazepines cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19284-9",
+        "display": "Benzodiazepines cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19285-6",
+        "display": "Benzodiazepines screen method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19286-4",
+        "display": "Benzodiazepines confirm method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20412-3",
+        "display": "Benzodiazepines [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3390-2",
+        "display": "Benzodiazepines [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "41467-2",
-        "display": "Benzodiaz/Creat Ur"
+        "display": "Benzodiazepines/Creatinine [Mass Ratio] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "52955-2",
+        "display": "Benzodiazepines [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70140-9",
+        "display": "Benzodiazepines [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70141-7",
+        "display": "Benzodiazepines [Presence] in Urine by Screen method >200 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70142-5",
+        "display": "Benzodiazepines [Presence] in Urine by Screen method >300 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "9428-4",
+        "display": "Benzodiazepines [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "99276-8",
+        "display": "3-Hydroxyphenazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "42235-2",
+        "display": "Benzodiazepine metabolites [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3385-2",
+        "display": "Benzodiazepines negative [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3386-0",
+        "display": "Deprecated Benzodiazepines negative [Identifier] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19282-3",
+        "display": "Benzodiazepines positive [Identifier] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3387-8",
+        "display": "Benzodiazepines positive [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3388-6",
+        "display": "Deprecated Benzodiazepines positive [Identifier] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
         "code": "53736-5",
-        "display": "Benzodiaz.other Ur-mCnc"
+        "display": "Benzodiazepines.other [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "code": "53745-6",
-        "display": "Benzodiazepines Pnl Ur"
+        "display": "Benzodiazepines panel - Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "code": "90890-5",
-        "display": "Benzodiazepines Pnl Ur Cfm"
+        "display": "Benzodiazepines panel - Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "code": "94117-9",
-        "display": "Benzodiazepines Pnl Ur Scn"
+        "display": "Benzodiazepines panel [Presence] - Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111407-3",
+        "display": "Benzodiazepines [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

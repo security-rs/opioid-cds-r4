@@ -57,7 +57,7 @@
         },
         {
           "url": "text",
-          "valueMarkdown": "Maintenance search expression: `benzodiazepine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine benzodiazepine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives such as."
+          "valueMarkdown": "Maintenance search expression: `benzodiazepine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine benzodiazepine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives."
         }
       ]
     }

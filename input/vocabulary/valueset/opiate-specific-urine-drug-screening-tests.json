@@ -164,7 +164,7 @@
           {
             "property": "parent",
             "op": "=",
-            "value": "LP28826-6"
+            "value": "LP390040-6"
           },
           {
             "property": "SYSTEM",
@@ -250,12 +250,38 @@
             "value": "LP15174-3"
           }
         ]
+      },
+      {
+        "system": "http://loinc.org",
+        "version": "2.82",
+        "filter": [
+          {
+            "property": "parent",
+            "op": "=",
+            "value": "LP248770-2"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "COMPONENT",
+            "op": "=",
+            "value": "LP28863-6"
+          }
+        ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-04-30T20:28:42.879Z",
-    "identifier": "urn:uuid:f28ceb75-4362-4e24-ac9c-f2111b497f2f",
+    "timestamp": "2026-05-01T16:41:28.284Z",
+    "identifier": "urn:uuid:e3250cee-b28b-41e9-84f0-003435488721",
     "parameter": [
       {
         "name": "offset",
@@ -271,7 +297,7 @@
       }
     ],
     "offset": 0,
-    "total": 35,
+    "total": 36,
     "contains": [
       {
         "system": "http://loinc.org",
@@ -462,6 +488,26 @@
         "system": "http://loinc.org",
         "code": "111393-5",
         "display": "Morphine [Measurement] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "TRIAL"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "110571-7",
+        "display": "Morphine Free [Measurement] in Urine",
         "extension": [
           {
             "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",

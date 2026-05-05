@@ -84,7 +84,22 @@ define "Is Perform Drug Screen Recommendation Applicable?":
 
 define "Applicable Because of Unexpected Results":
   "Patient Is Being Prescribed Opioid Analgesic with Ambulatory Misuse Potential"
-    and Rec10Common."Inclusion Criteria For Unexpected Results"
+    and (
+      if Config."Unexpected Results Latest UDS Only Enabled"
+        then "Inclusion Criteria For Unexpected Results On Latest UDS"
+      else Rec10Common."Inclusion Criteria For Unexpected Results"
+    )
+
+define "Latest UDS Date":
+  First(Rec10Common."All Lab Dates in Lookback Period")
+
+define "Inclusion Criteria For Unexpected Results On Latest UDS":
+  Routines."Is Opioid Review Useful?"
+    and exists (
+      Rec10Common."Remove Substances Without Positive or Negative Results" Details
+        where Details.unexpectedPosDetails.date contains "Latest UDS Date"
+          or Details.unexpectedNegDetails.udsDate contains "Latest UDS Date"
+    )
 
 define "Detail":
   Rec10Common."Get HTML Details"

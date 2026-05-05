@@ -1,5 +1,8 @@
 library OpioidCDSCommonConfig version '2022.1.0'
 
+// Override the default value set - ensure the identifier is the same
+valueset "Opiate Medications": 'http://fhir.org/guides/cdc/opioid-cds/ValueSet/opiate-medications'
+
 // Opioid Review Useful
 define "Age Less than 18 Years Is Enabled":
   true
@@ -71,6 +74,12 @@ define "Recommendation 10 UDS Lookback Period":
 
 define "Recommendation 10 Rx Lookback Period":
   Interval[Today() - 12 months - 31 days, Today()]
+
+define "Unexpected Results Latest UDS Only Enabled":
+  true
+
+define "Use Default Opiate Medications ValueSet":
+  false
 
 // Recommendation 12
 define "Evidence Based Treatment Criteria For Opioid Use Disorder":

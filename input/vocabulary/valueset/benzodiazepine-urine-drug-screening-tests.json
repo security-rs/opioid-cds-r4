@@ -57,7 +57,7 @@
         },
         {
           "url": "text",
-          "valueMarkdown": "Maintenance search expression: `benzodiazepine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine benzodiazepine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives."
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP429767-9 OR LP429769-5 OR LP15014-1 OR LP392032-1) AND system:urine`. The compose anchors at four trunk LP codes - LP429767-9, LP429769-5, LP15014-1, and LP392032-1 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
         }
       ]
     }
@@ -67,7 +67,7 @@
   "title": "Benzodiazepine urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2026-04-30T12:03:50-04:00",
+  "date": "2026-06-01T12:03:50-04:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for benzodiazepines screening and any substance that is in the class.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
@@ -76,240 +76,96 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP431557-0"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP429767-9"
           },
           {
             "property": "SYSTEM",
             "op": "=",
             "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP431559-6"
           },
           {
             "property": "CLASSTYPE",
             "op": "=",
             "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
           }
         ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP429769-5"
+          },
+          {
+            "property": "SYSTEM",
             "op": "=",
-            "value": "LP391611-3"
+            "value": "LP7681-2"
           },
           {
             "property": "CLASSTYPE",
             "op": "=",
             "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
           }
         ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP15014-1"
+          },
+          {
+            "property": "SYSTEM",
             "op": "=",
-            "value": "LP431526-5"
+            "value": "LP7681-2"
           },
           {
             "property": "CLASSTYPE",
             "op": "=",
             "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
           }
         ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP391614-7"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP417031-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP417032-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP391767-3"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
+            "property": "concept",
+            "op": "descendent-of",
             "value": "LP392032-1"
           },
           {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
             "property": "SYSTEM",
             "op": "=",
             "value": "LP7681-2"
           },
           {
-            "property": "COMPONENT",
+            "property": "CLASSTYPE",
             "op": "=",
-            "value": "LP15014-1"
+            "value": "1"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-04-30T15:41:25.238Z",
-    "identifier": "urn:uuid:191993e3-29fe-432d-bebb-ae44204b11fa",
+    "timestamp": "2026-06-01T15:45:23.240Z",
+    "identifier": "urn:uuid:f9878c30-74f5-4e92-8ed9-0247161bdb3f",
     "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
       }
     ],
-    "offset": 0,
-    "total": 33,
+    "total": 136,
     "contains": [
       {
         "system": "http://loinc.org",
@@ -333,8 +189,63 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "105948-4",
+        "display": "7-Aminonitrazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105949-2",
+        "display": "7-Aminonitrazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105950-0",
+        "display": "7-Aminoflunitrazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105955-9",
+        "display": "7-Aminonitrazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105970-8",
+        "display": "7-Aminonitrazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12311-7",
+        "display": "Prazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12314-1",
+        "display": "Clorazepate [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12382-8",
+        "display": "Temazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "12602-9",
+        "display": "Hydroxyethylflurazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "14192-9",
+        "display": "Triazolam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "14316-4",
         "display": "Benzodiazepines [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "14850-2",
+        "display": "Nitrazepam [Moles/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
@@ -343,8 +254,63 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "16204-0",
+        "display": "clonazePAM [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16206-5",
+        "display": "Temazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16224-8",
+        "display": "Triazolam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16227-1",
+        "display": "diazePAM [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16229-7",
+        "display": "clonazePAM [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16230-5",
+        "display": "N-desalkylflurazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16231-3",
+        "display": "Flurazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16232-1",
+        "display": "Triazolam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "17479-7",
+        "display": "Prazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18388-9",
+        "display": "diazePAM [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "19064-5",
         "display": "Benzodiazepines cutoff [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19245-0",
+        "display": "clonazePAM [Presence] in Urine"
       },
       {
         "system": "http://loinc.org",
@@ -355,6 +321,11 @@
         "system": "http://loinc.org",
         "code": "19280-7",
         "display": "Benzodiazepines tested for in Urine by Screen method Narrative"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19282-3",
+        "display": "Benzodiazepines positive [Identifier] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
@@ -378,53 +349,268 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "19364-9",
+        "display": "Bromazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19365-6",
+        "display": "Bromazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19366-4",
+        "display": "Bromazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19367-2",
+        "display": "Bromazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19385-4",
+        "display": "chlordiazePOXIDE [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19386-2",
+        "display": "chlordiazePOXIDE [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19387-0",
+        "display": "chlordiazePOXIDE cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19388-8",
+        "display": "chlordiazePOXIDE cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19399-5",
+        "display": "clonazePAM [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19402-7",
+        "display": "clonazePAM [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19403-5",
+        "display": "clonazePAM cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19404-3",
+        "display": "clonazePAM cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19443-1",
+        "display": "diazePAM [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19444-9",
+        "display": "diazePAM cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19445-6",
+        "display": "diazePAM cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19474-6",
+        "display": "Flurazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19475-3",
+        "display": "Flurazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19476-1",
+        "display": "Flurazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19477-9",
+        "display": "Flurazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19493-6",
+        "display": "Hydroxyethylflurazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19494-4",
+        "display": "Hydroxyethylflurazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19495-1",
+        "display": "Hydroxyethylflurazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19496-9",
+        "display": "Hydroxyethylflurazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19614-7",
+        "display": "N-desalkylflurazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19615-4",
+        "display": "N-desalkylflurazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19617-0",
+        "display": "N-desalkylflurazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19618-8",
+        "display": "N-desalkylflurazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19619-6",
+        "display": "N-desalkylflurazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19620-4",
+        "display": "Nitrazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19621-2",
+        "display": "Nitrazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19622-0",
+        "display": "Nitrazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19623-8",
+        "display": "Nitrazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19678-2",
+        "display": "Prazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19679-0",
+        "display": "Prazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19680-8",
+        "display": "Prazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19681-6",
+        "display": "Prazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19698-0",
+        "display": "Temazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19700-4",
+        "display": "Temazepam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19701-2",
+        "display": "Temazepam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19714-5",
+        "display": "Triazolam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19716-0",
+        "display": "Triazolam cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19717-8",
+        "display": "Triazolam cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "20412-3",
         "display": "Benzodiazepines [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "3390-2",
-        "display": "Benzodiazepines [Presence] in Urine"
+        "code": "20520-3",
+        "display": "Bromazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "41467-2",
-        "display": "Benzodiazepines/Creatinine [Mass Ratio] in Urine"
+        "code": "20522-9",
+        "display": "chlordiazePOXIDE [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "52955-2",
-        "display": "Benzodiazepines [Moles/volume] in Urine"
+        "code": "20532-8",
+        "display": "Hydroxyethylflurazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "70140-9",
-        "display": "Benzodiazepines [Mass/volume] in Urine by Screen method"
+        "code": "20552-6",
+        "display": "Nitrazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "70141-7",
-        "display": "Benzodiazepines [Presence] in Urine by Screen method >200 ng/mL"
+        "code": "20559-1",
+        "display": "Temazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "code": "70142-5",
-        "display": "Benzodiazepines [Presence] in Urine by Screen method >300 ng/mL"
+        "code": "21241-5",
+        "display": "diazePAM+Nordiazepam [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "code": "9428-4",
-        "display": "Benzodiazepines [Mass/volume] in Urine"
+        "code": "27036-3",
+        "display": "Norchlordiazepoxide [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "code": "99276-8",
-        "display": "3-Hydroxyphenazepam [Mass/volume] in Urine by Confirmatory method"
+        "code": "27084-3",
+        "display": "7-Aminoflunitrazepam [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "code": "42235-2",
-        "display": "Benzodiazepine metabolites [Presence] in Urine by Screen method"
+        "code": "28073-5",
+        "display": "7-Aminoclonazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "33301-3",
+        "display": "Norchlordiazepoxide [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
@@ -453,11 +639,6 @@
       },
       {
         "system": "http://loinc.org",
-        "code": "19282-3",
-        "display": "Benzodiazepines positive [Identifier] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
         "code": "3387-8",
         "display": "Benzodiazepines positive [Identifier] in Urine"
       },
@@ -483,8 +664,203 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "3390-2",
+        "display": "Benzodiazepines [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3406-6",
+        "display": "Bromazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3458-7",
+        "display": "chlordiazePOXIDE [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3459-5",
+        "display": "chlordiazePOXIDE [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3550-1",
+        "display": "diazePAM [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3551-9",
+        "display": "diazePAM [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3654-1",
+        "display": "Flurazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3655-8",
+        "display": "Flurazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3859-6",
+        "display": "Nitrazepam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "4070-9",
+        "display": "Triazolam [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "41467-2",
+        "display": "Benzodiazepines/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "42235-2",
+        "display": "Benzodiazepine metabolites [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "50843-2",
+        "display": "clonazePAM [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51776-3",
+        "display": "7-Aminoclonazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51777-1",
+        "display": "7-Aminoflunitrazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52955-2",
+        "display": "Benzodiazepines [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "53736-5",
         "display": "Benzodiazepines.other [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58364-1",
+        "display": "7-Aminoclonazepam/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58365-8",
+        "display": "7-Aminoclonazepam [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58369-0",
+        "display": "Temazepam/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "59872-2",
+        "display": "Bromazepam [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "59879-7",
+        "display": "chlordiazePOXIDE [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61030-3",
+        "display": "7-Aminoclonazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61033-7",
+        "display": "7-Aminoflunitrazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61040-2",
+        "display": "N-desalkylflurazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61060-0",
+        "display": "Temazepam [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64129-0",
+        "display": "N-desalkylflurazepam/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "64130-8",
+        "display": "diazePAM/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "66128-0",
+        "display": "chlordiazePOXIDE/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70140-9",
+        "display": "Benzodiazepines [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70141-7",
+        "display": "Benzodiazepines [Presence] in Urine by Screen method >200 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70142-5",
+        "display": "Benzodiazepines [Presence] in Urine by Screen method >300 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "86225-0",
+        "display": "clonazePAM/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94106-2",
+        "display": "Temazepam glucuronide [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94110-4",
+        "display": "2-Hydroxyethylflurazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94111-2",
+        "display": "7-Aminoflunitrazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94112-0",
+        "display": "7-Aminoclonazepam [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "9428-4",
+        "display": "Benzodiazepines [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "97159-8",
+        "display": "2-Hydroxyethylflurazepam [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "99276-8",
+        "display": "3-Hydroxyphenazepam [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
@@ -500,24 +876,19 @@
         "system": "http://loinc.org",
         "code": "94117-9",
         "display": "Benzodiazepines panel [Presence] - Urine by Screen method"
-      },
+      }
+    ],
+    "extension": [
       {
-        "system": "http://loinc.org",
-        "code": "111407-3",
-        "display": "Benzodiazepines [Measurement] in Urine",
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
           }
         ]
       }

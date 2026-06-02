@@ -19,6 +19,19 @@
     {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP437281-1 OR LP435271-4) AND system:urine`. The compose anchors at two trunk LP codes - LP437281-1 and LP435271-4 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/xylazine-urine-drug-screening-tests",
@@ -26,7 +39,7 @@
   "title": "Xylazine drug urine screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-05-09T18:08:12-06:00",
+  "date": "2026-06-02T10:00:16-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "contact": [
     {
@@ -56,43 +69,91 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP436919-7"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP437281-1"
           },
           {
             "property": "SYSTEM",
             "op": "=",
             "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }, 
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP435271-4"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2024-05-09T18:08:12-06:00",
-    "total": 3,
+    "timestamp": "2026-06-02T16:00:16.531Z",
+    "identifier": "urn:uuid:bb2a5d13-9556-4713-bdef-8f33e28f5b8c",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 7,
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "101809-2",
-        "display": "Xylazine [Presence] in Urine by Confirmatory method"
+        "code": "103638-3",
+        "display": "4-hydroxy Xylazine [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "103639-1",
+        "display": "4-hydroxy Xylazine [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "103640-9",
+        "display": "4-hydroxy Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "101808-4",
         "display": "Xylazine [Mass/volume] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "101809-2",
+        "display": "Xylazine [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "101810-0",
         "display": "Xylazine/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "107608-2",
+        "display": "Xylazine [Presence] in Urine"
       }
     ]
   }

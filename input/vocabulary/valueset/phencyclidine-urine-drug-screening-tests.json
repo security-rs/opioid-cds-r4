@@ -44,7 +44,7 @@
       },
       {
         "url": "text",
-        "valueMarkdown": "Maintenance search expression: `Phencyclidine (=system:Urine) AND NOT status:DEPRECATED`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine phencyclidine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives such as Dextromethorphan."
+        "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP14566-1) AND system:urine`. The compose anchors at one trunk LP code - LP14566-1 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
       }
     ]
   }
@@ -54,7 +54,7 @@
   "title": "Phencyclidine urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2023-05-25T18:08:12-06:00",
+  "date": "2026-06-02T09:57:06-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "contact": [ {
     "name": "Centers for Disease Control and Prevention (CDC)",
@@ -76,72 +76,36 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390195-8"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
+            "property": "concept",
+            "op": "descendent-of",
             "value": "LP14566-1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-04-30T19:08:24.144Z",
-    "identifier": "urn:uuid:46e4fba3-2cef-4f83-97dd-ca61d9c0cc90",
+    "timestamp": "2026-06-02T15:57:06.733Z",
+    "identifier": "urn:uuid:626e0333-f335-4eb2-bf28-8d6b4983ba28",
     "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
       }
     ],
-    "offset": 0,
-    "total": 15,
+    "total": 14,
     "contains": [
       {
         "system": "http://loinc.org",
@@ -212,41 +176,6 @@
         "system": "http://loinc.org",
         "code": "8238-8",
         "display": "Phencyclidine [Presence] in Urine by SAMHSA screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "108012-6",
-        "display": "Phencyclidine [Measurement] in Urine",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
-          }
-        ]
-      }
-    ],
-    "extension": [
-      {
-        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
-        "extension": [
-          {
-            "url": "code",
-            "valueCode": "status"
-          },
-          {
-            "url": "uri",
-            "valueUri": "http://hl7.org/fhir/concept-properties#status"
-          }
-        ]
       }
     ]
   }

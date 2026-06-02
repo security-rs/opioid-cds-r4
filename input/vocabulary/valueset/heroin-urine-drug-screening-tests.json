@@ -9,18 +9,6 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
-      "extension": [
-        {
-          "url": "type",
-          "valueCode": "documentation"
-        },
-        {
-          "url": "text",
-          "valueMarkdown": "Maintenance search expression: `acetylmorphine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine acetylmorphine (heroin) test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives."
-        }
-      ]
-    },    {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
       "valueContactDetail": {
         "name": "MD Partners, Inc.",
@@ -31,42 +19,45 @@
           }
         ]
       }
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
       "valueString": "Presumed general urine tests for heroin and metabolites."
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
       "valueString": "Urine test"
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
       "valueString": "Codes"
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
       "valueString": "None"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
       "valueCode": "computable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
       "valueCode": "structured"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
       "valueCode": "executable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
       "valueCode": "executable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP14980-4) AND system:urine`. The compose anchors at one trunk LP code - LP14980-4 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests",
@@ -74,7 +65,7 @@
   "title": "Heroin urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-04-15T12:22:34-06:00",
+  "date": "2024-06-01T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine screening tests for heroin and metabolites.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
@@ -83,104 +74,37 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389809-7"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389805-5"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
+            "property": "concept",
+            "op": "descendent-of",
             "value": "LP14980-4"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-05-01T16:49:25.413Z",
-    "identifier": "urn:uuid:203cda3b-12da-40cc-97be-84c33dfa0734",
+    "timestamp": "2026-06-01T20:40:07.422Z",
+    "identifier": "urn:uuid:183c2c4f-b186-41ca-a0d8-c05894ed8e53",
     "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
       }
     ],
-    "offset": 0,
     "total": 22,
     "contains": [
-      {
-        "system": "http://loinc.org",
-        "code": "47004-7",
-        "display": "6-monoacetylmorphine free [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "51740-9",
-        "display": "6-monoacetylmorphine free [Mass/volume] in Urine"
-      },
       {
         "system": "http://loinc.org",
         "code": "10975-1",
@@ -398,6 +322,16 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "47004-7",
+        "display": "6-monoacetylmorphine free [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51740-9",
+        "display": "6-monoacetylmorphine free [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "55520-1",
         "display": "6-Monoacetylmorphine (6-MAM) [Moles/volume] in Urine"
       },
@@ -413,23 +347,8 @@
       },
       {
         "system": "http://loinc.org",
-        "code": "108004-3",
-        "display": "6-Monoacetylmorphine (6-MAM) [Measurement] in Urine",
-        "extension": [
-          {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
-          }
-        ]
+        "code": "89308-1",
+        "display": "Morphine-6-Glucuronide [Presence] in Urine by Screen method"
       }
     ],
     "extension": [

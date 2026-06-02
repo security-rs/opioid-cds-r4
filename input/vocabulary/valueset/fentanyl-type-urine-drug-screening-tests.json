@@ -41,7 +41,7 @@
         },
         {
           "url": "text",
-          "valueMarkdown": "Maintenance search expression: `(*ntanyl* OR *ntanil*) AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine fentanyl type test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives."
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16021-5 OR LP15167-7 OR LP17874-6 OR LP411435-3 OR LP411437-9 OR LP411432-0 OR LP411415-5 OR LP411412-2 OR LP248692-8 OR LP411430-4 OR LP411429-6 OR LP411433-8 OR LP411418-9 OR LP411434-6 OR LP411413-0 OR LP411414-8 OR LP438292-7 OR LP438293-5 OR LP438295-0 OR LP438290-1 OR LP438289-3 OR LP438291-9 OR LP133999-5) AND system:urine`. The compose anchors at 23 trunk LP codes - LP16021-5, LP15167-7, LP17874-6, LP411435-3, LP411437-9, LP411432-0, LP411415-5, LP411412-2, LP248692-8, LP411430-4, LP411429-6, LP411433-8, LP411418-9, LP411434-6, LP411413-0, LP411414-8, LP438292-7, LP438293-5, LP438295-0, LP438290-1, LP438289-3, LP438291-9, and LP133999-5 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
         }
       ]
     }
@@ -51,7 +51,7 @@
   "title": "Fentanyl-type urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2026-05-01T10:52:58-04:00",
+  "date": "2026-06-01T10:52:58-04:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "contact": [
     {
@@ -80,12 +80,11 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389820-4"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP16021-5"
           },
           {
             "property": "CLASSTYPE",
@@ -101,715 +100,11 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389900-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389902-0"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411619-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389908-7"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389915-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389898-0"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP432937-3"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390169-3"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411620-0"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411621-8"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411622-6"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411623-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411624-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411619-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411625-9"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411626-7"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411627-5"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411628-3"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411629-1"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411630-9"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP411631-7"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390179-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443106-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443107-0"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443108-8"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443109-6"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443110-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP443111-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP440654-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP392077-6"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP434666-6"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
-            "value": "LP438294-3"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
+            "property": "concept",
+            "op": "descendent-of",
             "value": "LP15167-7"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
           },
           {
             "property": "CLASSTYPE",
@@ -820,22 +115,16 @@
             "property": "SYSTEM",
             "op": "=",
             "value": "LP7681-2"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
-            "value": "LP15048-9"
           }
         ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP17874-6"
           },
           {
             "property": "CLASSTYPE",
@@ -846,35 +135,421 @@
             "property": "SYSTEM",
             "op": "=",
             "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411435-3"
           },
           {
-            "property": "COMPONENT",
+            "property": "CLASSTYPE",
             "op": "=",
-            "value": "LP446960-9"
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411437-9"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411432-0"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411415-5"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411412-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP248692-8"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411430-4"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411429-6"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411433-8"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411418-9"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411434-6"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411413-0"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411414-8"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438292-7"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438293-5"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438295-0"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438290-1"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438289-3"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP438291-9"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP133999-5"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-05-01T18:50:05.765Z",
-    "identifier": "urn:uuid:fd76a536-00dc-456f-a785-c05dd6879ba0",
+    "timestamp": "2026-06-01T20:01:48.724Z",
+    "identifier": "urn:uuid:52c7f298-b7ac-47ec-b442-b21f7018210e",
     "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
       }
     ],
-    "offset": 0,
-    "total": 67,
+    "total": 57,
     "contains": [
       {
         "system": "http://loinc.org",
@@ -893,68 +568,13 @@
       },
       {
         "system": "http://loinc.org",
-        "code": "74372-4",
-        "display": "Acetyl fentanyl [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "74810-3",
-        "display": "Acetyl fentanyl [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58379-9",
-        "display": "fentaNYL+Norfentanyl [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "66129-8",
-        "display": "fentaNYL+Norfentanyl [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "93471-1",
-        "display": "Acetyl norfentanyl [Mass/volume] in Urine by Confirmatory method"
+        "code": "11073-4",
+        "display": "Despropionylfentanyl [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
         "code": "11075-9",
         "display": "Norfentanyl [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "43199-9",
-        "display": "Norfentanyl [Presence] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "43200-5",
-        "display": "Norfentanyl [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58382-3",
-        "display": "Norfentanyl/Creatinine [Mass Ratio] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58383-1",
-        "display": "Norfentanyl [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "77775-5",
-        "display": "Norfentanyl cutoff [Mass/volume] in Urine for Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "95797-7",
-        "display": "Norfentanyl [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "11073-4",
-        "display": "Despropionylfentanyl [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
@@ -994,6 +614,21 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "43199-9",
+        "display": "Norfentanyl [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "43200-5",
+        "display": "Norfentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58379-9",
+        "display": "fentaNYL+Norfentanyl [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "58380-7",
         "display": "fentaNYL/Creatinine [Mass Ratio] in Urine"
       },
@@ -1004,8 +639,38 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "58382-3",
+        "display": "Norfentanyl/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58383-1",
+        "display": "Norfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "59673-4",
         "display": "fentaNYL [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "66129-8",
+        "display": "fentaNYL+Norfentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "74372-4",
+        "display": "Acetyl fentanyl [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "74810-3",
+        "display": "Acetyl fentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77775-5",
+        "display": "Norfentanyl cutoff [Mass/volume] in Urine for Confirmatory method"
       },
       {
         "system": "http://loinc.org",
@@ -1026,6 +691,16 @@
         "system": "http://loinc.org",
         "code": "79260-6",
         "display": "fentaNYL cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93471-1",
+        "display": "Acetyl norfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "95797-7",
+        "display": "Norfentanyl [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
@@ -1144,21 +819,6 @@
       },
       {
         "system": "http://loinc.org",
-        "code": "65808-8",
-        "display": "Nortapentadol [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "81754-4",
-        "display": "Nortapentadol [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "89306-5",
-        "display": "Nortapentadol [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
         "code": "105536-7",
         "display": "Phenylacetyl fentanyl [Mass/volume] in Urine"
       },
@@ -1189,73 +849,23 @@
       },
       {
         "system": "http://loinc.org",
-        "code": "104229-0",
-        "display": "Carfentanil [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "105546-6",
-        "display": "Carfentanil [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
         "code": "67822-7",
         "display": "fentaNYL and Norfentanyl panel - Urine"
-      },
+      }
+    ],
+    "extension": [
       {
-        "system": "http://loinc.org",
-        "code": "101401-8",
-        "display": "Tapentadol and Nortapentadol panel - Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "105538-3",
-        "display": "Butyryl fentanyl carboxy metabolite [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "111185-5",
-        "display": "fentaNYL [Measurement] in Urine",
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "110560-0",
-        "display": "Norfentanyl [Measurement] in Urine",
-        "extension": [
+            "url": "code",
+            "valueCode": "status"
+          },
           {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
           }
         ]
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "107610-8",
-        "display": "Synthetic fentanyl analogs [Presence] in Urine"
       }
     ]
   }

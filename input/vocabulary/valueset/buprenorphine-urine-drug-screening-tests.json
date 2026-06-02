@@ -57,7 +57,7 @@
         },
         {
           "url": "text",
-          "valueMarkdown": "Maintenance search expression: `buprenorphine AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine buprenorphine test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives."
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16054-6 OR LP392033-9) AND system:urine`. The compose anchors at two trunk LP codes - LP16054-6 and LP392033-9 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
         }
       ]
     }
@@ -76,169 +76,31 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389835-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389837-8"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389839-4"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP407472-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP389832-9"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP392033-9"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          }
-        ]
-       },
-       {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
+            "property": "concept",
+            "op": "descendent-of",
             "value": "LP16054-6"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
           }
         ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP392033-9"
           },
           {
             "property": "SYSTEM",
@@ -246,88 +108,29 @@
             "value": "LP7681-2"
           },
           {
-            "property": "COMPONENT",
+            "property": "CLASSTYPE",
             "op": "=",
-            "value": "LP34568-3"
+            "value": "1"
           }
         ]
       }
     ]
   },
   "expansion": {
-    "timestamp": "2026-04-30T19:21:05.672Z",
-    "identifier": "urn:uuid:952a31ff-2e0b-40a3-99d5-758c15ae2ed1",
+    "timestamp": "2026-05-07T19:47:19.290Z",
+    "identifier": "urn:uuid:0168dddc-2cfc-4256-ad7d-5abae07ea39c",
     "parameter": [
-      {
-        "name": "offset",
-        "valueInteger": 0
-      },
-      {
-        "name": "count",
-        "valueInteger": 200
-      },
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
       }
     ],
-    "offset": 0,
-    "total": 24,
+    "total": 22,
     "contains": [
-      {
-        "system": "http://loinc.org",
-        "code": "38373-7",
-        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58359-1",
-        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "91027-3",
-        "display": "Buprenorphine-3-glucuronide [Presence] in Urine by Screen method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "89305-7",
-        "display": "Norbuprenorphine-3-glucuronide [Presence] in Urine by Screen method"
-      },
       {
         "system": "http://loinc.org",
         "code": "105966-6",
         "display": "Norbuprenorphine [Presence] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "49751-1",
-        "display": "Norbuprenorphine [Mass/volume] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "49753-7",
-        "display": "Norbuprenorphine [Mass/volume] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58361-7",
-        "display": "Norbuprenorphine/Creatinine [Mass Ratio] in Urine"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "58362-5",
-        "display": "Norbuprenorphine [Presence] in Urine by Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "77774-8",
-        "display": "Norbuprenorphine cutoff [Mass/volume] in Urine for Confirmatory method"
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "82371-6",
-        "display": "Norbuprenorphine [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
@@ -372,8 +175,28 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "38373-7",
+        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "49751-1",
+        "display": "Norbuprenorphine [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "49752-9",
         "display": "Buprenorphine [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "49753-7",
+        "display": "Norbuprenorphine [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58359-1",
+        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
@@ -382,13 +205,43 @@
       },
       {
         "system": "http://loinc.org",
+        "code": "58361-7",
+        "display": "Norbuprenorphine/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58362-5",
+        "display": "Norbuprenorphine [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "77764-9",
         "display": "Buprenorphine cutoff [Mass/volume] in Urine for Confirmatory method"
       },
       {
         "system": "http://loinc.org",
+        "code": "77774-8",
+        "display": "Norbuprenorphine cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "77787-0",
         "display": "Buprenorphine cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "82371-6",
+        "display": "Norbuprenorphine [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "89305-7",
+        "display": "Norbuprenorphine-3-glucuronide [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "91027-3",
+        "display": "Buprenorphine-3-glucuronide [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
@@ -399,44 +252,19 @@
         "system": "http://loinc.org",
         "code": "69033-9",
         "display": "Buprenorphine and Norbuprenorphine panel - Urine"
-      },
+      }
+    ],
+    "extension": [
       {
-        "system": "http://loinc.org",
-        "code": "111236-6",
-        "display": "Buprenorphine [Measurement] in Urine",
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
         "extension": [
           {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "code": "110566-7",
-        "display": "Norbuprenorphine [Measurement] in Urine",
-        "extension": [
+            "url": "code",
+            "valueCode": "status"
+          },
           {
-            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
-            "extension": [
-              {
-                "url": "code",
-                "valueCode": "status"
-              },
-              {
-                "url": "value",
-                "valueCode": "TRIAL"
-              }
-            ]
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
           }
         ]
       }

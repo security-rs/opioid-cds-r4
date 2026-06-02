@@ -9,19 +9,6 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
-      "extension": [
-        {
-          "url": "type",
-          "valueCode": "documentation"
-        },
-        {
-          "url": "text",
-          "valueMarkdown": "Maintenance search expression: `oxycodone AND system:urine`. This expression is used as a human-reviewed LOINC hierarchy/search query to identify candidate urine oxycodone test codes. The compose is curated and may use exact parent, SYSTEM, CLASSTYPE, and COMPONENT filters to avoid false positives such as those from immunoassay cross-reactivity.."
-        }
-      ]
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
       "valueContactDetail": {
         "name": "MD Partners, Inc.",
@@ -68,6 +55,19 @@
     {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP15003-4 OR LP248581-3 OR LP417242-7 OR LP417241-9) AND system:urine`. The compose anchors at four trunk LP codes - LP15003-4, LP248581-3, LP417242-7, and LP417241-9 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests",
@@ -75,7 +75,7 @@
   "title": "Oxycodone urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-04-15T12:22:34-06:00",
+  "date": "2026-06-02T15:47:08-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine screening tests for oxycodone.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
@@ -84,12 +84,11 @@
     "include": [
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390106-5"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP15003-4"
           },
           {
             "property": "SYSTEM",
@@ -105,12 +104,11 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390112-3"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP248581-3"
           },
           {
             "property": "SYSTEM",
@@ -126,12 +124,11 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390119-8"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP417242-7"
           },
           {
             "property": "SYSTEM",
@@ -147,12 +144,11 @@
       },
       {
         "system": "http://loinc.org",
-        "version": "2.82",
         "filter": [
           {
-            "property": "parent",
-            "op": "=",
-            "value": "LP390102-4"
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP417241-9"
           },
           {
             "property": "SYSTEM",
@@ -163,219 +159,157 @@
             "property": "CLASSTYPE",
             "op": "=",
             "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP419316-7"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP419317-5"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          }
-        ]
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.82",
-        "filter": [
-          {
-            "property": "parent",
-            "op": "=",
-            "value": "LP248770-2"
-          },
-          {
-            "property": "SYSTEM",
-            "op": "=",
-            "value": "LP7681-2"
-          },
-          {
-            "property": "CLASSTYPE",
-            "op": "=",
-            "value": "1"
-          },
-          {
-            "property": "COMPONENT",
-            "op": "=",
-            "value": "LP15003-4 "
           }
         ]
       }
     ]
   },
-  "expansion":{
-    "resourceType": "ValueSet",
-    "meta": {
-      "profile": [
-        "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
-        "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
-      ]
-    },
-    "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/oxycodone-urine-drug-screening-tests",
-    "name": "OXYCODONE_URINE_DRUG_SCREENING_TESTS",
-    "title": "Oxycodone urine drug screening tests",
-    "status": "active",
-    "experimental": false,
-    "date": "2024-04-15T12:22:34-06:00",
-    "expansion": {
-      "timestamp": "2026-04-30T19:26:56.850Z",
-      "identifier": "urn:uuid:a777ce77-3f03-48db-9687-7d9d53d4a51d",
-      "parameter": [
-        {
-          "name": "offset",
-          "valueInteger": 0
-        },
-        {
-          "name": "count",
-          "valueInteger": 200
-        },
-        {
-          "name": "used-codesystem",
-          "valueUri": "http://loinc.org|2.82"
-        }
-      ],
-      "offset": 0,
-      "total": 21,
-      "contains": [
-        {
-          "system": "http://loinc.org",
-          "code": "46973-4",
-          "display": "oxyCODONE Free [Mass/volume] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "51954-6",
-          "display": "oxyCODONE Free [Mass/volume] in Urine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "58430-0",
-          "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Screen method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "60276-3",
-          "display": "oxyCODONE+oxyMORphone cutoff [Mass/volume] in Urine for Screen method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "61197-0",
-          "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "86609-5",
-          "display": "Noroxymorphone/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "89302-4",
-          "display": "Noroxymorphone [Presence] in Urine by Screen method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "90894-7",
-          "display": "Noroxymorphone [Mass/volume] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "10998-3",
-          "display": "oxyCODONE [Presence] in Urine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "11246-6",
-          "display": "oxyCODONE [Mass/volume] in Urine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "16249-5",
-          "display": "oxyCODONE [Mass/volume] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "19642-8",
-          "display": "oxyCODONE [Presence] in Urine by Screen method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "19643-6",
-          "display": "oxyCODONE [Presence] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "19644-4",
-          "display": "oxyCODONE cutoff [Mass/volume] in Urine for Screen method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "19645-1",
-          "display": "oxyCODONE cutoff [Mass/volume] in Urine for Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "58395-5",
-          "display": "oxyCODONE/Creatinine [Mass Ratio] in Urine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "70215-9",
-          "display": "oxyCODONE [Moles/volume] in Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "78767-1",
-          "display": "oxyCODONE [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "78873-7",
-          "display": "oxyCODONE [Z-score] in Urine"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "94304-3",
-          "display": "OxyCODONE and metabolites panel - Urine by Confirmatory method"
-        },
-        {
-          "system": "http://loinc.org",
-          "code": "94305-0",
-          "display": "OxyMORphone and Noroxymorphone panel - Urine by Confirmatory method"
-        }
-      ]
-    }
+  "expansion": {
+    "timestamp": "2026-06-02T21:47:08.170Z",
+    "identifier": "urn:uuid:051d5315-216c-48f3-9900-08f7e0933f27",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 27,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "10998-3",
+        "display": "oxyCODONE [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "11246-6",
+        "display": "oxyCODONE [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16249-5",
+        "display": "oxyCODONE [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19642-8",
+        "display": "oxyCODONE [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19643-6",
+        "display": "oxyCODONE [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19644-4",
+        "display": "oxyCODONE cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19645-1",
+        "display": "oxyCODONE cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "46973-4",
+        "display": "oxyCODONE Free [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51954-6",
+        "display": "oxyCODONE Free [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58395-5",
+        "display": "oxyCODONE/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58430-0",
+        "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "60276-3",
+        "display": "oxyCODONE+oxyMORphone cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61197-0",
+        "display": "oxyCODONE+oxyMORphone [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61423-0",
+        "display": "Noroxycodone/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61424-8",
+        "display": "Noroxycodone [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "61425-5",
+        "display": "Noroxycodone [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70215-9",
+        "display": "oxyCODONE [Moles/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77779-7",
+        "display": "Noroxycodone cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78767-1",
+        "display": "oxyCODONE [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78873-7",
+        "display": "oxyCODONE [Z-score] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "86609-5",
+        "display": "Noroxymorphone/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "89302-4",
+        "display": "Noroxymorphone [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "89303-2",
+        "display": "Noroxycodone [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "90894-7",
+        "display": "Noroxymorphone [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "95135-0",
+        "display": "Noroxycodone [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94304-3",
+        "display": "OxyCODONE and metabolites panel - Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "94305-0",
+        "display": "OxyMORphone and Noroxymorphone panel - Urine by Confirmatory method"
+      }
+    ]
   }
 }

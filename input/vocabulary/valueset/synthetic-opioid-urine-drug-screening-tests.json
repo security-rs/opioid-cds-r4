@@ -2,208 +2,377 @@
   "resourceType": "ValueSet",
   "id": "synthetic-opioid-urine-drug-screening-tests",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset", "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
+    ]
   },
-  "extension": [ {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
-    "valueString": "Urine tests for synthetic and semi-synthetic (non-opiate) substances"
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
-    "valueString": "Urine test"
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
-    "valueString": "Urine tests for synthetic and semi-synthetic (non-opiate) substances"
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
-    "valueString": "Codes listed in the General opiate urine drug screening tests value set and the Opiate specific urine drug screening tests value set"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
-    "valueContactDetail": {
-      "name": "MD Partners, Inc.",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@mdpartners.com"
-      } ]
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
+      "valueString": "Urine tests for synthetic and semi-synthetic (non-opiate) substances"
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
+      "valueString": "Urine test"
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
+      "valueString": "Urine tests for synthetic and semi-synthetic (non-opiate) substances"
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
+      "valueString": "Codes listed in the General opiate urine drug screening tests value set and the Opiate specific urine drug screening tests value set"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
+      "valueContactDetail": {
+        "name": "MD Partners, Inc.",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@mdpartners.com"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
+      "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP248692-8 OR LP411610-1 OR LP411436-1) AND system:urine`. The compose anchors at three trunk LP codes - LP248692-8, LP411610-1, and LP411436-1 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
+        }
+      ]
     }
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "computable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "executable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
-    "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-    "valueMarkdown": "Step 1. Add all codes found using the following LOINC query: (opiate OR opioid AND NOT morphine AND NOT diamorphine AND NOT 6-Monoacetylmorphine AND NOT opiates) (=system:Urine)"
-  } ],
+  ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/synthetic-opioid-urine-drug-screening-tests",
   "name": "SYNTHETIC_OPIOID_URINE_DRUG_SCREENING_TESTS",
   "title": "Synthetic opioid urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2023-05-25T18:08:12-06:00",
+  "date": "2026-06-03T13:39:45-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
-  "contact": [ {
-    "name": "Centers for Disease Control and Prevention (CDC)",
-    "telecom": [ {
-      "system": "url",
-      "value": "https://www.cdc.gov"
-    } ]
-  } ],
+  "contact": [
+    {
+      "name": "Centers for Disease Control and Prevention (CDC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.cdc.gov"
+        }
+      ]
+    }
+  ],
   "description": "Urine tests for synthetic and semi-synthetic (non-opiate) substances",
-  "jurisdiction": [ {
-    "coding": [ {
-      "system": "urn:iso:std:iso:3166",
-      "code": "US"
-    } ]
-  } ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP248692-8"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411610-1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "LP411436-1"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
-    "timestamp": "2023-05-25T18:08:12-06:00",
-    "total": 28,
-    "contains": [ {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93471-1",
-      "display": "Acetyl norfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93473-7",
-      "display": "Beta hydroxythiofentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93465-3",
-      "display": "3-Methylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93469-5",
-      "display": "4-Fluorobutyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93464-6",
-      "display": "p-Fluorofentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "101162-6",
-      "display": "p-Fluorofentanyl [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "101161-8",
-      "display": "p-Fluorofentanyl/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93461-2",
-      "display": "4-Methoxybutyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93468-7",
-      "display": "Acrylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "99079-6",
-      "display": "Acrylfentanyl [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93467-9",
-      "display": "Butyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93470-3",
-      "display": "Furanylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "99081-2",
-      "display": "Furanylfentanyl [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93466-1",
-      "display": "Valerylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93472-9",
-      "display": "4-Methylphenethylacetylfentanyl [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93462-0",
-      "display": "Norcarfentanil [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93463-8",
-      "display": "Ocfentanil [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93455-4",
-      "display": "IC-26 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93456-2",
-      "display": "MT-45 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93459-6",
-      "display": "U-47700 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93460-4",
-      "display": "AH-7921 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93457-0",
-      "display": "AH-8529 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93458-8",
-      "display": "AH-8533 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93451-3",
-      "display": "Nor-W-18+Nor-W-15 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93453-9",
-      "display": "W-15 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93454-7",
-      "display": "W-18 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93452-1",
-      "display": "W-19 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.74",
-      "code": "93474-5",
-      "display": "Synthetic opioids panel - Urine by Confirmatory method"
-    } ]
+    "timestamp": "2026-06-03T19:39:45.262Z",
+    "identifier": "urn:uuid:ea05297e-8af1-49be-9457-5ffc70bb4084",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 41,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "93471-1",
+        "display": "Acetyl norfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101161-8",
+        "display": "p-Fluorofentanyl/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101162-6",
+        "display": "p-Fluorofentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101163-4",
+        "display": "Brorphine [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101164-2",
+        "display": "Brorphine/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101165-9",
+        "display": "Brorphine [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101166-7",
+        "display": "Metonitazene [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101167-5",
+        "display": "Metonitazene/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101168-3",
+        "display": "Metonitazene [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101169-1",
+        "display": "2-methyl AP-237 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101171-7",
+        "display": "2-methyl AP-237/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101180-8",
+        "display": "2-methyl AP-237 [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105530-0",
+        "display": "Beta hydroxythiofentanyl [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105531-8",
+        "display": "4-Methylphenethylacetylfentanyl [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "105532-6",
+        "display": "3-Methylfentanyl [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "107609-0",
+        "display": "Synthetic opioids [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93451-3",
+        "display": "Nor-W-18+Nor-W-15 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93452-1",
+        "display": "W-19 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93453-9",
+        "display": "W-15 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93454-7",
+        "display": "W-18 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93455-4",
+        "display": "IC-26 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93456-2",
+        "display": "MT-45 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93457-0",
+        "display": "AH-8529 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93458-8",
+        "display": "AH-8533 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93459-6",
+        "display": "U-47700 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93460-4",
+        "display": "AH-7921 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93461-2",
+        "display": "4-Methoxybutyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93462-0",
+        "display": "Norcarfentanil [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93463-8",
+        "display": "Ocfentanil [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93464-6",
+        "display": "p-Fluorofentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93465-3",
+        "display": "3-Methylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93466-1",
+        "display": "Valerylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93467-9",
+        "display": "Butyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93468-7",
+        "display": "Acrylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93469-5",
+        "display": "4-Fluorobutyrylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93470-3",
+        "display": "Furanylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93472-9",
+        "display": "4-Methylphenethylacetylfentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93473-7",
+        "display": "Beta hydroxythiofentanyl [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "99079-6",
+        "display": "Acrylfentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "99081-2",
+        "display": "Furanylfentanyl [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93474-5",
+        "display": "Synthetic opioids panel - Urine by Confirmatory method"
+      }
+    ]
   }
 }

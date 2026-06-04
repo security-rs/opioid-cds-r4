@@ -29,7 +29,7 @@
       "valueCode": "documentation"
     }, {
       "url": "text",
-      "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP18868-7 OR LP391552-9 OR LP426996-7) AND system:urine`. The compose anchors at three trunk LP codes - LP18868-7 (Amphetamines), LP391552-9 (Sympathomimetics), and LP426996-7 (Amphetamines panel) - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). Codes from the LP248770-2 (Lab terms not yet categorized) bucket are emitted as an explicit concept list since filtering on that catch-all parent would over-pull uncategorized urine lab terms. To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter (or extend the concept list for catch-all leaves), then re-expand."
+      "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP18868-7 OR LP391552-9 OR LP426996-7) AND system:urine`. The compose anchors at three trunk LP codes - LP18868-7 (Amphetamines), LP391552-9 (Sympathomimetics), and LP426996-7 (Amphetamines panel) - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). Codes from the LP248770-2 (Lab terms not yet categorized) bucket are emitted as an explicit concept list since filtering on that catch-all parent would over-pull uncategorized urine lab terms. To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter (or extend the concept list for catch-all leaves), then re-expand."
     } ]
   } ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/amphetamine-urine-drug-screening-tests",
@@ -61,7 +61,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP18868-7"
           },
           {
@@ -81,7 +81,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP391552-9"
           },
           {
@@ -101,7 +101,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP426996-7"
           },
           {

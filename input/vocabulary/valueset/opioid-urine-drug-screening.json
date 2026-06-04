@@ -71,7 +71,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP18149-2"
           },
           {
@@ -86,7 +86,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP248581-3"
           },
           {
@@ -101,7 +101,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP266981-2"
           },
           {
@@ -116,7 +116,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP286758-0"
           },
           {
@@ -131,7 +131,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390124-8"
           },
           {
@@ -146,7 +146,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390125-5"
           },
           {
@@ -161,7 +161,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390126-3"
           },
           {
@@ -176,7 +176,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390127-1"
           },
           {
@@ -191,7 +191,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390128-9"
           },
           {
@@ -206,7 +206,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP40335-9"
           },
           {
@@ -221,7 +221,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411321-5"
           },
           {
@@ -236,7 +236,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411322-3"
           },
           {
@@ -251,7 +251,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411323-1"
           },
           {
@@ -266,7 +266,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411324-9"
           },
           {
@@ -281,7 +281,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411325-6"
           },
           {
@@ -296,7 +296,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411327-2"
           },
           {
@@ -311,7 +311,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411328-0"
           },
           {
@@ -326,7 +326,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411329-8"
           },
           {
@@ -341,7 +341,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411333-0"
           },
           {
@@ -356,7 +356,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411334-8"
           },
           {
@@ -371,7 +371,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411412-2"
           },
           {
@@ -386,7 +386,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411413-0"
           },
           {
@@ -401,7 +401,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411414-8"
           },
           {
@@ -416,7 +416,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411415-5"
           },
           {
@@ -431,7 +431,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411429-6"
           },
           {
@@ -446,7 +446,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411430-4"
           },
           {
@@ -461,7 +461,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411432-0"
           },
           {
@@ -476,7 +476,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411433-8"
           },
           {
@@ -491,7 +491,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411434-6"
           },
           {
@@ -506,7 +506,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411435-3"
           },
           {
@@ -521,7 +521,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411437-9"
           },
           {
@@ -536,7 +536,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411628-3"
           },
           {
@@ -551,7 +551,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP433488-6"
           },
           {
@@ -566,7 +566,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP433489-4"
           },
           {
@@ -581,7 +581,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP433494-4"
           },
           {
@@ -596,7 +596,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP390086-9"
           },
           {
@@ -611,7 +611,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP392077-6"
           },
           {
@@ -626,7 +626,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP419316-7"
           },
           {
@@ -641,7 +641,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP419317-5"
           },
           {
@@ -656,7 +656,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP417172-6"
           },
           {

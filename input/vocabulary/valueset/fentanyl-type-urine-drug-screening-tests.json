@@ -41,7 +41,7 @@
         },
         {
           "url": "text",
-          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16021-5 OR LP15167-7 OR LP17874-6 OR LP411435-3 OR LP411437-9 OR LP411432-0 OR LP411415-5 OR LP411412-2 OR LP248692-8 OR LP411430-4 OR LP411429-6 OR LP411433-8 OR LP411418-9 OR LP411434-6 OR LP411413-0 OR LP411414-8 OR LP438292-7 OR LP438293-5 OR LP438295-0 OR LP438290-1 OR LP438289-3 OR LP438291-9 OR LP133999-5) AND system:urine`. The compose anchors at 23 trunk LP codes - LP16021-5, LP15167-7, LP17874-6, LP411435-3, LP411437-9, LP411432-0, LP411415-5, LP411412-2, LP248692-8, LP411430-4, LP411429-6, LP411433-8, LP411418-9, LP411434-6, LP411413-0, LP411414-8, LP438292-7, LP438293-5, LP438295-0, LP438290-1, LP438289-3, LP438291-9, and LP133999-5 - using `concept descendent-of` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another descendent-of filter, then re-expand."
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16021-5 OR LP15167-7 OR LP17874-6 OR LP411435-3 OR LP411437-9 OR LP411432-0 OR LP411415-5 OR LP411412-2 OR LP248692-8 OR LP411430-4 OR LP411429-6 OR LP411433-8 OR LP411418-9 OR LP411434-6 OR LP411413-0 OR LP411414-8 OR LP438292-7 OR LP438293-5 OR LP438295-0 OR LP438290-1 OR LP438289-3 OR LP438291-9 OR LP133999-5) AND system:urine`. The compose anchors at 23 trunk LP codes - LP16021-5, LP15167-7, LP17874-6, LP411435-3, LP411437-9, LP411432-0, LP411415-5, LP411412-2, LP248692-8, LP411430-4, LP411429-6, LP411433-8, LP411418-9, LP411434-6, LP411413-0, LP411414-8, LP438292-7, LP438293-5, LP438295-0, LP438290-1, LP438289-3, LP438291-9, and LP133999-5 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
         }
       ]
     }
@@ -83,7 +83,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP16021-5"
           },
           {
@@ -103,7 +103,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP15167-7"
           },
           {
@@ -123,7 +123,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP17874-6"
           },
           {
@@ -143,7 +143,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411435-3"
           },
           {
@@ -163,7 +163,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411437-9"
           },
           {
@@ -183,7 +183,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411432-0"
           },
           {
@@ -203,7 +203,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411415-5"
           },
           {
@@ -223,7 +223,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411412-2"
           },
           {
@@ -243,7 +243,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP248692-8"
           },
           {
@@ -263,7 +263,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411430-4"
           },
           {
@@ -283,7 +283,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411429-6"
           },
           {
@@ -303,7 +303,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411433-8"
           },
           {
@@ -323,7 +323,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411418-9"
           },
           {
@@ -343,7 +343,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411434-6"
           },
           {
@@ -363,7 +363,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411413-0"
           },
           {
@@ -383,7 +383,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP411414-8"
           },
           {
@@ -403,7 +403,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438292-7"
           },
           {
@@ -423,7 +423,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438293-5"
           },
           {
@@ -443,7 +443,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438295-0"
           },
           {
@@ -463,7 +463,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438290-1"
           },
           {
@@ -483,7 +483,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438289-3"
           },
           {
@@ -503,7 +503,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP438291-9"
           },
           {
@@ -523,7 +523,7 @@
         "filter": [
           {
             "property": "concept",
-            "op": "descendent-of",
+            "op": "is-a",
             "value": "LP133999-5"
           },
           {

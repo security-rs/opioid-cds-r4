@@ -37,11 +37,11 @@
     <version value="1.0.0" />
   </dependsOn>
   <!-- Using older version of the R4 extension pack here as the updated (v5.1.0) version contains R5 extension for cqf-strengthOfRecommendation and cqf-qualityOfEvidence -->
-  <!--dependsOn>
+  <dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
     <packageId value="hl7.fhir.uv.extensions.r4" />
-    <version value="5.1.0" />
-  </dependsOn-->
+    <version value="5.3.0" />
+  </dependsOn>
   <!-- Needed for the auto-oid-root parameter -->
   <!-- <dependsOn>
     <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools" />
@@ -742,10 +742,6 @@
     <parameter>
       <code value="pin-manifest" />
       <value value="manifest" />
-    </parameter>
-    <parameter>
-      <code value="pin-external" />
-      <value value="true" />
     </parameter>
          <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
          <parameter>

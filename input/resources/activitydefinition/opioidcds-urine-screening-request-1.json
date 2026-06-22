@@ -1,6 +1,10 @@
 {
   "resourceType": "ActivityDefinition",
   "id": "opioidcds-urine-screening-request-1",
+  "url": "http://fhir.org/guides/cdc/opioid-cds/ActivityDefinition/opioidcds-urine-screening-request-1",
+  "version": "2022.1.0",
+  "name": "URINE_SCREENING_REQUEST_1",
+  "title": "ActivityDefinition - Urine Screening Request 1",
   "status": "active",
   "library": [ "http://fhir.org/guides/cdc/opioid-cds/Library/OpioidCDSREC10OrderSign" ],
   "kind": "ServiceRequest",

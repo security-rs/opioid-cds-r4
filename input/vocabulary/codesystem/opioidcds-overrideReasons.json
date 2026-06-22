@@ -89,6 +89,41 @@
       "code": "decline-suggestion-with-comment",
       "display": "Decline Suggestion with Comment",
       "definition": "The suggestion provided by the service has been declined. Reasoning and/or justification supplied in an additional comment"
+    },
+    {
+      "code": "UToxAccepted",
+      "display": "Action Taken",
+      "definition": "Action taken on the Recommendation 10 urine toxicology screening recommendation (e.g., toxicology screen was ordered)."
+    },
+    {
+      "code": "UToxNA",
+      "display": "Alert not appropriate",
+      "definition": "The Recommendation 10 urine toxicology screening recommendation is not appropriate for the current patient or context."
+    },
+    {
+      "code": "UToxPDeclined",
+      "display": "Action not taken",
+      "definition": "Action on the Recommendation 10 urine toxicology screening recommendation was not taken (e.g., patient declined or other reason)."
+    },
+    {
+      "code": "UToxWrongProvider",
+      "display": "Wrong clinician",
+      "definition": "The Recommendation 10 urine toxicology screening recommendation is not appropriate for this clinician's scope of practice."
+    },
+    {
+      "code": "UnExptResultAccepted",
+      "display": "Action Taken",
+      "definition": "Action taken in response to the unexpected toxicology results alert from Recommendation 10 (e.g., will repeat urine drug screening more frequently or will assess for substance use disorder)."
+    },
+    {
+      "code": "UnExptResultNA",
+      "display": "Alert not appropriate",
+      "definition": "The Recommendation 10 unexpected toxicology results alert is not appropriate for the current patient or context."
+    },
+    {
+      "code": "UnExptResultWrongProvider",
+      "display": "Wrong clinician",
+      "definition": "The Recommendation 10 unexpected toxicology results alert is not appropriate for this clinician's scope of practice."
     }
   ]
 }

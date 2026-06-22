@@ -25,14 +25,23 @@
   "purpose": "This value set may use the Quality Data Model (QDM) datatype related to Procedure, Order or Intervention, Order. The intent of this value set is to identify all patients receiving hospice care outside of a hospital or long term care facility.",
   "expansion": {
     "timestamp": "2021-02-08T13:47:55-07:00",
+    "identifier": "urn:uuid:6423310a-9e35-4f18-a2ed-2acb9166e5eb",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
+      }
+    ],
     "contains": [ {
       "system": "http://snomed.info/sct",
-      "version": "2020-09",
       "code": "385763009",
       "display": "Hospice care (regime/therapy)"
     }, {
       "system": "http://snomed.info/sct",
-      "version": "2020-09",
       "code": "385765002",
       "display": "Hospice care management (procedure)"
     } ]

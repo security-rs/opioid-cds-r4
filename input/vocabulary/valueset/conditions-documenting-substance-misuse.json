@@ -2,402 +2,530 @@
   "resourceType": "ValueSet",
   "id": "conditions-documenting-substance-misuse",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset", "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
+    ]
   },
-  "extension": [ {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
-    "valueContactDetail": {
-      "name": "MD Partners, Inc.",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@mdpartners.com"
-      } ]
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
+      "valueContactDetail": {
+        "name": "MD Partners, Inc.",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@mdpartners.com"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "structured"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
+      "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
+      "valueContactDetail": {
+        "name": "MD Partners, Inc.",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@mdpartners.com"
+          }
+        ]
+      }
     }
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "computable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
-    "valueCode": "structured"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "executable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
-    "valueCode": "executable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
-    "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
-    "valueContactDetail": {
-      "name": "MD Partners, Inc.",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@mdpartners.com"
-      } ]
-    }
-  } ],
+  ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/conditions-documenting-substance-misuse",
   "name": "CONDITIONS_DOCUMENTING_SUBSTANCE_ABUSE",
   "title": "Conditions documenting substance misuse",
   "status": "active",
   "experimental": false,
-  "date": "2025-04-09T18:37:55-06:00",
+  "date": "2026-06-04T10:08:56-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
-  "contact": [ {
-    "name": "Centers for Disease Control and Prevention (CDC)",
-    "telecom": [ {
-      "system": "url",
-      "value": "https://www.cdc.gov"
-    } ]
-  } ],
+  "contact": [
+    {
+      "name": "Centers for Disease Control and Prevention (CDC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.cdc.gov"
+        }
+      ]
+    }
+  ],
   "description": "Any finding or condition that indicate problematic misuse of a substance other than tobacco or laxatives, including \"history of\" conditions.",
-  "jurisdiction": [ {
-    "coding": [ {
-      "system": "urn:iso:std:iso:3166",
-      "code": "US"
-    } ]
-  } ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
   "purpose": "Identification of patients that have a documented substance misuse condition now or in the past when considering opioid therapy.",
   "copyright": "© CDC 2016+.",
   "compose": {
-    "include": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "1254812006"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "228366006"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "66214007"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "417284009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "441668002"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "226034001"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "228427002"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "191939002"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "361055000"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "191928000"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "280985006"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "280982009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "231459008"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "280983004"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "110281001"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "719848005"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "191816009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "363101005"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "715431002"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "724713006"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "91388009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "390867000"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "296036006"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "296177007"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "295809003"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "295960003"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "708079007"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "1149408002"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "242253008"
-      } ]
-    }, {
-      "system": "http://hl7.org/fhir/sid/icd-10-cm",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "Z71.4"
-      } ]
-    }, {
-      "system": "http://hl7.org/fhir/sid/icd-10-cm",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "Z71.5"
-      } ]
-    }, {
-      "system": "http://hl7.org/fhir/sid/icd-10-cm",
-      "filter": [ {
-        "property": "concept",
-        "op": "descendent-of",
-        "value": "F55"
-      } ]
-    }, {
-      "system": "http://hl7.org/fhir/sid/icd-10-cm",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "Section-F10-F19"
-      } ]
-    } ],
-    "exclude": [ {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "56294008"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "282100009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "712542001"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "1149223009"
-      } ]
-    }, {
-      "system": "http://snomed.info/sct",
-      "version": "http://snomed.info/sct/731000124108/version/20250301",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "62014003"
-      } ]
-    }, {
-      "system": "http://hl7.org/fhir/sid/icd-10-cm",
-      "filter": [ {
-        "property": "concept",
-        "op": "is-a",
-        "value": "F17"
-      } ]
-    } ]
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "1254812006"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "228366006"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "66214007"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "417284009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "441668002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "226034001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "228427002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "191939002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "361055000"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "191928000"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "280985006"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "280982009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "231459008"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "280983004"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "110281001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "719848005"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "191816009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "363101005"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "715431002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "724713006"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "91388009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "390867000"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "296036006"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "296177007"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "295809003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "295960003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "708079007"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "1149408002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "242253008"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "Z71.4"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "Z71.5"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "descendent-of",
+            "value": "F55"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "Section-F10-F19"
+          }
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "56294008"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "282100009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "712542001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "1149223009"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "62014003"
+          }
+        ]
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "F17"
+          }
+        ]
+      }
+    ]
   },
   "expansion": {
-    "timestamp": "2025-04-09T13:02:00-06:00",
-    "total": 936,
+    "timestamp": "2026-06-04T16:08:56.416Z",
+    "identifier": "urn:uuid:947b5a2e-d8d0-4e3c-8ab9-80f9f43920c3",
     "parameter": [
       {
         "name": "used-codesystem",
-        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250301"
-      },
-      {
-        "name": "version",
-        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250301"
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
       },
       {
         "name": "used-codesystem",
-        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2024"
+        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2026-04-01"
       },
       {
         "name": "version",
-        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2024"
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/900000000000207008/version/20250201"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2026-04-01"
       }
     ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/valueset-unclosed",
+        "valueBoolean": true
+      },
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
+      }
+    ],
+    "total": 1085,
     "contains": [
       {
         "system": "http://snomed.info/sct",
         "code": "1254812006",
-        "display": "Substance dependence (disorder)"
+        "display": "Substance dependence"
       },
       {
         "system": "http://snomed.info/sct",
@@ -612,27 +740,27 @@
       {
         "system": "http://snomed.info/sct",
         "code": "425841004",
-        "display": "Phencyclidine dependence in remission (disorder)"
+        "display": "Phencyclidine dependence in remission"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "426001001",
-        "display": "Fentanyl dependence (disorder)"
+        "display": "Fentanyl dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "426873000",
-        "display": "Methamphetamine dependence (disorder)"
+        "display": "Methamphetamine dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "427327003",
-        "display": "Sedative dependence (disorder)"
+        "display": "Sedative dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428219007",
-        "display": "Caffeine dependence (disorder)"
+        "display": "Caffeine dependence"
       },
       {
         "system": "http://snomed.info/sct",
@@ -642,27 +770,27 @@
       {
         "system": "http://snomed.info/sct",
         "code": "703845008",
-        "display": "Buprenorphine dependence (disorder)"
+        "display": "Buprenorphine dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "713583005",
-        "display": "Mild alcohol dependence (disorder)"
+        "display": "Mild alcohol dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "713862009",
-        "display": "Severe alcohol dependence (disorder)"
+        "display": "Severe alcohol dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "714829008",
-        "display": "Moderate alcohol dependence (disorder)"
+        "display": "Moderate alcohol dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "724656006",
-        "display": "Hypnotic dependence (disorder)"
+        "display": "Hypnotic dependence"
       },
       {
         "system": "http://snomed.info/sct",
@@ -682,27 +810,27 @@
       {
         "system": "http://snomed.info/sct",
         "code": "817962007",
-        "display": "Chlordiazepoxide dependence (disorder)"
+        "display": "Chlordiazepoxide dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "838527002",
-        "display": "Amfetamine and/or amfetamine derivative dependence (disorder)"
+        "display": "Amphetamine and/or amphetamine derivative dependence"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1231158003",
-        "display": "Hypnotic dependence in remission (disorder)"
+        "display": "Hypnotic dependence in remission"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1231159006",
-        "display": "Anxiolytic dependence in remission (disorder)"
+        "display": "Anxiolytic dependence in remission"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1231160001",
-        "display": "Hypnotic dependence, episodic (disorder)"
+        "display": "Hypnotic dependence, episodic"
       },
       {
         "system": "http://snomed.info/sct",
@@ -712,12 +840,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1231162009",
-        "display": "Hypnotic dependence, continuous (disorder)"
+        "display": "Hypnotic dependence, continuous"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1231163004",
-        "display": "Anxiolytic dependence, continuous (disorder)"
+        "display": "Anxiolytic dependence, continuous"
       },
       {
         "system": "http://snomed.info/sct",
@@ -727,7 +855,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1231325000",
-        "display": "Amfetamine and/or amfetamine derivative dependence in remission (disorder)"
+        "display": "Amphetamine and/or amphetamine derivative dependence in remission"
       },
       {
         "system": "http://snomed.info/sct",
@@ -737,12 +865,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1231328003",
-        "display": "Amfetamine and/or amfetamine derivative dependence continuous (disorder)"
+        "display": "Amphetamine and/or amphetamine derivative dependence continuous"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1231331002",
-        "display": "Psychostimulant dependence in remission (disorder)"
+        "display": "Psychostimulant dependence in remission"
       },
       {
         "system": "http://snomed.info/sct",
@@ -762,7 +890,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1254974001",
-        "display": "Substance dependence, episodic (disorder)"
+        "display": "Substance dependence, episodic"
       },
       {
         "system": "http://snomed.info/sct",
@@ -772,7 +900,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1254981008",
-        "display": "Substance dependence during pregnancy, childbirth and/or puerperium (disorder)"
+        "display": "Substance dependence during pregnancy, childbirth and/or puerperium"
       },
       {
         "system": "http://snomed.info/sct",
@@ -782,12 +910,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1254988002",
-        "display": "Substance dependence in mother complicating pregnancy, childbirth and/or puerperium (disorder)"
+        "display": "Substance dependence in mother complicating pregnancy, childbirth and/or puerperium"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1254991002",
-        "display": "Pregnancy and substance dependence (disorder)"
+        "display": "Pregnancy and substance dependence"
       },
       {
         "system": "http://snomed.info/sct",
@@ -802,7 +930,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1255014000",
-        "display": "Combined substance dependence, excluding opioids (disorder)"
+        "display": "Combined substance dependence, excluding opioids"
       },
       {
         "system": "http://snomed.info/sct",
@@ -822,7 +950,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1255018002",
-        "display": "Combined opioid with non-opioid substance dependence, continuous (disorder)"
+        "display": "Combined opioid with non-opioid substance dependence, continuous"
       },
       {
         "system": "http://snomed.info/sct",
@@ -832,7 +960,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1255020004",
-        "display": "Combined substance dependence, excluding opioid, in remission (disorder)"
+        "display": "Combined substance dependence, excluding opioid, in remission"
       },
       {
         "system": "http://snomed.info/sct",
@@ -847,17 +975,17 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1345083007",
-        "display": "Dependence on corticosteroid due to harmful pattern of use (disorder)"
+        "display": "Dependence on corticosteroid due to harmful pattern of use"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1345084001",
-        "display": "Dependence on anabolic steroid due to harmful pattern of use (disorder)"
+        "display": "Dependence on anabolic steroid due to harmful pattern of use"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1345086004",
-        "display": "Dependence on steroid hormone due to harmful pattern of use (disorder)"
+        "display": "Dependence on steroid hormone due to harmful pattern of use"
       },
       {
         "system": "http://snomed.info/sct",
@@ -877,17 +1005,17 @@
       {
         "system": "http://snomed.info/sct",
         "code": "10741871000119101",
-        "display": "Alcohol dependence in pregnancy (disorder)"
+        "display": "Alcohol dependence in pregnancy"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "10755041000119100",
-        "display": "Alcohol dependence in childbirth (disorder)"
+        "display": "Alcohol dependence in childbirth"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "16076691000119100",
-        "display": "Episodic polysubstance dependence (disorder)"
+        "display": "Episodic polysubstance dependence"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1157,107 +1285,107 @@
       {
         "system": "http://snomed.info/sct",
         "code": "373613000",
-        "display": "Cleans own needles (finding)"
+        "display": "Cleans own needles"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "413096007",
-        "display": "Never injecting drug user (finding)"
+        "display": "Never injecting drug user"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "413295004",
-        "display": "Concerned about own drug use (finding)"
+        "display": "Concerned about own drug use"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "413329000",
-        "display": "Treated for drug use in last 12 months (finding)"
+        "display": "Treated for drug use in last 12 months"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "416479009",
-        "display": "Previously injecting drug user (finding)"
+        "display": "Previously injecting drug user"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "416751004",
-        "display": "Reduced drugs misuse (finding)"
+        "display": "Reduced drugs misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "417284009",
-        "display": "Current drug user (finding)"
+        "display": "Current drug user"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "417298001",
-        "display": "Abnormal craving for drugs (finding)"
+        "display": "Abnormal craving for drugs"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "417531009",
-        "display": "Excessive craving for drugs (finding)"
+        "display": "Excessive craving for drugs"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "417697003",
-        "display": "Irresistible craving for drugs (finding)"
+        "display": "Irresistible craving for drugs"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "424848002",
-        "display": "Recreational drug user (finding)"
+        "display": "Recreational drug user"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428406005",
-        "display": "Benzodiazepine misuse (finding)"
+        "display": "Benzodiazepine misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428493006",
-        "display": "Crack cocaine misuse (finding)"
+        "display": "Crack cocaine misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428495004",
-        "display": "Solvent misuse (finding)"
+        "display": "Solvent misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428623008",
-        "display": "Barbiturate misuse (finding)"
+        "display": "Barbiturate misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428659002",
-        "display": "Amphetamine misuse (finding)"
+        "display": "Amphetamine misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428819003",
-        "display": "Opiate misuse (finding)"
+        "display": "Opiate misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "428823006",
-        "display": "Cannabis misuse (finding)"
+        "display": "Cannabis misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "429179002",
-        "display": "Antidepressant misuse (finding)"
+        "display": "Antidepressant misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "429512006",
-        "display": "Methadone misuse (finding)"
+        "display": "Methadone misuse"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "429782000",
-        "display": "Cocaine misuse (finding)"
+        "display": "Cocaine misuse"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1267,22 +1395,22 @@
       {
         "system": "http://snomed.info/sct",
         "code": "702771005",
-        "display": "Illicit drug use unknown (finding)"
+        "display": "Illicit drug use unknown"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "703885002",
-        "display": "Misuse of analgesic (finding)"
+        "display": "Misuse of analgesic"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "707848009",
-        "display": "Patient denies drug use (finding)"
+        "display": "Patient denies drug use"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "715818002",
-        "display": "Cleans drug injection needle with bleach (finding)"
+        "display": "Cleans drug injection needle with bleach"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1302,12 +1430,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "840321001",
-        "display": "Signs of drug withdrawal (finding)"
+        "display": "Signs of drug withdrawal"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1264554000",
-        "display": "Signs of opioid withdrawal on naloxone challenge test (finding)"
+        "display": "Signs of opioid withdrawal on naloxone challenge test"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1346,14 +1474,24 @@
       },
       {
         "system": "http://snomed.info/sct",
-        "code": "591301000124101",
-        "display": "Misuse of non-prescription drug"
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "inactive": true,
         "code": "66214007",
-        "display": "Substance abuse"
+        "inactive": true,
+        "display": "Substance abuse",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "inactive"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://snomed.info/sct",
@@ -1363,17 +1501,17 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1348223001",
-        "display": "Nondependent harmful pattern of use of antidepressant in remission (disorder)"
+        "display": "Nondependent harmful pattern of use of antidepressant in remission"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1348224007",
-        "display": "Continuous nondependent harmful pattern of use of antidepressant (disorder)"
+        "display": "Continuous nondependent harmful pattern of use of antidepressant"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1348228005",
-        "display": "Episodic nondependent harmful pattern of use of antidepressant (disorder)"
+        "display": "Episodic nondependent harmful pattern of use of antidepressant"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1402,14 +1540,29 @@
       },
       {
         "system": "http://snomed.info/sct",
-        "inactive": true,
         "code": "110281001",
-        "display": "Chronic drug abuse"
+        "inactive": true,
+        "display": "Chronic drug abuse",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "inactive"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://snomed.info/sct",
         "code": "719848005",
-        "display": "Disorder caused by alcohol (disorder)"
+        "display": "Disorder caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1499,7 +1652,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "82047000",
-        "display": "Diarrhea caused by alcohol intake (disorder)"
+        "display": "Diarrhea caused by alcohol intake"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1554,7 +1707,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "216633005",
-        "display": "Accidental poisoning caused by alcoholic beverage (disorder)"
+        "display": "Accidental poisoning caused by alcoholic beverage"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1669,7 +1822,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "420054005",
-        "display": "Alcoholic cirrhosis (disorder)"
+        "display": "Alcoholic cirrhosis"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1689,32 +1842,32 @@
       {
         "system": "http://snomed.info/sct",
         "code": "699208000",
-        "display": "Thrombocytopenia caused by alcohol (disorder)"
+        "display": "Thrombocytopaenia caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "713181003",
-        "display": "Chronic alcoholic liver disease (disorder)"
+        "display": "Chronic alcoholic liver disease"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "713370005",
-        "display": "Acute on chronic alcoholic liver disease (disorder)"
+        "display": "Acute on chronic alcoholic liver disease"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "721710005",
-        "display": "Fibrosis of liver caused by alcohol (disorder)"
+        "display": "Fibrosis of liver caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "723103002",
-        "display": "Gastric ulcer caused by alcohol (disorder)"
+        "display": "Gastric ulcer caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "723927004",
-        "display": "Psychotic disorder caused by alcohol with schizophreniform symptoms (disorder)"
+        "display": "Psychotic disorder caused by alcohol with schizophreniform symptoms"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1744,12 +1897,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1231846001",
-        "display": "Psychosis caused by ethanol (disorder)"
+        "display": "Ethanol-induced psychosis"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "1234750000",
-        "display": "Dilated cardiomyopathy caused by ethanol (disorder)"
+        "display": "Alcoholic cardiomyopathy"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1759,7 +1912,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1234772003",
-        "display": "Neurological disorder caused by ethanol (disorder)"
+        "display": "Ethanol-related neurological disorder"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1779,7 +1932,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1234779007",
-        "display": "Mood disorder caused by ethanol (disorder)"
+        "display": "Mood disorder caused by ethanol"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1789,7 +1942,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1234781009",
-        "display": "Mood disorder with manic symptoms caused by ethanol (disorder)"
+        "display": "Alcohol-induced mood disorder with manic symptoms"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1799,7 +1952,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1234783007",
-        "display": "Organic mental disorder caused by ethanol (disorder)"
+        "display": "Organic mental disorder caused by ethanol"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1809,7 +1962,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "1336054003",
-        "display": "Episode of harmful use of alcohol (disorder)"
+        "display": "Episode of harmful use of alcohol"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1829,12 +1982,12 @@
       {
         "system": "http://snomed.info/sct",
         "code": "133301000119102",
-        "display": "Degenerative brain disorder caused by alcohol (disorder)"
+        "display": "Degenerative brain disorder caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
         "code": "135301000119103",
-        "display": "Parasomnia caused by alcohol (disorder)"
+        "display": "Parasomnia caused by alcohol"
       },
       {
         "system": "http://snomed.info/sct",
@@ -1859,35 +2012,75 @@
       {
         "system": "http://snomed.info/sct",
         "code": "288031000119105",
-        "display": "Alcohol induced disorder co-occurrent and due to alcohol dependence (disorder)"
+        "display": "Alcohol induced disorder co-occurrent and due to alcohol dependence"
       },
       {
         "system": "http://snomed.info/sct",
-        "code": "461171000124100",
-        "display": "Intentional poisoning by ethyl alcohol"
-      },
-      {
-        "system": "http://snomed.info/sct",
-        "inactive": true,
         "code": "191816009",
-        "display": "Drug dependence"
+        "inactive": true,
+        "display": "Drug dependence",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "inactive"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://snomed.info/sct",
-        "inactive": true,
         "code": "363101005",
-        "display": "Drug withdrawal"
+        "inactive": true,
+        "display": "Drug withdrawal",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "inactive"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://snomed.info/sct",
         "code": "715431002",
-        "display": "Embryopathy caused by phenobarbital (disorder)"
+        "display": "Embryopathy caused by phenobarbital"
       },
       {
         "system": "http://snomed.info/sct",
-        "inactive": true,
         "code": "724713006",
-        "display": "Harmful use of ketamine (disorder)"
+        "inactive": true,
+        "display": "Harmful use of ketamine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "inactive"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://snomed.info/sct",
@@ -1991,6 +2184,711 @@
       },
       {
         "system": "http://snomed.info/sct",
+        "code": "699449003",
+        "display": "Methamphetamine abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "713775002",
+        "display": "Novel psychoactive substance misuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "724694006",
+        "display": "Harmful pattern of use of caffeine"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "724697004",
+        "display": "Harmful pattern of use of nicotine"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "737336003",
+        "display": "Synthetic cannabinoid abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "762504005",
+        "display": "Abuse of synthetic cathinone"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "785277001",
+        "display": "Harmful pattern of use of amfetamine and/or amfetamine derivative"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "890112007",
+        "display": "Nondependent abuse of tobacco"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230071005",
+        "display": "Amfetamine and/or amfetamine derivative abuse, episodic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230072003",
+        "display": "Amfetamine and/or amfetamine derivative abuse, continuous"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230074002",
+        "display": "Nondependent hypnotic abuse, episodic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230075001",
+        "display": "Nondependent anxiolytic abuse, episodic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230076000",
+        "display": "Nondependent anxiolytic abuse, continuous"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230077009",
+        "display": "Nondependent hypnotic abuse, continuous"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230078004",
+        "display": "Nondependent anxiolytic abuse in remission"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230079007",
+        "display": "Nondependent hypnotic abuse in remission"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230080005",
+        "display": "Nondependent anxiolytic abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230081009",
+        "display": "Nondependent hypnotic abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230082002",
+        "display": "Nondependent psychostimulant abuse in remission"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230083007",
+        "display": "Nondependent amphetamine and/or amphetamine derivative abuse in remission"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230084001",
+        "display": "Nondependent psychostimulant abuse, continuous"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230085000",
+        "display": "Nondependent amphetamine and/or amphetamine derivative abuse, continuous"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230086004",
+        "display": "Nondependent psychostimulant abuse, episodic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230087008",
+        "display": "Nondependent amphetamine and/or amphetamine derivative abuse, episodic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230088003",
+        "display": "Nondependent amphetamine and/or amphetamine derivative abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230089006",
+        "display": "Nondependent psychostimulant abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1230266009",
+        "display": "Amphetamine and/or amphetamine derivative abuse in remission"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1304039005",
+        "display": "Harmful pattern of use of heroin"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1335952009",
+        "display": "Harmful pattern of use of anxiolytic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1335953004",
+        "display": "Harmful pattern of use of hypnotic"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1336239003",
+        "display": "Harmful pattern of use of MDMA (methylenedioxymethamphetamine)"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1343585008",
+        "display": "Maternal tobacco abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1344922008",
+        "display": "Ketamine abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1345156008",
+        "display": "Harmful pattern of use of tobacco"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "125851000119106",
+        "display": "Continuous sedative abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "145101000119102",
+        "display": "Intravenous cocaine abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "145841000119107",
+        "display": "Episodic phencyclidine abuse"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "390867000",
+        "display": "H/O: repeated overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296036006",
+        "display": "Barbiturate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295520007",
+        "display": "Methohexitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295522004",
+        "display": "Intentional methohexitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295983000",
+        "display": "Methylphenobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295985007",
+        "display": "Intentional methylphenobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295987004",
+        "display": "Overdose of phenobarbitone"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295989001",
+        "display": "Intentional phenobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295991009",
+        "display": "Primidone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295993007",
+        "display": "Intentional primidone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296037002",
+        "display": "Amylobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296039004",
+        "display": "Intentional amylobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296041003",
+        "display": "Butabarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296043000",
+        "display": "Intentional butabarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296045007",
+        "display": "Cyclobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296047004",
+        "display": "Intentional cyclobarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296049001",
+        "display": "Quinalbarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296051002",
+        "display": "Intentional quinalbarbitone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1145046005",
+        "display": "Intentional thiopental overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1145050003",
+        "display": "Thiopental overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296177007",
+        "display": "Butyrophenone overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296178002",
+        "display": "Benperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296181007",
+        "display": "Intentional benperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296183005",
+        "display": "Trifluperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296185003",
+        "display": "Intentional trifluperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296187006",
+        "display": "Haloperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296189009",
+        "display": "Intentional haloperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296191001",
+        "display": "Droperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296193003",
+        "display": "Intentional droperidol overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295809003",
+        "display": "Central appetite depressant overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295811007",
+        "display": "Intentional central appetite depressant overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295960003",
+        "display": "Overdose of anticonvulsant drug"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "242832005",
+        "display": "Intentional benzodiazepine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "242833000",
+        "display": "Intentional diazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "242834006",
+        "display": "Intentional chlordiazepoxide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "242835007",
+        "display": "Intentional temazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295448009",
+        "display": "Magnesium sulphate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295450001",
+        "display": "Intentional magnesium sulphate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295768004",
+        "display": "Aminoglutethimide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295770008",
+        "display": "Intentional aminoglutethimide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295961004",
+        "display": "Beclamide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295963001",
+        "display": "Intentional beclamide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295965008",
+        "display": "Lamotrigine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295967000",
+        "display": "Intentional lamotrigine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295969002",
+        "display": "Piracetam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295971002",
+        "display": "Intentional piracetam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295973004",
+        "display": "Gabapentin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295975006",
+        "display": "Intentional gabapentin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295995000",
+        "display": "Overdose of carbamazepine"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295997008",
+        "display": "Intentional overdose by carbamazepine"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295999006",
+        "display": "Vigabatrin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296001007",
+        "display": "Intentional vigabatrin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296003005",
+        "display": "Phenytoin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296004004",
+        "display": "Intentional phenytoin overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296006002",
+        "display": "Ethosuximide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296008001",
+        "display": "Intentional ethosuximide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296010004",
+        "display": "Clonazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296012007",
+        "display": "Intentional clonazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296032008",
+        "display": "Paraldehyde overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296034009",
+        "display": "Intentional paraldehyde overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296053004",
+        "display": "Benzodiazepine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296054005",
+        "display": "Flunitrazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296056007",
+        "display": "Intentional flunitrazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296058008",
+        "display": "Flurazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296060005",
+        "display": "Intentional flurazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296062002",
+        "display": "Loprazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296064001",
+        "display": "Intentional loprazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296066004",
+        "display": "Lormetazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296068003",
+        "display": "Intentional lormetazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296070007",
+        "display": "Nitrazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296072004",
+        "display": "Intentional nitrazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296074003",
+        "display": "Triazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296076001",
+        "display": "Intentional triazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296079008",
+        "display": "Alprazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296081005",
+        "display": "Intentional alprazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296083008",
+        "display": "Bromazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296085001",
+        "display": "Intentional bromazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296087009",
+        "display": "Chlordiazepoxide overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296090003",
+        "display": "Clobazam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296092006",
+        "display": "Intentional clobazam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296098005",
+        "display": "Ketazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296100005",
+        "display": "Intentional ketazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296102002",
+        "display": "Medazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296104001",
+        "display": "Intentional medazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296106004",
+        "display": "Oxazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296108003",
+        "display": "Intentional oxazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296110001",
+        "display": "Prazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296112009",
+        "display": "Intentional prazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296114005",
+        "display": "Midazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296116007",
+        "display": "Intentional midazolam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296118008",
+        "display": "Diazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296121005",
+        "display": "Lorazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296123008",
+        "display": "Intentional lorazepam overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296125001",
+        "display": "Overdose of temazepam"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296152006",
+        "display": "Chlormethiazole overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "296154007",
+        "display": "Intentional chlormethiazole overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1145056009",
+        "display": "Intentional clorazepate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1145058005",
+        "display": "Clorazepate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1162803009",
+        "display": "Valproate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1162806001",
+        "display": "Intentional valproate overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "708079007",
+        "display": "Illicit drug overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "1149408002",
+        "display": "Overdose of monoamine oxidase inhibitor"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295890009",
+        "display": "Phenelzine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "code": "295892001",
+        "display": "Intentional phenelzine overdose"
+      },
+      {
+        "system": "http://snomed.info/sct",
         "code": "295894000",
         "display": "Iproniazid overdose"
       },
@@ -2052,7 +2950,7 @@
       {
         "system": "http://snomed.info/sct",
         "code": "242830002",
-        "display": "Intentional dihydrocodeine overdose (disorder)"
+        "display": "Intentional dihydrocodeine overdose"
       },
       {
         "system": "http://snomed.info/sct",
@@ -2247,6 +3145,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "Z71.4",
+        "abstract": true,
         "display": "Alcohol abuse counseling and surveillance"
       },
       {
@@ -2262,6 +3161,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "Z71.5",
+        "abstract": true,
         "display": "Drug abuse counseling and surveillance"
       },
       {
@@ -2306,17 +3206,19 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
-        "code": "F10",
-        "display": "Alcohol related disorders"
-      },
-      {
-        "system": "http://hl7.org/fhir/sid/icd-10-cm",
-        "code": "F10-F19",
+        "code": "Section-F10-F19",
         "display": "Mental and behavioral disorders due to psychoactive substance use (F10-F19)"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F10",
+        "abstract": true,
+        "display": "Alcohol related disorders"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.1",
+        "abstract": true,
         "display": "Alcohol abuse"
       },
       {
@@ -2332,6 +3234,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.12",
+        "abstract": true,
         "display": "Alcohol abuse with intoxication"
       },
       {
@@ -2352,6 +3255,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.13",
+        "abstract": true,
         "display": "Alcohol abuse, with withdrawal"
       },
       {
@@ -2382,6 +3286,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.15",
+        "abstract": true,
         "display": "Alcohol abuse with alcohol-induced psychotic disorder"
       },
       {
@@ -2402,6 +3307,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.18",
+        "abstract": true,
         "display": "Alcohol abuse with other alcohol-induced disorders"
       },
       {
@@ -2432,6 +3338,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.2",
+        "abstract": true,
         "display": "Alcohol dependence"
       },
       {
@@ -2447,6 +3354,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.22",
+        "abstract": true,
         "display": "Alcohol dependence with intoxication"
       },
       {
@@ -2467,6 +3375,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.23",
+        "abstract": true,
         "display": "Alcohol dependence with withdrawal"
       },
       {
@@ -2497,6 +3406,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.25",
+        "abstract": true,
         "display": "Alcohol dependence with alcohol-induced psychotic disorder"
       },
       {
@@ -2527,6 +3437,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.28",
+        "abstract": true,
         "display": "Alcohol dependence with other alcohol-induced disorders"
       },
       {
@@ -2557,11 +3468,23 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.9",
+        "abstract": true,
         "display": "Alcohol use, unspecified"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F10.90",
+        "display": "Alcohol use, unspecified, uncomplicated"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F10.91",
+        "display": "Alcohol use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.92",
+        "abstract": true,
         "display": "Alcohol use, unspecified with intoxication"
       },
       {
@@ -2582,6 +3505,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.93",
+        "abstract": true,
         "display": "Alcohol use, unspecified with withdrawal"
       },
       {
@@ -2612,6 +3536,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.95",
+        "abstract": true,
         "display": "Alcohol use, unspecified with alcohol-induced psychotic disorder"
       },
       {
@@ -2642,6 +3567,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F10.98",
+        "abstract": true,
         "display": "Alcohol use, unspecified with other alcohol-induced disorders"
       },
       {
@@ -2672,11 +3598,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11",
+        "abstract": true,
         "display": "Opioid related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.1",
+        "abstract": true,
         "display": "Opioid abuse"
       },
       {
@@ -2692,6 +3620,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.12",
+        "abstract": true,
         "display": "Opioid abuse with intoxication"
       },
       {
@@ -2727,6 +3656,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.15",
+        "abstract": true,
         "display": "Opioid abuse with opioid-induced psychotic disorder"
       },
       {
@@ -2747,6 +3677,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.18",
+        "abstract": true,
         "display": "Opioid abuse with other opioid-induced disorder"
       },
       {
@@ -2772,6 +3703,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.2",
+        "abstract": true,
         "display": "Opioid dependence"
       },
       {
@@ -2787,6 +3719,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.22",
+        "abstract": true,
         "display": "Opioid dependence with intoxication"
       },
       {
@@ -2822,6 +3755,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.25",
+        "abstract": true,
         "display": "Opioid dependence with opioid-induced psychotic disorder"
       },
       {
@@ -2842,6 +3776,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.28",
+        "abstract": true,
         "display": "Opioid dependence with other opioid-induced disorder"
       },
       {
@@ -2867,6 +3802,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.9",
+        "abstract": true,
         "display": "Opioid use, unspecified"
       },
       {
@@ -2876,7 +3812,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F11.91",
+        "display": "Opioid use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.92",
+        "abstract": true,
         "display": "Opioid use, unspecified with intoxication"
       },
       {
@@ -2912,6 +3854,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.95",
+        "abstract": true,
         "display": "Opioid use, unspecified with opioid-induced psychotic disorder"
       },
       {
@@ -2932,6 +3875,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F11.98",
+        "abstract": true,
         "display": "Opioid use, unspecified with other specified opioid-induced disorder"
       },
       {
@@ -2957,11 +3901,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12",
+        "abstract": true,
         "display": "Cannabis related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.1",
+        "abstract": true,
         "display": "Cannabis abuse"
       },
       {
@@ -2977,6 +3923,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.12",
+        "abstract": true,
         "display": "Cannabis abuse with intoxication"
       },
       {
@@ -3007,6 +3954,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.15",
+        "abstract": true,
         "display": "Cannabis abuse with psychotic disorder"
       },
       {
@@ -3027,6 +3975,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.18",
+        "abstract": true,
         "display": "Cannabis abuse with other cannabis-induced disorder"
       },
       {
@@ -3047,6 +3996,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.2",
+        "abstract": true,
         "display": "Cannabis dependence"
       },
       {
@@ -3062,6 +4012,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.22",
+        "abstract": true,
         "display": "Cannabis dependence with intoxication"
       },
       {
@@ -3092,6 +4043,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.25",
+        "abstract": true,
         "display": "Cannabis dependence with psychotic disorder"
       },
       {
@@ -3112,6 +4064,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.28",
+        "abstract": true,
         "display": "Cannabis dependence with other cannabis-induced disorder"
       },
       {
@@ -3132,6 +4085,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.9",
+        "abstract": true,
         "display": "Cannabis use, unspecified"
       },
       {
@@ -3141,7 +4095,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F12.91",
+        "display": "Cannabis use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.92",
+        "abstract": true,
         "display": "Cannabis use, unspecified with intoxication"
       },
       {
@@ -3172,6 +4132,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.95",
+        "abstract": true,
         "display": "Cannabis use, unspecified with psychotic disorder"
       },
       {
@@ -3192,6 +4153,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F12.98",
+        "abstract": true,
         "display": "Cannabis use, unspecified with other cannabis-induced disorder"
       },
       {
@@ -3212,11 +4174,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13",
+        "abstract": true,
         "display": "Sedative, hypnotic, or anxiolytic related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.1",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic-related abuse"
       },
       {
@@ -3232,6 +4196,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.12",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic abuse with intoxication"
       },
       {
@@ -3252,6 +4217,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.13",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic abuse with withdrawal"
       },
       {
@@ -3282,6 +4248,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.15",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic abuse with sedative, hypnotic or anxiolytic-induced psychotic disorder"
       },
       {
@@ -3302,6 +4269,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.18",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic abuse with other sedative, hypnotic or anxiolytic-induced disorders"
       },
       {
@@ -3332,6 +4300,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.2",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic-related dependence"
       },
       {
@@ -3347,6 +4316,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.22",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic dependence with intoxication"
       },
       {
@@ -3367,6 +4337,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.23",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic dependence with withdrawal"
       },
       {
@@ -3397,6 +4368,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.25",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic dependence with sedative, hypnotic or anxiolytic-induced psychotic disorder"
       },
       {
@@ -3427,6 +4399,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.28",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic dependence with other sedative, hypnotic or anxiolytic-induced disorders"
       },
       {
@@ -3457,6 +4430,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.9",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic-related use, unspecified"
       },
       {
@@ -3466,7 +4440,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F13.91",
+        "display": "Sedative, hypnotic or anxiolytic use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.92",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic use, unspecified with intoxication"
       },
       {
@@ -3487,6 +4467,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.93",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic use, unspecified with withdrawal"
       },
       {
@@ -3517,6 +4498,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.95",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic use, unspecified with sedative, hypnotic or anxiolytic-induced psychotic disorder"
       },
       {
@@ -3547,6 +4529,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F13.98",
+        "abstract": true,
         "display": "Sedative, hypnotic or anxiolytic use, unspecified with other sedative, hypnotic or anxiolytic-induced disorders"
       },
       {
@@ -3577,11 +4560,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14",
+        "abstract": true,
         "display": "Cocaine related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.1",
+        "abstract": true,
         "display": "Cocaine abuse"
       },
       {
@@ -3597,6 +4582,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.12",
+        "abstract": true,
         "display": "Cocaine abuse with intoxication"
       },
       {
@@ -3632,6 +4618,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.15",
+        "abstract": true,
         "display": "Cocaine abuse with cocaine-induced psychotic disorder"
       },
       {
@@ -3652,6 +4639,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.18",
+        "abstract": true,
         "display": "Cocaine abuse with other cocaine-induced disorder"
       },
       {
@@ -3682,6 +4670,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.2",
+        "abstract": true,
         "display": "Cocaine dependence"
       },
       {
@@ -3697,6 +4686,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.22",
+        "abstract": true,
         "display": "Cocaine dependence with intoxication"
       },
       {
@@ -3732,6 +4722,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.25",
+        "abstract": true,
         "display": "Cocaine dependence with cocaine-induced psychotic disorder"
       },
       {
@@ -3752,6 +4743,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.28",
+        "abstract": true,
         "display": "Cocaine dependence with other cocaine-induced disorder"
       },
       {
@@ -3782,6 +4774,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.9",
+        "abstract": true,
         "display": "Cocaine use, unspecified"
       },
       {
@@ -3791,7 +4784,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F14.91",
+        "display": "Cocaine use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.92",
+        "abstract": true,
         "display": "Cocaine use, unspecified with intoxication"
       },
       {
@@ -3827,6 +4826,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.95",
+        "abstract": true,
         "display": "Cocaine use, unspecified with cocaine-induced psychotic disorder"
       },
       {
@@ -3847,6 +4847,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F14.98",
+        "abstract": true,
         "display": "Cocaine use, unspecified with other specified cocaine-induced disorder"
       },
       {
@@ -3877,11 +4878,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15",
+        "abstract": true,
         "display": "Other stimulant related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.1",
+        "abstract": true,
         "display": "Other stimulant abuse"
       },
       {
@@ -3897,6 +4900,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.12",
+        "abstract": true,
         "display": "Other stimulant abuse with intoxication"
       },
       {
@@ -3932,6 +4936,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.15",
+        "abstract": true,
         "display": "Other stimulant abuse with stimulant-induced psychotic disorder"
       },
       {
@@ -3952,6 +4957,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.18",
+        "abstract": true,
         "display": "Other stimulant abuse with other stimulant-induced disorder"
       },
       {
@@ -3982,6 +4988,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.2",
+        "abstract": true,
         "display": "Other stimulant dependence"
       },
       {
@@ -3997,6 +5004,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.22",
+        "abstract": true,
         "display": "Other stimulant dependence with intoxication"
       },
       {
@@ -4032,6 +5040,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.25",
+        "abstract": true,
         "display": "Other stimulant dependence with stimulant-induced psychotic disorder"
       },
       {
@@ -4052,6 +5061,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.28",
+        "abstract": true,
         "display": "Other stimulant dependence with other stimulant-induced disorder"
       },
       {
@@ -4082,6 +5092,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.9",
+        "abstract": true,
         "display": "Other stimulant use, unspecified"
       },
       {
@@ -4091,7 +5102,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F15.91",
+        "display": "Other stimulant use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.92",
+        "abstract": true,
         "display": "Other stimulant use, unspecified with intoxication"
       },
       {
@@ -4127,6 +5144,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.95",
+        "abstract": true,
         "display": "Other stimulant use, unspecified with stimulant-induced psychotic disorder"
       },
       {
@@ -4147,6 +5165,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F15.98",
+        "abstract": true,
         "display": "Other stimulant use, unspecified with other stimulant-induced disorder"
       },
       {
@@ -4177,11 +5196,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16",
+        "abstract": true,
         "display": "Hallucinogen related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.1",
+        "abstract": true,
         "display": "Hallucinogen abuse"
       },
       {
@@ -4197,6 +5218,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.12",
+        "abstract": true,
         "display": "Hallucinogen abuse with intoxication"
       },
       {
@@ -4227,6 +5249,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.15",
+        "abstract": true,
         "display": "Hallucinogen abuse with hallucinogen-induced psychotic disorder"
       },
       {
@@ -4247,6 +5270,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.18",
+        "abstract": true,
         "display": "Hallucinogen abuse with other hallucinogen-induced disorder"
       },
       {
@@ -4272,6 +5296,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.2",
+        "abstract": true,
         "display": "Hallucinogen dependence"
       },
       {
@@ -4287,6 +5312,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.22",
+        "abstract": true,
         "display": "Hallucinogen dependence with intoxication"
       },
       {
@@ -4312,6 +5338,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.25",
+        "abstract": true,
         "display": "Hallucinogen dependence with hallucinogen-induced psychotic disorder"
       },
       {
@@ -4332,6 +5359,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.28",
+        "abstract": true,
         "display": "Hallucinogen dependence with other hallucinogen-induced disorder"
       },
       {
@@ -4357,6 +5385,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.9",
+        "abstract": true,
         "display": "Hallucinogen use, unspecified"
       },
       {
@@ -4366,7 +5395,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F16.91",
+        "display": "Hallucinogen use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.92",
+        "abstract": true,
         "display": "Hallucinogen use, unspecified with intoxication"
       },
       {
@@ -4392,6 +5427,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.95",
+        "abstract": true,
         "display": "Hallucinogen use, unspecified with hallucinogen-induced psychotic disorder"
       },
       {
@@ -4412,6 +5448,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F16.98",
+        "abstract": true,
         "display": "Hallucinogen use, unspecified with other specified hallucinogen-induced disorder"
       },
       {
@@ -4437,11 +5474,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18",
+        "abstract": true,
         "display": "Inhalant related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.1",
+        "abstract": true,
         "display": "Inhalant abuse"
       },
       {
@@ -4457,6 +5496,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.12",
+        "abstract": true,
         "display": "Inhalant abuse with intoxication"
       },
       {
@@ -4482,6 +5522,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.15",
+        "abstract": true,
         "display": "Inhalant abuse with inhalant-induced psychotic disorder"
       },
       {
@@ -4507,6 +5548,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.18",
+        "abstract": true,
         "display": "Inhalant abuse with other inhalant-induced disorders"
       },
       {
@@ -4527,6 +5569,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.2",
+        "abstract": true,
         "display": "Inhalant dependence"
       },
       {
@@ -4542,6 +5585,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.22",
+        "abstract": true,
         "display": "Inhalant dependence with intoxication"
       },
       {
@@ -4567,6 +5611,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.25",
+        "abstract": true,
         "display": "Inhalant dependence with inhalant-induced psychotic disorder"
       },
       {
@@ -4592,6 +5637,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.28",
+        "abstract": true,
         "display": "Inhalant dependence with other inhalant-induced disorders"
       },
       {
@@ -4612,6 +5658,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.9",
+        "abstract": true,
         "display": "Inhalant use, unspecified"
       },
       {
@@ -4621,7 +5668,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F18.91",
+        "display": "Inhalant use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.92",
+        "abstract": true,
         "display": "Inhalant use, unspecified with intoxication"
       },
       {
@@ -4647,6 +5700,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.95",
+        "abstract": true,
         "display": "Inhalant use, unspecified with inhalant-induced psychotic disorder"
       },
       {
@@ -4672,6 +5726,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F18.98",
+        "abstract": true,
         "display": "Inhalant use, unspecified with other inhalant-induced disorders"
       },
       {
@@ -4692,11 +5747,13 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19",
+        "abstract": true,
         "display": "Other psychoactive substance related disorders"
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.1",
+        "abstract": true,
         "display": "Other psychoactive substance abuse"
       },
       {
@@ -4712,6 +5769,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.12",
+        "abstract": true,
         "display": "Other psychoactive substance abuse with intoxication"
       },
       {
@@ -4737,6 +5795,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.13",
+        "abstract": true,
         "display": "Other psychoactive substance abuse with withdrawal"
       },
       {
@@ -4767,6 +5826,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.15",
+        "abstract": true,
         "display": "Other psychoactive substance abuse with psychoactive substance-induced psychotic disorder"
       },
       {
@@ -4797,6 +5857,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.18",
+        "abstract": true,
         "display": "Other psychoactive substance abuse with other psychoactive substance-induced disorders"
       },
       {
@@ -4827,6 +5888,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.2",
+        "abstract": true,
         "display": "Other psychoactive substance dependence"
       },
       {
@@ -4842,6 +5904,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.22",
+        "abstract": true,
         "display": "Other psychoactive substance dependence with intoxication"
       },
       {
@@ -4867,6 +5930,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.23",
+        "abstract": true,
         "display": "Other psychoactive substance dependence with withdrawal"
       },
       {
@@ -4897,6 +5961,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.25",
+        "abstract": true,
         "display": "Other psychoactive substance dependence with psychoactive substance-induced psychotic disorder"
       },
       {
@@ -4927,6 +5992,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.28",
+        "abstract": true,
         "display": "Other psychoactive substance dependence with other psychoactive substance-induced disorders"
       },
       {
@@ -4957,6 +6023,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.9",
+        "abstract": true,
         "display": "Other psychoactive substance use, unspecified"
       },
       {
@@ -4966,7 +6033,13 @@
       },
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
+        "code": "F19.91",
+        "display": "Other psychoactive substance use, unspecified, in remission"
+      },
+      {
+        "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.92",
+        "abstract": true,
         "display": "Other psychoactive substance use, unspecified with intoxication"
       },
       {
@@ -4992,6 +6065,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.93",
+        "abstract": true,
         "display": "Other psychoactive substance use, unspecified with withdrawal"
       },
       {
@@ -5022,6 +6096,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.95",
+        "abstract": true,
         "display": "Other psychoactive substance use, unspecified with psychoactive substance-induced psychotic disorder"
       },
       {
@@ -5052,6 +6127,7 @@
       {
         "system": "http://hl7.org/fhir/sid/icd-10-cm",
         "code": "F19.98",
+        "abstract": true,
         "display": "Other psychoactive substance use, unspecified with other psychoactive substance-induced disorders"
       },
       {

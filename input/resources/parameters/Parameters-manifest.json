@@ -5,6 +5,14 @@
     {
       "name": "system-version",
       "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20250901"
+    },
+    {
+      "name": "default-canonical-version",
+      "valueUri": "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation|5.3.0"
+    },
+    {
+      "name": "default-canonical-version",
+      "valueUri": "http://hl7.org/fhir/StructureDefinition/cqf-qualityOfEvidence|5.3.0"
     }
   ]
 }

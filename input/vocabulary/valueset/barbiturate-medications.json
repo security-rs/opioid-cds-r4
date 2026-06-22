@@ -73,6 +73,17 @@
   "purpose": "Barbiturate medications for opioid management",
   "expansion": {
     "timestamp": "2025-02-24T13:06:41-07:00",
+    "identifier": "urn:uuid:97a23825-3c28-4960-b699-29b01a9115ea",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://www.nlm.nih.gov/research/umls/rxnorm|03022026"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://www.nlm.nih.gov/research/umls/rxnorm|03022026"
+      }
+    ],
     "total": 119,
     "contains": [
       {

@@ -125,6 +125,10 @@
       {
         "name": "used-codesystem",
         "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
       }
     ],
     "total": 183,

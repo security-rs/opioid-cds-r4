@@ -9,10 +9,6 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-      "valueMarkdown": "Step 1: go to https://loinc.org/tree/\nStep 2: use query acetylmorphine AND system:urine\nStep 3: export the results to CSV\nStep 4: Filter results by properties defined in query"
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
       "valueContactDetail": {
         "name": "MD Partners, Inc.",
@@ -23,42 +19,45 @@
           }
         ]
       }
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
       "valueString": "Presumed general urine tests for heroin and metabolites."
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
       "valueString": "Urine test"
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
       "valueString": "Codes"
-    },
-    {
+    },    {
       "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
       "valueString": "None"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
       "valueCode": "computable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
       "valueCode": "structured"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
       "valueCode": "executable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeRepresentationLevel",
       "valueCode": "executable"
-    },
-    {
+    },    {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP14980-4) AND system:urine`. The compose anchors at one trunk LP code - LP14980-4 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/heroin-urine-drug-screening-tests",
@@ -66,140 +65,309 @@
   "title": "Heroin urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-04-15T12:22:34-06:00",
+  "date": "2024-06-01T12:22:34-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine screening tests for heroin and metabolites.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP14980-4"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
-    "timestamp": "2024-04-15T12:22:37-06:00",
-    "total": 21,
+    "timestamp": "2026-06-01T20:40:07.422Z",
+    "identifier": "urn:uuid:183c2c4f-b186-41ca-a0d8-c05894ed8e53",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 22,
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "51740-9",
-        "display": "6MAM Free Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "47004-7",
-        "display": "6MAM Free Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "27073-6",
-        "display": "Deprecated 6MAM Ur Ql"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "14845-2",
-        "display": "Deprecated 6MAM Ur Ql"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19592-5",
-        "display": "Deprecated 6MAM Ur Ql Cfm"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19591-7",
-        "display": "Deprecated 6MAM Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "21050-0",
-        "display": "Deprecated 6MAM Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19594-1",
-        "display": "Deprecated 6MAM Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "10975-1",
-        "display": "6MAM Ur-mCnc"
+        "display": "6-Monoacetylmorphine (6-MAM) [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "20514-6",
-        "display": "Deprecated 6MAM Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19593-3",
-        "display": "6MAM Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "10976-9",
-        "display": "6MAM Ur Ql"
+        "display": "6-Monoacetylmorphine (6-MAM) [Presence] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19322-7",
-        "display": "6MAM Ur Ql Cfm"
+        "code": "14845-2",
+        "display": "Deprecated Monoacetylmorphine [Presence] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
         "code": "19321-9",
-        "display": "6MAM Ur Ql Scn"
+        "display": "6-Monoacetylmorphine (6-MAM) [Presence] in Urine by Screen method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "55520-1",
-        "display": "6MAM Ur-sCnc"
+        "code": "19322-7",
+        "display": "6-Monoacetylmorphine (6-MAM) [Presence] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "70197-9",
-        "display": "6MAM Ur Cfm-sCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19596-6",
-        "display": "Deprecated 6MAM CtO Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19324-3",
-        "display": "6MAM CtO Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "19595-8",
-        "display": "Deprecated 6MAM CtO Ur Scn-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "19323-5",
-        "display": "6MAM CtO Ur Scn-mCnc"
+        "display": "6-Monoacetylmorphine (6-MAM) cutoff [Mass/volume] in Urine for Screen method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "19324-3",
+        "display": "6-Monoacetylmorphine (6-MAM) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19591-7",
+        "display": "Deprecated 6-Monoacetylmorphine [Presence] in Urine by Screen method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19592-5",
+        "display": "Deprecated 6-Monoacetylmorphine [Presence] in Urine by Confirm method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19593-3",
+        "display": "6-Monoacetylmorphine (6-MAM) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19594-1",
+        "display": "Deprecated Monoacetylmorphine [Mass/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19595-8",
+        "display": "Deprecated 6-Monoacetylmorphine cutoff [Mass/volume] in Urine for Screen method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19596-6",
+        "display": "Deprecated 6-Monoacetylmorphine cutoff [Mass/volume] in Urine for Confirm method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20514-6",
+        "display": "Deprecated 6-Monoacetylmorphine [Mass/volume] in Urine Confirm",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "21050-0",
+        "display": "Deprecated Acetylmorphine [Mass/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "27073-6",
+        "display": "Deprecated acetylmorphine [Presence] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "47004-7",
+        "display": "6-monoacetylmorphine free [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "51740-9",
+        "display": "6-monoacetylmorphine free [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "55520-1",
+        "display": "6-Monoacetylmorphine (6-MAM) [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "58384-9",
-        "display": "6MAM/Creat Ur"
+        "display": "6-Monoacetylmorphine (6-MAM)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70197-9",
+        "display": "6-Monoacetylmorphine (6-MAM) [Moles/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "89308-1",
+        "display": "Morphine-6-Glucuronide [Presence] in Urine by Screen method"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
       }
     ]
   }

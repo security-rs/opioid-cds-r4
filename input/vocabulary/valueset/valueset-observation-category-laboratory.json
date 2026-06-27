@@ -28,6 +28,17 @@
   "description": "Laboratory Observation Category",
   "expansion": {
     "timestamp": "2021-06-08T13:47:55-07:00",
+    "identifier": "urn:uuid:1273ced3-7cf2-443a-b5c6-babf319e4061",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://terminology.hl7.org/CodeSystem/observation-category|2.0.0"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://terminology.hl7.org/CodeSystem/observation-category|2.0.0"
+      }
+    ],
     "contains": [
       {
         "system": "http://terminology.hl7.org/CodeSystem/observation-category",

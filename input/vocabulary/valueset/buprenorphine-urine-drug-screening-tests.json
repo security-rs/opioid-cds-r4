@@ -9,10 +9,6 @@
   },
   "extension": [
     {
-      "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-      "valueMarkdown": "Step 1: go to https://loinc.org/tree/\nStep 2: use query buprenorphine AND system:urine\nStep 3: export the results to CSV\nStep 4: Filter results by properties defined in query"
-    },
-    {
       "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
       "valueContactDetail": {
         "name": "MD Partners, Inc.",
@@ -51,6 +47,19 @@
     {
       "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
       "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16054-6 OR LP392033-9) AND system:urine`. The compose anchors at two trunk LP codes - LP16054-6 and LP392033-9 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
+        }
+      ]
     }
   ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/buprenorphine-urine-drug-screening-tests",
@@ -58,140 +67,210 @@
   "title": "Buprenorphine urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2024-04-15T12:22:34-06:00",
+  "date": "2026-04-30T14:44:02-04:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "description": "Presumed general urine tests for buprenorphine screening.",
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP16054-6"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP392033-9"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
-    "timestamp": "2024-04-15T12:22:36-06:00",
-    "total": 21,
+    "timestamp": "2026-05-07T19:47:19.290Z",
+    "identifier": "urn:uuid:0168dddc-2cfc-4256-ad7d-5abae07ea39c",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 22,
     "contains": [
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "38373-7",
-        "display": "Buprenorphine+Nor Ur Ql"
+        "code": "105966-6",
+        "display": "Norbuprenorphine [Presence] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "58359-1",
-        "display": "Buprenorphine+Nor Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "91027-3",
-        "display": "B3G Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "89305-7",
-        "display": "N3G Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "49753-7",
-        "display": "Norbuprenorphine Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "49751-1",
-        "display": "Norbuprenorphine Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "58362-5",
-        "display": "Norbuprenorphine Ur Ql Cfm"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "82371-6",
-        "display": "Norbuprenorphine Ur Ql Scn"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "77774-8",
-        "display": "Norbuprenorphine CtO Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "58361-7",
-        "display": "Norbuprenorphine/Creat Ur"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3416-5",
-        "display": "Buprenorphine 24h Ur-mRate"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "16496-2",
-        "display": "Buprenorphine Ur-aCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3415-7",
-        "display": "Buprenorphine Ur-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "49752-9",
-        "display": "Buprenorphine Ur Cfm-mCnc"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "3414-0",
-        "display": "Buprenorphine Ur Ql"
-      },
-      {
-        "system": "http://loinc.org",
-        "version": "2.81",
         "code": "16208-1",
-        "display": "Buprenorphine Ur Ql Cfm"
+        "display": "Buprenorphine [Presence] in Urine by Confirmatory method"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "93494-3",
-        "display": "Buprenorphine Ur Ql Scn"
+        "code": "16496-2",
+        "inactive": true,
+        "display": "Buprenorphine [Units/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DISCOURAGED"
+              }
+            ]
+          }
+        ]
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "77764-9",
-        "display": "Buprenorphine CtO Ur Cfm-mCnc"
+        "code": "3414-0",
+        "display": "Buprenorphine [Presence] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
-        "code": "77787-0",
-        "display": "Buprenorphine CtO Ur Scn-mCnc"
+        "code": "3415-7",
+        "display": "Buprenorphine [Mass/volume] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "3416-5",
+        "display": "Buprenorphine [Mass/time] in 24 hour Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "38373-7",
+        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "49751-1",
+        "display": "Norbuprenorphine [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "49752-9",
+        "display": "Buprenorphine [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "49753-7",
+        "display": "Norbuprenorphine [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58359-1",
+        "display": "Buprenorphine+Norbuprenorphine [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "58360-9",
-        "display": "Buprenorphine/Creat Ur"
+        "display": "Buprenorphine/Creatinine [Mass Ratio] in Urine"
       },
       {
         "system": "http://loinc.org",
-        "version": "2.81",
+        "code": "58361-7",
+        "display": "Norbuprenorphine/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58362-5",
+        "display": "Norbuprenorphine [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77764-9",
+        "display": "Buprenorphine cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77774-8",
+        "display": "Norbuprenorphine cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77787-0",
+        "display": "Buprenorphine cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "82371-6",
+        "display": "Norbuprenorphine [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "89305-7",
+        "display": "Norbuprenorphine-3-glucuronide [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "91027-3",
+        "display": "Buprenorphine-3-glucuronide [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93494-3",
+        "display": "Buprenorphine [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
         "code": "69033-9",
-        "display": "Buprenorphine+Nor pnl Ur"
+        "display": "Buprenorphine and Norbuprenorphine panel - Urine"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
       }
     ]
   }

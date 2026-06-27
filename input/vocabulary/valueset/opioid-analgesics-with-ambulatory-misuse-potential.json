@@ -63,6 +63,17 @@
   "copyright": "© CDC 2016+.",
   "expansion": {
     "timestamp": "2025-02-24T13:06:46-07:00",
+    "identifier": "urn:uuid:2d7e6507-7ffe-4c34-8f8f-9289813e4600",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://www.nlm.nih.gov/research/umls/rxnorm|03022026"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://www.nlm.nih.gov/research/umls/rxnorm|03022026"
+      }
+    ],
     "total": 557,
     "contains": [
       {

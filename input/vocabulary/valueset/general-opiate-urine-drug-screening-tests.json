@@ -2,178 +2,301 @@
   "resourceType": "ValueSet",
   "id": "general-opiate-urine-drug-screening-tests",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset", "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
+    ]
   },
-  "extension": [ {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
-    "valueString": "Presumed general urine tests for naturally occurring opioids (i.e. opiates) that are not specific to a particular substance based upon the inclusion of the word 'opiates' in the long name."
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
-    "valueString": "Urine test"
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
-    "valueString": "Codes"
-  }, {
-    "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
-    "valueString": "None"
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
-    "valueContactDetail": {
-      "name": "MD Partners, Inc.",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@mdpartners.com"
-      } ]
+  "extension": [
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-clinical-focus",
+      "valueString": "Presumed general urine tests for naturally occurring opioids (i.e. opiates) that are not specific to a particular substance based upon the inclusion of the word 'opiates' in the long name."
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-dataelement-scope",
+      "valueString": "Urine test"
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-inclusion-criteria",
+      "valueString": "Codes"
+    },
+    {
+      "url": "http://fhir.org/guides/cdc/opioid-cds/StructureDefinition/cdc-valueset-exclusion-criteria",
+      "valueString": "None"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
+      "valueContactDetail": {
+        "name": "MD Partners, Inc.",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@mdpartners.com"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
+      "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP14565-3 OR LP135742-7) AND system:urine`. The compose anchors at two trunk LP codes - LP14565-3 and LP135742-7 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
+        }
+      ]
     }
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "computable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "executable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
-    "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
-  }, {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-rules-text",
-    "valueMarkdown": "Step 1. Add all codes found using the following LOINC query: opiates (=system:Urine)"
-  } ],
+  ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/general-opiate-urine-drug-screening-tests",
   "name": "GENERAL_OPIATE_URINE_DRUG_SCREENING_TESTS",
   "title": "General opiate urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2023-05-25T18:08:12-06:00",
+  "date": "2026-06-02T09:32:14-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
-  "contact": [ {
-    "name": "Centers for Disease Control and Prevention (CDC)",
-    "telecom": [ {
-      "system": "url",
-      "value": "https://www.cdc.gov"
-    } ]
-  } ],
+  "contact": [
+    {
+      "name": "Centers for Disease Control and Prevention (CDC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.cdc.gov"
+        }
+      ]
+    }
+  ],
   "description": "Presumed general urine tests for naturally occurring opioids (i.e. opiates) that are not specific to a particular substance based upon the inclusion of the word 'opiates' in the long name.",
-  "jurisdiction": [ {
-    "coding": [ {
-      "system": "urn:iso:std:iso:3166",
-      "code": "US"
-    } ]
-  } ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
   "purpose": "Identification of urine drug tests where results can be used when considering pain management therapy",
   "copyright": "© CDC 2016+.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP14565-3"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP135742-7"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
+  },
   "expansion": {
-    "timestamp": "2023-05-25T18:08:12-06:00",
-    "total": 22,
-    "contains": [ {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19298-9",
-      "display": "Opiates positive [Identifier] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8220-6",
-      "display": "Opiates [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "17384-9",
-      "display": "Opiates [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70150-8",
-      "display": "Opiates [Mass/volume] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "5707-5",
-      "display": "Deprecated Opiates [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "5706-7",
-      "display": "Opiates [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3879-4",
-      "display": "Opiates [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "18390-5",
-      "display": "Opiates [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8221-4",
-      "display": "Opiates [Presence] in Urine by SAMHSA confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8222-2",
-      "display": "Opiates [Presence] in Urine by SAMHSA screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19295-5",
-      "display": "Opiates [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "21431-2",
-      "display": "Opiates [Presence] in Urine by Screen method >2000 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70151-6",
-      "display": "Opiates [Presence] in Urine by Screen method >300 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "52952-9",
-      "display": "Opiates [Moles/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19302-9",
-      "display": "Opiates confirm method [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19138-7",
-      "display": "Opiates cutoff [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19300-3",
-      "display": "Opiates cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19299-7",
-      "display": "Opiates cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19301-1",
-      "display": "Opiates screen method [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19297-1",
-      "display": "Opiates tested for in Urine by Screen method Narrative"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19296-3",
-      "display": "Opiates tested for in Urine by Screen method Nominal"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "41465-6",
-      "display": "Opiates/Creatinine [Mass Ratio] in Urine"
-    } ]
+    "timestamp": "2026-06-02T15:32:14.317Z",
+    "identifier": "urn:uuid:fecde73a-b86b-434b-bf55-e90f706d1949",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 23,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "17384-9",
+        "display": "Opiates [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18390-5",
+        "display": "Opiates [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19138-7",
+        "display": "Opiates cutoff [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19295-5",
+        "display": "Opiates [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19296-3",
+        "display": "Opiates tested for in Urine by Screen method Nominal"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19297-1",
+        "display": "Opiates tested for in Urine by Screen method Narrative"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19298-9",
+        "display": "Opiates positive [Identifier] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19299-7",
+        "display": "Opiates cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19300-3",
+        "display": "Opiates cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19301-1",
+        "display": "Opiates screen method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19302-9",
+        "display": "Opiates confirm method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "21431-2",
+        "display": "Opiates [Presence] in Urine by Screen method >2000 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3879-4",
+        "display": "Opiates [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "41465-6",
+        "display": "Opiates/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52952-9",
+        "display": "Opiates [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "5706-7",
+        "display": "Opiates [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "5707-5",
+        "display": "Deprecated Opiates [Identifier] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70150-8",
+        "display": "Opiates [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70151-6",
+        "display": "Opiates [Presence] in Urine by Screen method >300 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8220-6",
+        "display": "Opiates [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8221-4",
+        "display": "Opiates [Presence] in Urine by SAMHSA confirm method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8222-2",
+        "display": "Opiates [Presence] in Urine by SAMHSA screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "106506-9",
+        "display": "Opiates panel - Urine by LC/MS/MS"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
+      }
+    ]
   }
 }

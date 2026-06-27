@@ -123,10 +123,17 @@
       "valueBoolean": true
     } ],
     "timestamp": "2023-05-26T00:28:58.056Z",
-    "parameter": [ {
-      "name": "version",
-      "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
-    } ],
+    "identifier": "urn:uuid:6dfa1bbb-97a0-4444-a210-7359cb95bcf0",
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
+      }
+    ],
     "contains": [ {
       "system": "http://snomed.info/sct",
       "code": "306205009",

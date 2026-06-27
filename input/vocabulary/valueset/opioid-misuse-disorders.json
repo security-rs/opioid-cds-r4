@@ -137,13 +137,25 @@
       "valueBoolean": true
     } ],
     "timestamp": "2023-05-25T18:04:24.486Z",
-    "parameter": [ {
-      "name": "version",
-      "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
-    }, {
-      "name": "version",
-      "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2021"
-    } ],
+    "identifier": "urn:uuid:90ed9dfa-37bc-496c-8deb-8db3e33e6e04",
+    "parameter": [
+      {
+        "name": "version",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://snomed.info/sct|http://snomed.info/sct/731000124108/version/20230301"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2021"
+      },
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://hl7.org/fhir/sid/icd-10-cm|2021"
+      }
+    ],
     "contains": [ {
       "system": "http://snomed.info/sct",
       "code": "5602001",

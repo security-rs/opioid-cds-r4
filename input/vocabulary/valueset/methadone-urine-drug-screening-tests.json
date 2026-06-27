@@ -2,196 +2,284 @@
   "resourceType": "ValueSet",
   "id": "methadone-urine-drug-screening-tests",
   "meta": {
-    "profile": [ "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset", "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset" ]
+    "profile": [
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-computablevalueset",
+      "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-executablevalueset"
+    ]
   },
-  "extension": [ {
-    "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
-    "valueContactDetail": {
-      "name": "MD Partners, Inc.",
-      "telecom": [ {
-        "system": "email",
-        "value": "info@mdpartners.com"
-      } ]
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/valueset-author",
+      "valueContactDetail": {
+        "name": "MD Partners, Inc.",
+        "telecom": [
+          {
+            "system": "email",
+            "value": "info@mdpartners.com"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "computable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
+      "valueCode": "executable"
+    },
+    {
+      "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
+      "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+      "extension": [
+        {
+          "url": "type",
+          "valueCode": "documentation"
+        },
+        {
+          "url": "text",
+          "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP15015-8) AND system:urine`. The compose anchors at one trunk LP code - LP15015-8 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
+        }
+      ]
     }
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "computable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-knowledgeCapability",
-    "valueCode": "executable"
-  }, {
-    "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
-    "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
-  } ],
+  ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/methadone-urine-drug-screening-tests",
   "name": "METHADONE_URINE_DRUG_SCREENING_TESTS",
   "title": "Methadone urine drug screening tests",
   "status": "active",
   "experimental": false,
-  "date": "2023-05-25T18:08:12-06:00",
+  "date": "2026-06-02T09:35:42-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
-  "contact": [ {
-    "name": "Centers for Disease Control and Prevention (CDC)",
-    "telecom": [ {
-      "system": "url",
-      "value": "https://www.cdc.gov"
-    } ]
-  } ],
+  "contact": [
+    {
+      "name": "Centers for Disease Control and Prevention (CDC)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.cdc.gov"
+        }
+      ]
+    }
+  ],
   "description": "Urine tests to identify methadone and metabolites",
-  "jurisdiction": [ {
-    "coding": [ {
-      "system": "urn:iso:std:iso:3166",
-      "code": "US"
-    } ]
-  } ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "US"
+        }
+      ]
+    }
+  ],
   "copyright": "© CDC 2016+.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "filter": [ {
-        "property": "parent",
-        "op": "=",
-        "value": "LP15015-8"
-      }, {
-        "property": "SYSTEM",
-        "op": "=",
-        "value": "LP7681-2"
-      }, {
-        "property": "CLASSTYPE",
-        "op": "=",
-        "value": "1"
-      } ]
-    } ]
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP15015-8"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
   },
   "expansion": {
-    "timestamp": "2023-05-25T18:08:12-06:00",
-    "total": 25,
-    "contains": [ {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78770-5",
-      "display": "Methadone [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "41466-4",
-      "display": "Methadone/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19552-9",
-      "display": "Methadone cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19553-7",
-      "display": "Methadone cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78857-0",
-      "display": "Methadone [Z-score] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "52958-6",
-      "display": "Methadone [Moles/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70149-0",
-      "display": "Methadone [Presence] in Urine by Screen method >300 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70148-2",
-      "display": "Methadone [Presence] in Urine by Screen method >150 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19550-3",
-      "display": "Methadone [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "16199-2",
-      "display": "Methadone [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3773-9",
-      "display": "Methadone [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70147-4",
-      "display": "Methadone [Mass/volume] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "16246-1",
-      "display": "Methadone [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3774-7",
-      "display": "Methadone [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3775-4",
-      "display": "Methadone [Mass/time] in 24 hour Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "58390-6",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "77752-4",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "77754-0",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "93495-0",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "58428-4",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "41858-2",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "58429-2",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "50542-0",
-      "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "42251-9",
-      "display": "Methadone+Metabolite [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "33527-3",
-      "display": "Methadone.long acting metabolite [Mass/volume] in Urine"
-    } ]
+    "timestamp": "2026-06-02T15:35:42.337Z",
+    "identifier": "urn:uuid:ff3ee469-c1fc-4ec8-bc53-8aea2a2d43b6",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 27,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "104627-5",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine by Gas chromatography-mass spectrometry"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "104628-3",
+        "display": "Methadone [Mass/volume] in Urine by Gas chromatography-mass spectrometry"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16199-2",
+        "display": "Methadone [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "16246-1",
+        "display": "Methadone [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19550-3",
+        "display": "Methadone [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19552-9",
+        "display": "Methadone cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19553-7",
+        "display": "Methadone cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "33527-3",
+        "display": "Deprecated Methadone.long acting metabolite [Mass/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3773-9",
+        "display": "Methadone [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3774-7",
+        "display": "Methadone [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3775-4",
+        "display": "Methadone [Mass/time] in 24 hour Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "41466-4",
+        "display": "Methadone/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "41858-2",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "42251-9",
+        "display": "Methadone+Metabolite [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "50542-0",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52958-6",
+        "display": "Methadone [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58390-6",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58428-4",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "58429-2",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70147-4",
+        "display": "Methadone [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70148-2",
+        "display": "Methadone [Presence] in Urine by Screen method >150 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70149-0",
+        "display": "Methadone [Presence] in Urine by Screen method >300 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77752-4",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77754-0",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78770-5",
+        "display": "Methadone [Mass/volume] in Urine -- adjusted for lean body mass+urine creatinine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78857-0",
+        "display": "Methadone [Z-score] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "93495-0",
+        "display": "2-Ethylidene-1,5-Dimethyl-3,3-Diphenylpyrrolidine (EDDP) [Presence] in Urine by Screen method"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
+      }
+    ]
   }
 }

@@ -22,13 +22,26 @@
   }, {
     "url": "http://hl7.org/fhir/uv/cpg/StructureDefinition/cpg-usageWarning",
     "valueString": "This value set contains a point-in-time expansion enumerating the codes that meet the value set intent. As new versions of the code systems used by the value set are released, the contents of this expansion will need to be updated to incorporate newly defined codes that meet the value set intent. Before, and periodically during production use, the value set expansion contents SHOULD be updated. The value set expansion specifies the timestamp when the expansion was produced, SHOULD contain the parameters used for the expansion, and SHALL contain the codes that are obtained by evaluating the value set definition. If this is ONLY an executable value set, a distributable definition of the value set must be obtained to compute the updated expansion."
+  },
+  {
+    "url": "http://hl7.org/fhir/StructureDefinition/cqf-artifactComment",
+    "extension": [
+      {
+        "url": "type",
+        "valueCode": "documentation"
+      },
+      {
+        "url": "text",
+        "valueMarkdown": "Maintenance search expression: `multiaxial_descendantsof:(LP16058-7 OR LP392128-7) AND system:urine`. The compose anchors at two trunk LP codes - LP16058-7 and LP392128-7 - using `concept is-a` filters scoped to SYSTEM=LP7681-2 (urine) and CLASSTYPE=1 (lab test). To regenerate: re-run the search expression as a LOINC hierarchy query, add any newly-discovered trunk LP code as another is-a filter, then re-expand."
+      }
+    ]
   } ],
   "url": "http://fhir.org/guides/cdc/opioid-cds/ValueSet/cannabinoid-urine-drug-screening-tests",
   "name": "CANNABINOID_URINE_DRUG_SCREENING_TESTS",
   "title": "Cannabinoid class urine drug screening",
   "status": "active",
   "experimental": false,
-  "date": "2023-05-25T18:08:12-06:00",
+  "date": "2026-05-08T14:09:42-06:00",
   "publisher": "Centers for Disease Control and Prevention (CDC)",
   "contact": [ {
     "name": "Centers for Disease Control and Prevention (CDC)",
@@ -46,737 +59,975 @@
   } ],
   "copyright": "© CDC 2016+.",
   "compose": {
-    "include": [ {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "filter": [ {
-        "property": "parent",
-        "op": "=",
-        "value": "LP16058-7"
-      }, {
-        "property": "SYSTEM",
-        "op": "=",
-        "value": "LP7681-2"
-      }, {
-        "property": "CLASSTYPE",
-        "op": "=",
-        "value": "1"
-      } ]
-    } ]
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP16058-7"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "LP392128-7"
+          },
+          {
+            "property": "SYSTEM",
+            "op": "=",
+            "value": "LP7681-2"
+          },
+          {
+            "property": "CLASSTYPE",
+            "op": "=",
+            "value": "1"
+          }
+        ]
+      }
+    ]
   },
   "expansion": {
-    "timestamp": "2023-05-25T18:08:12-06:00",
-    "total": 142,
-    "contains": [ {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "26747-6",
-      "display": "Cannabinoids/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19287-2",
-      "display": "Cannabinoids tested for in Urine by Screen method Nominal"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19288-0",
-      "display": "Cannabinoids tested for in Urine by Screen method Narrative"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19293-0",
-      "display": "Cannabinoids screen method [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19291-4",
-      "display": "Cannabinoids cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19292-2",
-      "display": "Cannabinoids cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19073-6",
-      "display": "Cannabinoids cutoff [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19294-8",
-      "display": "Cannabinoids confirm method [Identifier] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "52954-5",
-      "display": "Cannabinoids [Moles/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70145-8",
-      "display": "Cannabinoids [Presence] in Urine by Screen method >50 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70144-1",
-      "display": "Cannabinoids [Presence] in Urine by Screen method >20 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "18282-4",
-      "display": "Cannabinoids [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19289-8",
-      "display": "Cannabinoids [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3427-2",
-      "display": "Cannabinoids [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "70143-3",
-      "display": "Cannabinoids [Mass/volume] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "20413-1",
-      "display": "Cannabinoids [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "42860-7",
-      "display": "Cannabinoids [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "26760-9",
-      "display": "Cannabinoids [Units/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19290-6",
-      "display": "Cannabinoids positive [Identifier] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "75651-0",
-      "display": "Tetrahydrocannabivarin [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78814-1",
-      "display": "Cannabicyclohexanol cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78813-3",
-      "display": "Cannabicyclohexanol [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "13478-3",
-      "display": "Tetrahydrocannabinol/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19417-5",
-      "display": "Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19704-6",
-      "display": "Deprecated Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19418-3",
-      "display": "Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19705-3",
-      "display": "Deprecated Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "14312-3",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >50 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "21556-6",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >20 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "21557-4",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >100 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19415-9",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8175-2",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by SAMHSA screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8174-5",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by SAMHSA confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "17872-3",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Confirm method >25 ng/mL"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19416-7",
-      "display": "Tetrahydrocannabinol [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3426-4",
-      "display": "Tetrahydrocannabinol [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "14313-1",
-      "display": "Tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "20524-5",
-      "display": "Deprecated Tetrahydrocannabinol [Mass/volume] in Urine by Confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3530-3",
-      "display": "Tetrahydrocannabinol [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "8173-7",
-      "display": "Deprecated Tetrahydrocannabinol [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19702-0",
-      "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19703-8",
-      "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine by Confirm method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3529-5",
-      "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101249-1",
-      "display": "Delta-8-tetrahydrocannabinol [Mass/volume] in Urine by LC/MS/MS"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78754-9",
-      "display": "11-Hydroxy delta-9 tetrahydrocannabinol [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "80113-4",
-      "display": "11-Hydroxy delta-9 tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19055-3",
-      "display": "Carboxy tetrahydrocannabinol/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19383-9",
-      "display": "Carboxy tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19384-7",
-      "display": "Carboxy tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19381-3",
-      "display": "Carboxy tetrahydrocannabinol [Presence] in Urine by Screen method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "19382-1",
-      "display": "Carboxy tetrahydrocannabinol [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3435-5",
-      "display": "Carboxy tetrahydrocannabinol [Presence] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "20521-1",
-      "display": "Carboxy tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "3436-3",
-      "display": "Carboxy tetrahydrocannabinol [Mass/volume] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72472-4",
-      "display": "UR-144 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72471-6",
-      "display": "UR-144 4/5-hydroxypentyl (synthetic cannabinoid metabolites) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78881-0",
-      "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72468-2",
-      "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78880-2",
-      "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78879-4",
-      "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72469-0",
-      "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78878-6",
-      "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87486-7",
-      "display": "PB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101182-4",
-      "display": "MDMB-4en-PINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101183-2",
-      "display": "MDMB-4en-PINACA [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101181-6",
-      "display": "MDMB-4en-PINACA [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101191-5",
-      "display": "5F-MDMB-PICA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101192-3",
-      "display": "5F-MDMB-PICA [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101190-7",
-      "display": "5F-MDMB-PICA [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "90747-7",
-      "display": "MDMB-FUBINACA-M1 [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101185-7",
-      "display": "4F-MDMB-BINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101186-5",
-      "display": "4F-MDMB-BINACA [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101184-0",
-      "display": "4F-MDMB-BINACA [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72470-8",
-      "display": "MAM-2201 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72473-2",
-      "display": "JWH-398 5 hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78850-5",
-      "display": "JWH-250 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72466-6",
-      "display": "JWH-250 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72803-0",
-      "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72467-4",
-      "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72802-2",
-      "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "73917-7",
-      "display": "JWH-250 4/5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78849-7",
-      "display": "JWH-210 5-Hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78848-9",
-      "display": "JWH-210 5-Hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72805-5",
-      "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78847-1",
-      "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72804-8",
-      "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78846-3",
-      "display": "JWH-200 6-Hydroxyindole (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78845-5",
-      "display": "JWH-200 6-Hydroxyindole (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78844-8",
-      "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72462-5",
-      "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78843-0",
-      "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78842-2",
-      "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72474-0",
-      "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78841-4",
-      "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78840-6",
-      "display": "JWH-081 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "77771-4",
-      "display": "JWH-081 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72807-1",
-      "display": "JWH-073 carboxylated (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72806-3",
-      "display": "JWH-073 carboxylated (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72874-1",
-      "display": "JWH-073 butanol (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72875-8",
-      "display": "JWH-073 butanol (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72779-2",
-      "display": "JWH-073 butanoate (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78839-8",
-      "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72465-8",
-      "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72778-4",
-      "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78838-0",
-      "display": "JWH-073 4-hydroxybutyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72464-1",
-      "display": "JWH-073 4-hydroxybutyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "73918-5",
-      "display": "JWH-073 (synthetic cannabinoid) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72460-9",
-      "display": "JWH-073 3-hydroxybutyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72781-8",
-      "display": "JWH-018 pentanol (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72780-0",
-      "display": "JWH-018 pentanol (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72783-4",
-      "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78837-2",
-      "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72461-7",
-      "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72782-6",
-      "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72809-7",
-      "display": "JWH-018 carboxylated (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72808-9",
-      "display": "JWH-018 carboxylated (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72777-6",
-      "display": "Deprecated JWH-018 butanol metabolite/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72776-8",
-      "display": "Deprecated JWH-018 butanol metabolite [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "73914-4",
-      "display": "JWH-018 (synthetic cannabinoid) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72459-1",
-      "display": "JWH-018 4/5-hydroxypentyl (synthetic cannabinoid metabolites) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "88023-7",
-      "display": "XLR-11 N-(4-hydroxypentyl) (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87487-5",
-      "display": "MAB-CHMINACA butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87484-2",
-      "display": "BB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87488-3",
-      "display": "AM694 N-5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87489-1",
-      "display": "AKB48 N-pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87490-9",
-      "display": "ADB-PINACA pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87485-9",
-      "display": "ADBICA N-pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87491-7",
-      "display": "ADBICA N-4-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87492-5",
-      "display": "AB-PINACA pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87493-3",
-      "display": "AB-FUBINACA oxobutanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87494-1",
-      "display": "AB-CHMINACA hydroxycyclohexyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "87495-8",
-      "display": "AB-CHMINACA butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72818-8",
-      "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "78783-8",
-      "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72463-3",
-      "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "72817-0",
-      "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "88022-9",
-      "display": "5-F PB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "90746-9",
-      "display": "5F-ADB-M7 (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "67126-3",
-      "display": "Cannabinoids synthetic [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101188-1",
-      "display": "ADB-BUTINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101189-9",
-      "display": "ADB-BUTINACA [Presence] in Urine by Confirmatory method"
-    }, {
-      "system": "http://loinc.org",
-      "version": "2.81",
-      "code": "101187-3",
-      "display": "ADB-BUTINACA [Mass/volume] in Urine by Confirmatory method"
-    } ]
+    "timestamp": "2026-05-08T20:09:42.771Z",
+    "identifier": "urn:uuid:173287f4-034e-4078-ba3d-aba7a811aaa4",
+    "parameter": [
+      {
+        "name": "used-codesystem",
+        "valueUri": "http://loinc.org|2.82"
+      },
+      {
+        "name": "version",
+        "valueUri": "http://loinc.org|2.82"
+      }
+    ],
+    "total": 149,
+    "contains": [
+      {
+        "system": "http://loinc.org",
+        "code": "101181-6",
+        "display": "MDMB-4en-PINACA [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101182-4",
+        "display": "MDMB-4en-PINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101183-2",
+        "display": "MDMB-4en-PINACA [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101184-0",
+        "display": "4F-MDMB-BINACA [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101185-7",
+        "display": "4F-MDMB-BINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101186-5",
+        "display": "4F-MDMB-BINACA [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101187-3",
+        "display": "ADB-BUTINACA [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101188-1",
+        "display": "ADB-BUTINACA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101189-9",
+        "display": "ADB-BUTINACA [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101190-7",
+        "display": "5F-MDMB-PICA [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101191-5",
+        "display": "5F-MDMB-PICA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101192-3",
+        "display": "5F-MDMB-PICA [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101249-1",
+        "display": "Delta-8-tetrahydrocannabinol [Mass/volume] in Urine by LC/MS/MS"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101860-5",
+        "display": "4F-MDMB-BUTICA [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101861-3",
+        "display": "4F-MDMB-BUTICA/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "101862-1",
+        "display": "4F-MDMB-BUTICA [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "107208-1",
+        "display": "Cannabinoids synthetic [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111504-7",
+        "display": "5F-ADB-M7 (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "111505-4",
+        "display": "5F-ADB-M7 (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "13478-3",
+        "display": "Tetrahydrocannabinol/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "14312-3",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >50 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "14313-1",
+        "display": "Tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "17872-3",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Confirm method >25 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "18282-4",
+        "display": "Cannabinoids [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19055-3",
+        "display": "Carboxy tetrahydrocannabinol/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19073-6",
+        "display": "Cannabinoids cutoff [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19287-2",
+        "display": "Cannabinoids tested for in Urine by Screen method Nominal"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19288-0",
+        "display": "Cannabinoids tested for in Urine by Screen method Narrative"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19289-8",
+        "display": "Cannabinoids [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19290-6",
+        "display": "Cannabinoids positive [Identifier] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19291-4",
+        "display": "Cannabinoids cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19292-2",
+        "display": "Cannabinoids cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19293-0",
+        "display": "Cannabinoids screen method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19294-8",
+        "display": "Cannabinoids confirm method [Identifier] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19381-3",
+        "display": "Carboxy tetrahydrocannabinol [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19382-1",
+        "display": "Carboxy tetrahydrocannabinol [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19383-9",
+        "display": "Carboxy tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19384-7",
+        "display": "Carboxy tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19415-9",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19416-7",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19417-5",
+        "display": "Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19418-3",
+        "display": "Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19702-0",
+        "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine by Screen method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19703-8",
+        "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine by Confirm method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19704-6",
+        "display": "Deprecated Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Screen method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "19705-3",
+        "display": "Deprecated Tetrahydrocannabinol cutoff [Mass/volume] in Urine for Confirm method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20413-1",
+        "display": "Cannabinoids [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20521-1",
+        "display": "Carboxy tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "20524-5",
+        "display": "Deprecated Tetrahydrocannabinol [Mass/volume] in Urine by Confirm method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "21556-6",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >20 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "21557-4",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by Screen method >100 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "26747-6",
+        "display": "Cannabinoids/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "26760-9",
+        "inactive": true,
+        "display": "Cannabinoids [Units/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DISCOURAGED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3426-4",
+        "display": "Tetrahydrocannabinol [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3427-2",
+        "display": "Cannabinoids [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3435-5",
+        "display": "Carboxy tetrahydrocannabinol [Presence] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3436-3",
+        "display": "Carboxy tetrahydrocannabinol [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3529-5",
+        "display": "Deprecated Tetrahydrocannabinol [Presence] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "3530-3",
+        "display": "Tetrahydrocannabinol [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "42860-7",
+        "display": "Cannabinoids [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "52954-5",
+        "display": "Cannabinoids [Moles/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "67126-3",
+        "display": "Cannabinoids synthetic [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70143-3",
+        "display": "Cannabinoids [Mass/volume] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70144-1",
+        "display": "Cannabinoids [Presence] in Urine by Screen method >20 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "70145-8",
+        "display": "Cannabinoids [Presence] in Urine by Screen method >50 ng/mL"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72459-1",
+        "display": "JWH-018 4/5-hydroxypentyl (synthetic cannabinoid metabolites) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72460-9",
+        "display": "JWH-073 3-hydroxybutyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72461-7",
+        "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72462-5",
+        "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72463-3",
+        "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72464-1",
+        "display": "JWH-073 4-hydroxybutyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72465-8",
+        "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72466-6",
+        "display": "JWH-250 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72467-4",
+        "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72468-2",
+        "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72469-0",
+        "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72470-8",
+        "display": "MAM-2201 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72471-6",
+        "display": "UR-144 4/5-hydroxypentyl (synthetic cannabinoid metabolites) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72472-4",
+        "display": "UR-144 pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72473-2",
+        "display": "JWH-398 5 hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72474-0",
+        "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72776-8",
+        "display": "Deprecated JWH-018 butanol metabolite [Mass/volume] in Urine by Confirmatory method",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72777-6",
+        "display": "Deprecated JWH-018 butanol metabolite/Creatinine [Mass Ratio] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72778-4",
+        "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72779-2",
+        "display": "JWH-073 butanoate (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72780-0",
+        "display": "JWH-018 pentanol (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72781-8",
+        "display": "JWH-018 pentanol (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72782-6",
+        "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72783-4",
+        "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72802-2",
+        "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72803-0",
+        "display": "JWH-250 5-carboxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72804-8",
+        "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72805-5",
+        "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72806-3",
+        "display": "JWH-073 carboxylated (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72807-1",
+        "display": "JWH-073 carboxylated (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72808-9",
+        "display": "JWH-018 carboxylated (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72809-7",
+        "display": "JWH-018 carboxylated (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72817-0",
+        "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72818-8",
+        "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72874-1",
+        "display": "JWH-073 butanol (synthetic cannabinoid metabolite)/Creatinine [Mass Ratio] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72875-8",
+        "display": "JWH-073 butanol (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "73914-4",
+        "display": "JWH-018 (synthetic cannabinoid) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "73917-7",
+        "display": "JWH-250 4/5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "73918-5",
+        "display": "JWH-073 (synthetic cannabinoid) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "75651-0",
+        "display": "Tetrahydrocannabivarin [Mass/volume] in Urine"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "77771-4",
+        "display": "JWH-081 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78754-9",
+        "display": "11-Hydroxy delta-9 tetrahydrocannabinol [Presence] in Urine by Screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78783-8",
+        "display": "AM-2201 4-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78813-3",
+        "display": "Cannabicyclohexanol [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78814-1",
+        "display": "Cannabicyclohexanol cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78837-2",
+        "display": "JWH-018 pentanoate (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78838-0",
+        "display": "JWH-073 4-hydroxybutyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78839-8",
+        "display": "JWH-073 butanoate (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78840-6",
+        "display": "JWH-081 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78841-4",
+        "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78842-2",
+        "display": "JWH-122 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78843-0",
+        "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78844-8",
+        "display": "JWH-200 4-hydroxyindole (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78845-5",
+        "display": "JWH-200 6-Hydroxyindole (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78846-3",
+        "display": "JWH-200 6-Hydroxyindole (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78847-1",
+        "display": "JWH-210 5-carboxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78848-9",
+        "display": "JWH-210 5-Hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78849-7",
+        "display": "JWH-210 5-Hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78850-5",
+        "display": "JWH-250 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78878-6",
+        "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78879-4",
+        "display": "RCS-4 5-carboxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78880-2",
+        "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "78881-0",
+        "display": "RCS-4 5-hydroxypentyl (synthetic cannabinoid metabolite) cutoff [Mass/volume] in Urine for Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "80113-4",
+        "display": "11-Hydroxy delta-9 tetrahydrocannabinol [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8173-7",
+        "display": "Deprecated Tetrahydrocannabinol [Mass/volume] in Urine",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.contains.property",
+            "extension": [
+              {
+                "url": "code",
+                "valueCode": "status"
+              },
+              {
+                "url": "value",
+                "valueCode": "DEPRECATED"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8174-5",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by SAMHSA confirm method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "8175-2",
+        "display": "Tetrahydrocannabinol [Presence] in Urine by SAMHSA screen method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87484-2",
+        "display": "BB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87485-9",
+        "display": "ADBICA N-pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87486-7",
+        "display": "PB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87487-5",
+        "display": "MAB-CHMINACA butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87488-3",
+        "display": "AM694 N-5-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87489-1",
+        "display": "AKB48 N-pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87490-9",
+        "display": "ADB-PINACA pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87491-7",
+        "display": "ADBICA N-4-hydroxypentyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87492-5",
+        "display": "AB-PINACA pentanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87493-3",
+        "display": "AB-FUBINACA oxobutanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87494-1",
+        "display": "AB-CHMINACA hydroxycyclohexyl (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "87495-8",
+        "display": "AB-CHMINACA butanoate (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "88022-9",
+        "display": "5-F PB-22 3-carboxyindole (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "88023-7",
+        "display": "XLR-11 N-(4-hydroxypentyl) (synthetic cannabinoid metabolite) [Presence] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "90746-9",
+        "display": "5F-ADB-M7 (synthetic cannabinoid metabolite) [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "90747-7",
+        "display": "MDMB-FUBINACA-M1 [Mass/volume] in Urine by Confirmatory method"
+      },
+      {
+        "system": "http://loinc.org",
+        "code": "72478-1",
+        "display": "Synthetic cannabinoids panel - Urine by Confirmatory method"
+      }
+    ],
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/5.0/StructureDefinition/extension-ValueSet.expansion.property",
+        "extension": [
+          {
+            "url": "code",
+            "valueCode": "status"
+          },
+          {
+            "url": "uri",
+            "valueUri": "http://hl7.org/fhir/concept-properties#status"
+          }
+        ]
+      }
+    ]
   }
 }

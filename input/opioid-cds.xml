@@ -37,11 +37,11 @@
     <version value="1.0.0" />
   </dependsOn>
   <!-- Using older version of the R4 extension pack here as the updated (v5.1.0) version contains R5 extension for cqf-strengthOfRecommendation and cqf-qualityOfEvidence -->
-  <!--dependsOn>
+  <dependsOn>
     <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
     <packageId value="hl7.fhir.uv.extensions.r4" />
-    <version value="5.1.0" />
-  </dependsOn-->
+    <version value="5.3.0" />
+  </dependsOn>
   <!-- Needed for the auto-oid-root parameter -->
   <!-- <dependsOn>
     <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools" />
@@ -669,11 +669,15 @@
       <code value="shownav" />
       <value value="true" />
     </parameter>
-    <!-- Using CDC OID - TODO: make sure this is appropriate -->
-    <!-- <parameter>
+    <!-- Using CDC OID - TODO: make sure this is appropriate 
+    Since CDC governs the root at 2.16.840.1.114222, they would need to be the ones to provision an OID
+    But since PHIN is decommissioning this year, it doesn't look like this is viable option for obtaining an OID
+    So we are just using the HL7 provisioning process here (https://github.com/FHIR/ig-registry/pull/614/changes)
+    -->
+    <parameter>
       <code value="auto-oid-root" />
-      <value value="2.16.840.1.114222" />
-    </parameter> -->
+      <value value="2.16.840.1.113883.4.642.40.65" />
+    </parameter>
     <!-- Turning this off, since we currently use CQF Tooling to compile and package CQL libraries and related artifacts -->
     <!-- <parameter>
       <code value="path-binary" />
@@ -742,10 +746,6 @@
     <parameter>
       <code value="pin-manifest" />
       <value value="manifest" />
-    </parameter>
-    <parameter>
-      <code value="pin-external" />
-      <value value="true" />
     </parameter>
          <!-- Uncomment one or more of these if you want to limit which syntaxes are supported or want to disable the display of mappings
          <parameter>

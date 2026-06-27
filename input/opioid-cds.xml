@@ -669,11 +669,15 @@
       <code value="shownav" />
       <value value="true" />
     </parameter>
-    <!-- Using CDC OID - TODO: make sure this is appropriate -->
-    <!-- <parameter>
+    <!-- Using CDC OID - TODO: make sure this is appropriate 
+    Since CDC governs the root at 2.16.840.1.114222, they would need to be the ones to provision an OID
+    But since PHIN is decommissioning this year, it doesn't look like this is viable option for obtaining an OID
+    So we are just using the HL7 provisioning process here (https://github.com/FHIR/ig-registry/pull/614/changes)
+    -->
+    <parameter>
       <code value="auto-oid-root" />
-      <value value="2.16.840.1.114222" />
-    </parameter> -->
+      <value value="2.16.840.1.113883.4.642.40.65" />
+    </parameter>
     <!-- Turning this off, since we currently use CQF Tooling to compile and package CQL libraries and related artifacts -->
     <!-- <parameter>
       <code value="path-binary" />

@@ -195,3 +195,12 @@ INFORMATION: ValueSet/medicationrequest-status-active: ValueSet.compose.include[
 
 # This deprecation advisory targets ValueSet.language.binding on the cdc-valueset profile, but the binding (including the elementdefinition-maxValueSet extension) is inherited verbatim from the base FHIR R4 ValueSet StructureDefinition. We don't author or control it.
 INFORMATION: StructureDefinition/cdc-valueset: StructureDefinition.snapshot.element[4].binding.extension[0]: The extension http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet|5.3.0 is deprecated with the note: 'Use additionalBinding extension or element instead'
+
+# These valuesets are in tx.fhir.org, so it is not clear why this is erroring? (https://tx.fhir.org/r4/ValueSet?url=http%3A%2F%2Fcts.nlm.nih.gov%2Ffhir%2FValueSet%2F2.16.840.1.113762.1.4.1021.115&version=&text=&status=&lang=&source=&system=&content-mode=&mode=vs)
+WARNING: ValueSet/conditions-documenting-sleep-disordered-breathing: ValueSet.compose.include[0].valueSet[0]: A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.114'
+WARNING: ValueSet/conditions-documenting-sleep-disordered-breathing: ValueSet.compose.include[1].valueSet[0]: A definition could not be found for Canonical URL 'http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.115'
+WARNING: ValueSet/conditions-documenting-sleep-disordered-breathing: ValueSet.compose.include[0].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.114 could not be found so cannot be checked
+WARNING: ValueSet/conditions-documenting-sleep-disordered-breathing: ValueSet.compose.include[1].valueSet[0]: The value set import http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113762.1.4.1021.115 could not be found so cannot be checked
+
+
+

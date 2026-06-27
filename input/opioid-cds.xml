@@ -2,7 +2,7 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="fhir.cdc.opioid-cds-r4" />
   <url value="http://fhir.org/guides/cdc/opioid-cds/ImplementationGuide/fhir.cdc.opioid-cds-r4" />
-  <version value="2022.1.0" />
+  <version value="2022.1.1" />
   <name value="Opioid_CDC" />
   <title value="2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide" />
   <status value="active" />

@@ -65,7 +65,7 @@ include OpioidCDSREC10Common version '2022.1.0' called Rec10Common
 **
 */
 
-// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-10-order-sign
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioid-cds-10-order-sign
 
 parameter ContextPrescriptions List<MedicationRequest>
 

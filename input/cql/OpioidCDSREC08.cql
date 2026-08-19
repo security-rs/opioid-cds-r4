@@ -38,7 +38,7 @@ include MMECalculator version '3.0.0' called MMECalculator
 **
 */
 
-// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-08
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioid-cds-08
 
 parameter ContextPrescriptions List<MedicationRequest>
 

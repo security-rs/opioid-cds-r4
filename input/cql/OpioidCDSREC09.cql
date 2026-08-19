@@ -37,7 +37,7 @@ include OpioidCDSRoutines version '2022.1.0' called Routines
 **
 */
 
-// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-09
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioid-cds-09
 
 parameter ContextPrescriptions List<MedicationRequest>
 

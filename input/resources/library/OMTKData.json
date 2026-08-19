@@ -95,7 +95,7 @@
       "value": "http://alphora.com"
     } ]
   } ],
-  "description": "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).",
+  "description": "This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.\r\nThe content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).",
   "useContext": [ {
     "code": {
       "system": "http://terminology.hl7.org/CodeSystem/usage-context-type",

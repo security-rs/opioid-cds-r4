@@ -67,7 +67,7 @@ code "Urine Drug Screening": '310627008' from Common.SNOMED display 'Urine drug 
 **
 */
 
-// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds-r4/PlanDefinition/opioid-cds-10-patient-view
+// META: Plan Definition: http://fhir.org/guides/cdc/opioid-cds/PlanDefinition/opioid-cds-10-patient-view
 
 context Patient
 

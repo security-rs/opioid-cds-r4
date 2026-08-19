@@ -2,8 +2,8 @@ feedback:
    - active: true
      dashboard:
        label: New Issue
-       url: https://github.com/cqframework/opioid-cds-r4/issues/new
+       url: https://github.com/security-rs/opioid-cds-r4/issues/new
    - active: true
      dashboard:
        label: Issues
-       url: https://github.com/cqframework/opioid-cds-r4/issues
+       url: https://github.com/security-rs/opioid-cds-r4/issues

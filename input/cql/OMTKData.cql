@@ -2,7 +2,7 @@ library OMTKData version '3.0.0'
 
 /*
 This library contains drug ingredient data for opioid ingredients of combinations drugs as determined using the [RxNav](https://rxnav.nlm.nih.gov/) API.
-The content was produced using the process described [here](http://build.fhir.org/ig/cqframework/opioid-cds-r4/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).
+The content was produced using the process described [here](http://fhir.org/guides/cdc/opioid-cds/service-documentation.html#solution-component-1-medication-and-terminology-knowledge-base).
 
 This version of the content was generated on 2020-10-20
 

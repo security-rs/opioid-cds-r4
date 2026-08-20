@@ -1,7 +1,7 @@
 {
-    "package-id" : "fhir.cdc.opioid-cds-r4",
+    "package-id" : "fhir.cdc.opioid-cds",
     "version": "2022.1.1",
-    "path": "http://fhir.org/guides/cdc/opioid-cds-r4/2022.1.1",
+    "path": "http://fhir.org/guides/cdc/opioid-cds/2022.1.1",
     "mode": "technical-correction",
     "status": "release",
     "sequence": "2022",

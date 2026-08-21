@@ -5,7 +5,7 @@
     "mode": "technical-correction",
     "status": "release",
     "sequence": "2022",
-    "desc": "Release publication of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide, version 2022.1.1 (Technical Correction)",
+    "desc": "Release publication of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide, version 2022.1.1 (Technical Correction). This technical correction updates the value set definitions for all value sets to use `compose` rather than the narrative instructions that were previously provided.",
     "descmd": "Release publication of the 2022 CDC Clinical Practice Guideline for Prescribing Opioids Implementation Guide, version 2022.1.1 (Technical Correction)",
     "first" : false
 }

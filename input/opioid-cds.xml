@@ -640,6 +640,11 @@
         <title value="License and Legal Terms" />
         <generation value="html" />
       </page>
+      <page>
+        <nameUrl value="changes.html" />
+        <title value="Changes" />
+        <generation value="markdown"/>
+      </page>
     </page>
     <!-- copyright year is a mandatory parameter -->
     <parameter>

@@ -22,6 +22,11 @@
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1" />
   <dependsOn>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
+    <packageId value="hl7.fhir.uv.extensions.r4" />
+    <version value="5.3.0" />
+  </dependsOn>
+  <dependsOn>
     <uri value="http://hl7.org/fhir/uv/cpg/ImplementationGuide/hl7.fhir.uv.cpg" />
     <packageId value="hl7.fhir.uv.cpg" />
     <version value="1.0.0" />
@@ -36,18 +41,6 @@
     <packageId value="hl7.fhir.uv.crmi" />
     <version value="1.0.0" />
   </dependsOn>
-  <!-- Using older version of the R4 extension pack here as the updated (v5.1.0) version contains R5 extension for cqf-strengthOfRecommendation and cqf-qualityOfEvidence -->
-  <dependsOn>
-    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions" />
-    <packageId value="hl7.fhir.uv.extensions.r4" />
-    <version value="5.3.0" />
-  </dependsOn>
-  <!-- Needed for the auto-oid-root parameter -->
-  <!-- <dependsOn>
-    <uri value="http://hl7.org/fhir/tools/ImplementationGuide/hl7.fhir.uv.tools" />
-    <packageId value="hl7.fhir.uv.tools" />
-    <version value="0.2.0" />
-  </dependsOn> -->
   <definition>
     <grouping id="recommendation-artifact-packages">
       <name value="Recommendation Artifact Packages" />
